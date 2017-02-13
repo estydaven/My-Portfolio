@@ -8,7 +8,7 @@ module.exports = function() {
                     cssName: 'sprite.css',
                 }))
 
-        .pipe($.gulp.dest('./build/images/'));
+        .pipe($.gulp.dest('./build/images/'))
         .pipe($.gulp.dest('./build/css/'));
     });
 };
