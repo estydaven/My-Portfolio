@@ -1,7 +1,84 @@
 extends ../_template
 
-block variables
-  - var title = 'Home page'
+block title
+    title Портфолио
 
 block content
-  include ../common/_greating
+  .wrapper
+    section.l-section.l-hero
+        include ../common/socials
+
+        .l-hero__bg
+        .l-hero__container
+            include ../common/avatar
+
+    section.l-section.l-about
+        .l-about__col.l-about__col_left
+            svg.l-about__triangle
+            .c-section-title
+            .c-about
+                .c-about__pic
+                .c-block-title
+                .c-block-text
+
+        .l-about__col.l-about__col_right
+            .l-skills
+                .c-block-title
+                .l-skills__text
+                    p
+                    p
+                    p
+                ul.l-skills-group
+                    li.l-skills-group__item
+                        .c-skills-group__title Frontend
+                        ul.l-skills-list
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                    li.l-skills-group__item
+                        .c-skills-group__title Backend
+                        ul.l-skills-list
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                    li.l-skills-group__item
+                        .c-skills-group__title Workflow
+                        ul.l-skills-list
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+                            li.l-skills-list__item
+                                .c-skill
+                                    svg.c-skill__circle
+                                    .c-skill__title
+    section.l-section.l-map
+        include ../common/contacts
+
+    include ../common/footer
