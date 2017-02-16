@@ -1,5 +1,15 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import 'common/greating';
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+@import 'common/welcome';

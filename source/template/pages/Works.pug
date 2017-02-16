@@ -1,0 +1,48 @@
+extends ../_template
+
+block title
+    | Мои работы
+
+block content
+    .wrapper
+        section.l-section.l-hero
+            include ../common/socials
+            include ../common/avatar
+            include ../common/arrow-down
+
+        section.l-section.l-about
+            .l-about__col.l-about__col_left
+                include ../common/triangle
+                .c-slider
+
+
+            .l-about__col.l-about__col_right
+                include ../common/triangle
+                .c-about_blog
+                    .c-about-title
+                    .c-about-subtitle
+                    button.c-about-button
+
+        section.l-section.l-about-me
+            .c-block-title_about ЧТО ОБО МНЕ ГОВОРЯТ
+            .c-section-opinion
+                .c-opinion
+                    .c-opinion__img
+                    .c-opinion__text
+                        p Валентина проходила обучение не где-то, а в Loftschool! Пять недель хардкорных испытаний и тяжелых ночей.
+                    .c-opinion__text-author
+                        span Ковальчук Дмитрий
+                        p - основатель Loftschool
+            .c-section-opinion
+                .c-opinion
+                    .c-opinion__img
+                    .c-opinion__text
+                        p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                    .c-opinion__text-author
+                        span Сабанцев Владимир
+                        p - преподаватель
+            include ../common/contact-me
+            include ../common/arrow-up
+            include ../common/footer
+
+

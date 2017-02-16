@@ -1,81 +1,82 @@
 extends ../_template
 
 block title
-    title Портфолио
+    | Портфолио
 
 block content
-  .wrapper
-    section.l-section.l-hero
-        include ../common/socials
-        include ../common/avatar
+    .wrapper
+        section.l-section.l-hero
+            include ../common/socials
+            include ../common/avatar
+            include ../common/arrow-down
 
-    section.l-section.l-about
-        .l-about__col.l-about__col_left
-            svg.l-about__triangle
-            .c-section-title
-            .c-about
-                .c-about__pic
-                .c-block-title
-                .c-block-text
+        section.l-section.l-about
+            .l-about__col.l-about__col_left
+                include ../common/triangle
+                .c-section-title
+                .c-about
+                    .c-about__pic
+                    .c-block-title
+                    .c-block-text
 
-        .l-about__col.l-about__col_right
-            .l-skills
-                .c-block-title
-                .l-skills__text
-                    p
-                    p
-                    p
-                ul.l-skills-group
-                    li.l-skills-group__item
-                        .c-skills-group__title Frontend
-                        ul.l-skills-list
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                    li.l-skills-group__item
-                        .c-skills-group__title Backend
-                        ul.l-skills-list
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                    li.l-skills-group__item
-                        .c-skills-group__title Workflow
-                        ul.l-skills-list
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-                            li.l-skills-list__item
-                                .c-skill
-                                    svg.c-skill__circle
-                                    .c-skill__title
-    section.l-section.l-map
-        include ../common/contacts
-
-    include ../common/footer
+            .l-about__col.l-about__col_right
+                include ../common/triangle
+                .l-skills
+                    .c-block-title
+                    .l-skills__text
+                        p
+                        p
+                        p
+                    ul.l-skills-group
+                        li.l-skills-group__item
+                            .c-skills-group__title Frontend
+                            ul.l-skills-list
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                        li.l-skills-group__item
+                            .c-skills-group__title Backend
+                            ul.l-skills-list
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                        li.l-skills-group__item
+                            .c-skills-group__title Workflow
+                            ul.l-skills-list
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+                                li.l-skills-list__item
+                                    .c-skill
+                                        svg.c-skill__circle
+                                        .c-skill__title
+        section.l-section.l-map
+            include ../common/contacts
+            include ../common/footer

@@ -1,0 +1,44 @@
+extends ../_template
+
+block title
+    | Блог
+
+block content
+    .wrapper
+        section.l-section.l-hero
+            include ../common/socials
+            include ../common/avatar
+            include ../common/arrow-down
+
+        section.l-section.l-about
+            .l-about__col.l-about__col_left
+                include ../common/triangle
+                .l-sidebar
+                    ul.l-sidebar-list
+                        li.l-sidebar-list__item_chousen
+                        li.l-sidebar-list__item
+                        li.l-sidebar-list__item
+                        li.l-sidebar-list__item
+
+            .l-about__col.l-about__col_right
+                include ../common/triangle
+                .c-about-articles
+                    .c-about-article
+                        .c-about-title Самое важное в SASS
+                        .c-about-subtitle 22 ноября 2016
+                        .c-about-text
+                            p
+                            p
+                        .c-about-image
+                .c-about-articles
+                    .c-about-article
+                        .c-about-title Приемы в верстке, без которых не обходится ни один сайт
+                        .c-about-subtitle 13 ноября 2016
+                        .c-about-text
+                            p
+                            p
+                        .c-about-image
+
+                    include ../common/footer
+
+

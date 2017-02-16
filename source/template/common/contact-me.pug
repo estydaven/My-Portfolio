@@ -1,0 +1,8 @@
+.c-contact-me
+    .c-contact-me__title
+    form.c-contactform(method='post', action='#')
+        input.c-contactform__name(name='name', placeholder='Ваше имя', required='')
+        input.c-contactform__email(name='emailaddress', placeholder='Bаш email', type='email', required='')
+        textarea.c-contactform__message(rows='4', cols='50', name='subject', placeholder='Ваше сообщение', required='')
+        input.c-contactform__btn_send(name='submit', type='submit', value='Отправить')
+        input.c-contactform__btn(name='submit', type='submit', value='Очистить')
