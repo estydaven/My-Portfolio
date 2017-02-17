@@ -35,17 +35,14 @@
 .c-hero__bg{
   width: 380px;
   height: 390px;
-  background-color: #1c2945;
-  opacity: 0.6;
+  background: rgba(30, 46, 74, 0.7);
   position: absolute;
   bottom: 220px;
   left: 600px;
 }
 
 .l-hero__container{
-  position: absolute;
-  bottom: 320px;
-  left: 700px;
+
   width: 250px;
   height: 250px;
   color: #ffffff;
