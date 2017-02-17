@@ -32,20 +32,27 @@
   }
 }
 
-.c-hero__bg{
-  width: 380px;
-  height: 390px;
-  background: rgba(30, 46, 74, 0.7);
+.l-wrapper-avatar{
   position: absolute;
   bottom: 220px;
   left: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 380px;
+  height: 390px;
+  background: rgba(30, 46, 74, 0.7);
+}
+
+.c-hero__bg{
+  width: 100%;
   display: flex;
   justify-content: center;
 
 }
 
 .l-hero__container{
-  width: 250px;
+  width: 100%;
   height: 250px;
   color: #ffffff;
   margin-top: 10px;
@@ -66,15 +73,42 @@
 .c-user__name {
   font-size: 22px;
   text-align: center;
+  font-family: 'robotomedium';
 }
 
 .c-user__occ{
   font-size: 16px;
   text-align: center;
+  font-family: "Roboto";
 }
 
 .c-wrapper-avatar__copyright{
   width: 100%;
   text-align: center;
   color: #e1e2e5;
+}
+
+.c-navigation{
+  width: 100%;
+
+}
+
+.c-navigation-list{
+  display: inline-block;
+}
+
+.c-navigation-item {
+  display: inline-block;
+  
+}
+.c-navigation-link{
+
+  padding: 20px 30px;
+  background-color: #0548be;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.c-navigation-item_choused{
+
 }
