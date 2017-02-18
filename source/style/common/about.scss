@@ -107,6 +107,7 @@
 .user{
   text-align: center;
   @include centered();
+  width: 100%;
 }
 
 .user__pic-container{
