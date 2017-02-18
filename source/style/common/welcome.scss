@@ -1,9 +1,3 @@
-.wrapper{
-  max-width: 1800px;
-  position: relative;
-  height: 100%;
-  min-height: 500px;
-}
 
 .l-image-bg{
   width: 100%;
@@ -33,37 +27,32 @@
 }
 
 .l-wrapper-avatar{
-  position: absolute;
-  bottom: 220px;
-  left: 600px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   width: 380px;
   height: 390px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 20px 0;
   background: rgba(30, 46, 74, 0.7);
 }
 
-.c-hero__bg{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-}
-
-.l-hero__container{
-  width: 100%;
-  height: 250px;
-  color: #ffffff;
-  margin-top: 10px;
+.c-hero-bg{
+  margin-bottom: 35px;
+  background: rgba(30, 46, 74, 0.7);
 }
 
 .c-user{
-  border-radius: 50% 50%;
-  overflow: hidden;
-  width: 170px;
-  height: 170px;
+  text-align: center;
+}
+
+.c-user__avatar{
+  width: 140px;
+  height: 140px;
   margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .c-user__pic{
@@ -71,22 +60,29 @@
 }
 
 .c-user__name {
-  font-size: 22px;
+  font-size: 28px;
   text-align: center;
   font-family: 'robotomedium';
+  color: #ffffff;
 }
 
 .c-user__occ{
   font-size: 16px;
   text-align: center;
   font-family: "Roboto";
+  color: #ffffff;
 }
 
-.c-wrapper-avatar__copyright{
+.c-wrapper-avatar__copyright {
   width: 100%;
   text-align: center;
   color: #e1e2e5;
+  position: absolute;
+  bottom: 30px;
+  font-size: 16px;
+  font-family: 'robotolight';
 }
+
 
 .c-navigation{
   width: 100%;
@@ -99,7 +95,7 @@
 
 .c-navigation-item {
   display: inline-block;
-  
+
 }
 .c-navigation-link{
 

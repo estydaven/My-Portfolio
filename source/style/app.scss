@@ -1,3 +1,5 @@
+@import "mixin";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +12,27 @@ html{
 
 body{
   height: 100%;
+  margin: 0;
+  font-family: 'Roboto', Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.wrapper{
+  max-width: 1800px;
+  position: relative;
+  height: 100%;
+}
+
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 @import 'common/welcome';
+@import "common/about";
 @import "roboto.css";
 @import "fontowesome.css";
 @import "webissimo.css";

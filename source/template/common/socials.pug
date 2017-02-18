@@ -1,8 +1,27 @@
-ul.c-socials
-    li.c-socials-item
-        a.c-socials-link
-    li.c-socials-item
-        a.c-socials-link
-    li.c-socials-item
-        a.c-socials-link
+ul.socials
+
+    -
+        icons = [
+            {
+                icon: 'github',
+                href: 'https://github.com/estydaven'
+            },
+            {
+                icon: 'vk',
+                href: '//https://vk.com/id13401205'
+            },
+            {
+                icon: 'in',
+                href: ''
+            }
+        ]
+    each icon in icons
+        li.socials__item
+            a(href=icon.href).socials__link
+                svg.socials__icon
+                    use(xlink:href=`./assets/img/sprite/sprite.svg#${icon.icon}`)
+        li.socials-item
+            a.socials-link
+        li.socials-item
+            a.socials-link
 
