@@ -90,13 +90,18 @@
   display: inline-block;
   vertical-align: middle;
   padding: 20px;
-}
+ }
 
-.icon{
+.icon-welcome{
   width: 25px;
   height: 35px;
   display: inline-block;
   fill: #0b45aa;
+
+  &:hover{
+    fill: #0548be;
+  }
+
 }
 
 .navigation__welcome{
