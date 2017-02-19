@@ -5,14 +5,16 @@ block title
 
 block content
     .wrapper
-        section.l-section.l-hero
-            include ../common/socials
-            include ../common/avatar
-            include ../common/arrow-down
+        section.section.hero
+            .hero-background
+                img(src='assets/img/background.jpg').hero__bg-img
+            .hero__container
+                img(src='assets/img/stars.png').hero-title-pic
 
-        section.l-section.l-about
-            .l-about__col.l-about__col_left
-                include ../common/triangle
+                include ../common/avatar-all
+            include ../common/arrow-down
+            include ../common/socials
+            include ../common/hamburger
                 .c-slider
 
 

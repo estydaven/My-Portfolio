@@ -245,6 +245,7 @@
 
 .skills{
   padding-right: 40px;
+  padding-top: 60px;
 }
 
 .skills-group__title{
@@ -312,7 +313,7 @@
 }
 
 .map{
-  width: 1800px;
+  width: 100%;
   height: 100%;
   position: relative;
   background-image: url(../img/map.png);
@@ -327,7 +328,137 @@
   top: 50%;
   left: 30%;
   width: 580px;
-  height: 280px;
-  background-color: #ffffff;
-  opacity: 0.8;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.8);
+
+}
+
+.contacts-list{
+  width: 50%;
+  float: left;
+}
+
+.contacts-list__item{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 30px;
+}
+
+.icon__contacts{
+  width: 40px;
+  height: 40px;
+  fill: #004cd1;
+  float: left;
+
+}
+
+.contacts-item{
+  color: #6b6e78;
+  font-family: 'robotomedium';
+  font-size: 16px;
+  text-align: end;
+
+}
+
+.page-footer{
+  height: 190px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(60, 62, 71, 0.8);
+
+}
+
+.footer-author{
+  background: rgba(43, 87, 164, 0.8);
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  font-family: 'robotomedium';
+  height: 40px;
+  padding: 10px;
+}
+
+.page-footer__left{
+  text-align: left;
+  color: #ffffff;
+  font-family: 'robotolight';
+  font-size: 16px;
+  width: 33%;
+  margin-left: 30px;
+  bottom: 115px;
+  float: left;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.page-footer__right{
+  text-align: left;
+  color: #ffffff;
+  font-family: 'robotolight';
+  font-size: 16px;
+  bottom: 70px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 35px;
+}
+
+.page-footer__center{
+  width: 33%;
+  bottom: 70px;
+  float: left;
+  margin-top: 40px;
+  height: auto;
+  border-right: 2px solid #97989d;
+  border-left: 2px solid #97989d;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'robotobold';
+  font-size: 15px;
+  float: left;
+  margin-left: 20px;
+}
+
+.socials-footer{
+  float: left;
+  margin-top: -20px;
+  height: 90px;
+  width: 600px;
+}
+
+.socials-footer__link{
+  width: 53px;
+  height: 55px;
+  display: block;
+  padding-top: 10px;
+  color: #ccc;
+}
+
+.socials-footer__list{
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.socials-footer__item{
+  display: inline-block;
+  padding-right: 40px;
+}
+
+.icon-footer{
+  fill: #9e9fa3;
+  width: 25px;
+  height: 25px;
+
+  &:hover{
+    fill: #004cd1;
+  }
+
 }
