@@ -12,8 +12,12 @@ block content
                 img(src='assets/img/stars.png').hero-title-pic
 
                 include ../common/avatar-all
+            include ../common/arrow-down
             include ../common/socials
-                include ../common/arrow-down
+            include ../common/hamburger
+
+
+
 
         section.section.about
             .about__col.about__col_left
@@ -21,75 +25,57 @@ block content
                     polygon(points="0,0 0,110 1000, 110")
                 .section-title(style="background-image: url('assets/img/stars2.png')")
                     | Обо мне
-                .about
+                .about-user
                     .about__pic
                         img(src='assets/img/face2.jpg').about__img
                     .block-title Кто я
                     .block-text
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Я веб-разработчик из Гродно, Беларусь. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    .block-text
+                        p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
 
             .about__col.about__col_right
                 svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
                     polygon(points="0,110 1000,110 1000,0")
                 .skills
                     .block-title Чем я могу быть вам полезна
+
                     .skills__text
-                        p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте попорядку.
+                        p Больше всего меня привлекает Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте попорядку.
+
+
+                    -
+                        skills = [
+                        {
+                        title: "Frontend",
+                        technologies: ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                        },
+                        {
+                        title: "Backend",
+                        technologies: ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+                        },
+                        {
+                        title: "WorkFlow",
+                        technologies: ['Git', 'Gulp', 'Bower']
+                        }
+                        ]
 
 
                     ul.skills-group
-                        li.skills-group__item
-                            .skills-group__title Frontend
-                            ul.skills-list
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                            circle(cx="50" cy="50" r="40").skills__circle-under
-                                            circle(cx="50" cy="50" r="40").skills__circle-above
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                        li.skills-group__item
-                            .skills-group__title Backend
-                            ul.skills-list
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                        li.skills-group__item
-                            .skills-group__title Workflow
-                            ul.skills-list
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
-                                li.skills-list__item
-                                    .skill
-                                        svg.skill__circle
-                                        .skill__title
+                        each skill in skills
+                            li.skills-group__item
+                                .skills-group__title= skill.title
+                                ul.skills-list
+                                    each tech in skill.technologies
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle(viewBox="0 0 100 100")
+                                                    circle(r="40" cx="50%" cy="50%").skills__circle-under
+                                                    circle(r="40" cx="50%" cy="50%").skills__circle-above
+                                                    .skill_title= tech
+
+
+
         section.section.map
             include ../common/contacts
-            include ../common/footer
+            //include ../common/footer
