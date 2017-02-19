@@ -1,0 +1,112 @@
+.section-works{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.works__col {
+
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+  .left{
+    left: 0;
+    fill: rgba(19, 21, 36, 0.7);
+  }
+
+ .right{
+      right: 0;
+      fill: rgba(19, 21, 36, 0.7);
+    }
+
+
+
+
+.about__triangle{
+  display: block;
+  width: 100%;
+  height: 220px;
+  position: absolute;
+
+}
+
+.section-title__works {
+  font-size: 63px;
+  color: #373e42;
+  text-align: center;
+  padding: 45px 80px;
+  color: #ffffff;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: sansus_webissimoregular;
+  position: relative;
+}
+
+.block__svg_works{
+  height: 200px;
+  width: 100%;
+  display: block;
+
+}
+
+.about-me{
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+
+}
+
+.section-opinion{
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.opinion{
+  width: 50%;
+  float: left;
+
+  font-family: 'robotoitalic';
+  font-size: 16px;
+
+}
+
+.opinion__text{
+  background-image: url(../img/quote.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top: 20px;
+}
+
+.text{
+  font-family: 'robotobold_italic';
+}
+
+.opinion__text-author{
+  padding: 30px;
+  text-align: center;
+}
+
+.opinion__img{
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+.opinion__pic{
+
+  width: 100%;
+}
+
+
