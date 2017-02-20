@@ -8,31 +8,50 @@ block content
         section.section-works
             .hero-background
                 img(src='assets/img/background.jpg').hero__bg-img
-            .hero__container
+            .container.hero__container
                 img(src='assets/img/stars.png').hero-title-pic
 
                 include ../common/avatar-all
-            include ../common/arrow-down
+
             include ../common/socials
             include ../common/hamburger
 
         section.works__col
-            .left
-                svg(viewbox="0 0 1000 110" preserveAspectRatio='none').about__triangle
-                    polygon(points="0,0 0,110 1000, 110")
-            .right
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,110 1000,110 1000,0")
-            .section-title__works(style="background-image: url('assets/img/stars2.png')")
-                | МОИ РАБОТЫ
+            svg.triangle(viewbox='0 0 100 100', preserveaspectratio='none')
+                polygon(points='0,0 50,100 100,0 100,100 0,100')
+            //.section-title__works
+                .main-title.section-title_undefined(style="background-image: url('assets/img/stars2.png')") МОИ РАБОТЫ
 
-
-
-
+        //section.portfolio
+            .column.column_left.portfolio__column
+                .work
+                    .work__title.block__title
+                        | Сайт школы онлайн
+                        br
+                        | образования
+                    .work__technology html, css, javascript
+                    a.work__link(href='#')
+                        svg.work__icon
+                            use(xlink:href='assets/img/sprite/sprite.svg#link')
+                        span Посмотреть сайт
+            .column.column_right.portfolio__column
+                .work__slider
+                    .work__preview
+                        img.work__pic(src='assets/img/work.png')
+                    .work__toggle
+                        .work__prev.toggle.column.column_left
+                            a.toggle__link.toggle__link_prev(href='#')
+                                svg.toggle__icon
+                                    use(xlink:href='assets/img/sprite/sprite.svg#portf_arrow_down')
+                            img.toggle__pic(src='assets/img/work.png')
+                        .work__next.toggle.column.column_right
+                            a.toggle__link.toggle__link_next(href='#')
+                                svg.toggle__icon
+                                    use(xlink:href='assets/img/sprite/sprite.svg#portf_arrow_up')
+                            img.toggle__pic(src='assets/img/work.png')
         section.section.about-me
-            .section-title__works(style="background-image: url('assets/img/stars2.png')")
-                | ЧТО ОБО МНЕ
-                | ГОВОРЯТ
+            .section-title__works
+                .main-title(style="background-image: url('assets/img/stars2.png')") ЧТО ОБО МНЕ ГОВОРЯТ
             .section-opinion
                 .opinion
                     .opinion__img
@@ -52,7 +71,7 @@ block content
                         span.text Сабанцев Владимир
                         p - преподаватель
 
-            //include ../common/contact-me
-            //include ../common/footer
+                include ../common/contact-me
+            include ../common/footer
 
 

@@ -1,0 +1,109 @@
+.blog-footer{
+  width: 100%;
+  height: auto;
+ position: relative;
+}
+
+.blog {
+  position: relative; }
+
+.blog-container {
+  padding: 70px 70px 0;
+  margin-bottom: 200px;
+  font-family: 'robotoregular';
+}
+
+.sidebar {
+  width: 22.77778%;
+  position: static; }
+
+.articles {
+  width: 72.77778%;
+  float: right;
+}
+
+.main-title_blog {
+  color: #fff;
+  padding: 70px 115px 100px;
+  margin-top: -60px;
+  margin-bottom: -80px;
+  background-position: center center;
+
+  &:before, &:after{
+    background-color: #fff;
+    top: 120px;
+  }
+  &:before{
+    left: 60px;
+  }
+  &:after{
+    right: 60px;
+  }
+
+}
+
+.blog-menu {
+  text-align: right; }
+
+.blog-menu__item {
+  margin-bottom: 10px; }
+.blog-menu__item:last-child {
+  margin-bottom: 0; }
+
+.blog-menu__link {
+  display: inline-block;
+  padding: 14px 17px;
+  border-right: 3px solid transparent;
+  text-decoration: none;
+  color: #455a64;
+
+  &:hover{
+    border-right-color: #083c96;
+    color: #083c96;
+  }
+  &_active{
+    border-right-color: #083c96;
+    color: #083c96;
+  }
+
+}
+
+.articles__list {
+  width: 1000px;
+  padding: 0 20px; }
+
+.articles__item {
+  position: relative;
+  margin-bottom: 63px;
+  padding-bottom: 50px;
+
+  &after{
+    content: '';
+    display: block;
+    width: 681px;
+    height: 5px;
+    background-color: rgba(55, 62, 66, 0.1);
+    position: absolute;
+    bottom: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  &:last-child:after {
+    display: none; }
+}
+
+.post__head {
+  margin-bottom: 27px; }
+
+.post__title {
+  font-family: 'sansus_webissimoregular';
+  font-size: 35px;
+  color: #474b57;
+  margin-bottom: 30px; }
+
+.post__date {
+  color: #7e97c2; }
+
+.post__content p {
+  margin-bottom: 20px; }
