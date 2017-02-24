@@ -5,20 +5,20 @@ block title
 
 block content
     .wrapper
-        section.section-works
-            .hero-background
-                img(src='assets/img/background.jpg').hero__bg-img
-            .container.hero__container
-                img(src='assets/img/stars.png').hero-title-pic
-
-                include ../common/avatar-all
-
+        section.section-about
             include ../common/socials
             include ../common/hamburger
+            include ../common/avatar-all
+            include ../common/arrow-down
 
         section.section.about
-            svg.triangle(viewbox='0 0 100 100', preserveaspectratio='none')
-                polygon(points='0,0 50,100 100,0 100,100 0,100')
+            .about__col.about__col_left
+                svg(viewbox="0 0 1000 110" preserveAspectRatio='none').about__triangle
+                    polygon(points="0,0 0,110 1000,110")
+
+            .about__col.about__col_right
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,110 1000,110 1000,0")
             .blog-container
                 aside.sidebar
                     nav.blog-menu

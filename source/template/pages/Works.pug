@@ -6,52 +6,50 @@ block title
 block content
     .wrapper
         section.section-works
-            .hero-background
-                img(src='assets/img/background.jpg').hero__bg-img
-            .container.hero__container
-                img(src='assets/img/stars.png').hero-title-pic
-
-                include ../common/avatar-all
-
             include ../common/socials
             include ../common/hamburger
+            include ../common/avatar-all
+            include ../common/arrow-down
 
-        section.works__col
-            svg.triangle(viewbox='0 0 100 100', preserveaspectratio='none')
-                polygon(points='0,0 50,100 100,0 100,100 0,100')
-            //.section-title__works
-                .main-title.section-title_undefined(style="background-image: url('assets/img/stars2.png')") МОИ РАБОТЫ
+            section.works__col
+                svg.triangle( height="150px" width="100%" viewbox='0 0 1000 85', preserveaspectratio='none')
+                    polygon.left(points='0,0 0,86 500.8,86 500.8,75.5')
+                    polygon.right(points='1000,0 1000,86 500,86 500,75.5')
+                .section-title__works
+                    .main-title МОИ РАБОТЫ
+                    img.stars2(src='assets/img/stars2.png')
 
-        //section.portfolio
+        section.portfolio
             .column.column_left.portfolio__column
                 .work
-                    .work__title.block__title
+                    .block-title
                         | Сайт школы онлайн
                         br
                         | образования
                     .work__technology html, css, javascript
-                    a.work__link(href='#')
+                    a.work__link(href='#') Посмотреть сайт
                         svg.work__icon
-                            use(xlink:href='assets/img/sprite/sprite.svg#link')
-                        span Посмотреть сайт
+                            use(xlink:href='assets/img/sprite.svg#link')
+
             .column.column_right.portfolio__column
                 .work__slider
                     .work__preview
-                        img.work__pic(src='assets/img/work.png')
+                        img.work__pic(src="assets/img/work.png")
                     .work__toggle
                         .work__prev.toggle.column.column_left
                             a.toggle__link.toggle__link_prev(href='#')
                                 svg.toggle__icon
-                                    use(xlink:href='assets/img/sprite/sprite.svg#portf_arrow_down')
+                                    use(xlink:href='assets/img/sprite.svg#portf_arrow_down')
                             img.toggle__pic(src='assets/img/work.png')
                         .work__next.toggle.column.column_right
                             a.toggle__link.toggle__link_next(href='#')
                                 svg.toggle__icon
-                                    use(xlink:href='assets/img/sprite/sprite.svg#portf_arrow_up')
+                                    use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
                             img.toggle__pic(src='assets/img/work.png')
         section.section.about-me
-            .section-title__works
-                .main-title(style="background-image: url('assets/img/stars2.png')") ЧТО ОБО МНЕ ГОВОРЯТ
+            .section-title__work
+                .main-title ЧТО ОБО МНЕ ГОВОРЯТ
+                img.stars2(src='assets/img/stars2.png')
             .section-opinion
                 .opinion
                     .opinion__img

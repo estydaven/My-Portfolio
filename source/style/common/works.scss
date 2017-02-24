@@ -1,42 +1,61 @@
 .section-works{
-  height: 100%;
+  min-height: 810px;
   overflow: hidden;
   position: relative;
-
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  height: 810px;
 }
 
 .works__col{
-  text-align: center;
-  position: relative;
+  padding-top: 30px;
 }
 
+.left{
+  fill: rgba(13, 15, 31, 0.5);
+  border: 0;
+  }
+
+.right{
+  fill: rgba(13, 15, 31, 0.5);
+  border: 0;
+  }
+
 .triangle{
-  width: 100%;
-  height: 260px;
-  fill: rgba(21, 25, 39, 0.7);
-  position: absolute;
-  bottom: 100%;
-  left: 0;
+  border: 0;
 }
 
 .main-title{
-  box-sizing: content-box;
-  padding: 45px 80px;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
   font-family: sansus_webissimoregular;
   font-size: 63px;
   line-height: 1;
   color: #ffffff;
-  display: inline-block;
-  position: relative;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: contain;
+  position: absolute;
 }
 
+.stars2{
+  height: 160px;
+  display: block;
+  margin: 0 auto;
 
+}
 
 .section-title__works {
-  text-align: center;
+  height: 200px;
+  width: 100%;
+  display: block;
+  background-color: rgba(13, 15, 31, 0.5);
+  margin-top: -6px;
+}
+
+.section-title__work{
+  height: 200px;
+  width: 100%;
+  display: block;
+  padding-top: 20px;
 
 }
 
@@ -49,20 +68,26 @@
 .column {
   width: 50%;
   position: relative;
+  float: left;
 
   &_left{
-    background-color: #f0efe9;
+    background-color: #f2f0e8;
+
   }
   &_right{
-    background-color: #f0efe9;
+    background-color: #e3e2de;
+
   }
 
 }
 
 .portfolio__column {
-  height: 750px; }
+  position: relative;
+  float: left;
+  height: 800px;
+}
 
-.work {
+.work{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -74,57 +99,76 @@
   position: relative;
   padding: 18px 20px;
   text-transform: uppercase;
-  color: #00bfa5;
+  color: #083c96;
   margin-bottom: 40px;
+  text-align: center;
+  font-family: 'robotomedium';
+  font-size: 16px;
+}
 
-  &:before, &:after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(55, 62, 66, 0.3);
-    position: absolute;
-    left: 0;
-  }
-  &:before{
-    top: 0;
-  }
-  &:after{
-    bottom: 0;
+.work__link {
+  display: block;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  background-color: #004cd1;
+  border-radius: 4px;
+  margin: 0 auto;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover{
+    background-color: #0e55d2;
   }
 
 }
 
-.work__link {
-  display: inline-block;
-  padding: 13px 18px;
-  background-color: #00bfa5;
-  border-radius: 4px;
-  color: #fff;
-  text-decoration: none;
+.work__icon{
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  float: left;
+  vertical-align: middle;
+}
 
-  &:hover{
-    background-color: #009688;
-  }
-
+.work-slider{
+  width: 100%;
+  height: 800px;
+  position: relative;
 }
 
 .work__preview {
   width: 645px;
   height: 525px;
   margin: 0 auto;
-  padding: 43px 0 66px; }
+  padding: 43px 0 66px;
+  }
+
+
 
 .work__pic {
   max-width: 100%;
   max-height: 100%; }
 
-.work__toggle {
-  height: 225px; }
-
+.work__toggle{
+  @extend %clearfix;
+  height: 225px;
+}
 .toggle {
-  height: 100%;
-  position: relative; }
+  height: 225px;
+  position: relative;
+
+  &:before{
+    content: "";
+    display: table;
+  }
+  &:after{
+    content: "";
+    display: table;
+  }
+
+}
 
 .toggle__link {
   display: block;
@@ -133,13 +177,22 @@
   position: absolute;
   background-color: rgba(55, 62, 66, 0.4);
 
-  &toggle__link_prev:hover &toggle__icon{
-    transition: .5s;
-    top: 65%;
+  &_prev {
+
+    &:hover {
+      .toggle__icon {
+        transition: .5s;
+        top: 65%;
+      }
+    }
   }
-  &toggle__link_next:hover &toggle__icon{
-    transition: .5s;
-    top: 35%;
+  &_next {
+    &:hover {
+      .toggle__icon {
+        transition: .5s;
+        top: 35%;
+      }
+    }
   }
 
 }
@@ -147,6 +200,16 @@
 .toggle__pic {
   max-width: 100%;
   max-height: 100%; }
+
+.toggle__icon{
+  width: 43px;
+  height: 27px;
+  fill: #ffffff;
+  transition: .2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
 
 .about-me{
   width: 100%;
@@ -190,8 +253,8 @@
 }
 
 .opinion__img{
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
@@ -199,7 +262,6 @@
 }
 
 .opinion__pic{
-
   width: 100%;
 }
 
@@ -247,8 +309,9 @@
   color: #fff;
   position: relative;
   bottom: 0;
-  background: rgba(28, 27, 31, 0.5);
+  background: rgba(28, 27, 31, 0.1);
   border: none;
+  cursor: pointer;
 
     &:hover{
       background: #004cd1;

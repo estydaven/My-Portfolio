@@ -1,7 +1,10 @@
-.hero{
-  height: 600px;
+.section-about{
+  min-height: 600px;
   overflow: hidden;
   position: relative;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+
 }
 
 .hero__bg-img{
@@ -20,23 +23,32 @@
 }
 
 .socials {
-  text-align: center;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 200px;
+  margin-left: 20px;
+  display: inline-block;
+
 }
 
 .socials-list {
-  text-align: center;
-  position: absolute;
+  margin: 0;
+  padding: 0;
 
 }
 
 .socials__item{
   display: inline-block;
   vertical-align: middle;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none outside none;
+  padding: 15px;
+}
+
+.socials__link{
+  width: 53px;
+  height: 55px;
+  display: block;
+  padding-top: 10px;
+  color: #ffffff;
 }
 
 .icon {
@@ -52,15 +64,19 @@
 }
 
 .arrow{
-  width: 20px;
-  height: 20px;
   position: absolute;
-  left: 600px;
-  top: 120px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  display: inline-block;
 }
 
 .arrow-down__img{
-  width: 100%;
+  width: 53px;
+  height: 55px;
+  padding-top: 10px;
+  color: #ffffff;
 }
 
 .arrow-down__pic{
@@ -70,11 +86,9 @@
 }
 
 .hamburger{
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  margin-right: 10px;
+  float: right;
+  padding-top: 15px;
 }
 
 .hamburger__img{
@@ -94,68 +108,36 @@
   align-items: stretch;
 }
 
-.about__col{
+.about__col {
   float: left;
   width: 50%;
   position: relative;
 
-  &_left{
+  &_left {
     background: #f2f0e8;
 
-    .about__triangle{
+    .about__triangle {
       left: 0;
       fill: #f2f0e8;
     }
   }
-  &_right{
+
+  &_right {
     background: #eae8e2;
 
-    .about__triangle{
+    .about__triangle {
       right: 0;
       fill: #eae8e2;
     }
   }
-
 }
 
-.about__triangle{
+.about__triangle {
   display: block;
   width: 100%;
   height: 110px;
   position: absolute;
   bottom: 100%;
-}
-
-.section-title {
-  font-size: 63px;
-  color: #373e42;
-  text-align: center;
-  padding: 45px 80px;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  font-family: sansus_webissimoregular;
-  position: relative;
-  float: left;
-
-  &:before, &:after {
-    content: "";
-    display: block;
-    width: 22px;
-    height: 5px;
-    @include centered(y);
-    background: #c9c9c6;
-  }
-
-  $dash-margin: 40px;
-
-  &:before {
-    left: $dash-margin;
-  }
-
-  &:after {
-    right: $dash-margin;
-  }
 }
 
 .about-user{
@@ -165,7 +147,29 @@
   align-items: flex-end;
   width: 60%;
   float: right;
-  margin-top: -100px;
+}
+
+.section-title_fl_left{
+  font-size: 63px;
+  text-align: center;
+  padding: 45px;
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'sansus_webissimoregular';
+  position: relative;
+}
+
+.main-title_about{
+  width: 100%;
+  text-align: center;
+
+  font-family: sansus_webissimoregular;
+  font-size: 63px;
+  line-height: 1;
+  color: #474b57;
+  position: absolute;
 }
 
 .about__pic{
@@ -208,34 +212,58 @@
 }
 
 .user{
+  top: 0;
+  right: 0;
+  bottom: 410px;
+  left: 0;
   text-align: center;
-  @include centered();
-  width: 100%;
+
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
 }
 
 .user__pic-container{
-  width: 147px;
-  height: 147px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.user__pic{
-  width: 100%;
+  margin: 0 auto;
 }
 
 .user__name{
-  margin-bottom: 10px;
-  color: #ffffff;
-  font-size: 35px;
+  width: 100%;
 }
 
-.user__desc{
-  font-weight: 100;
+.user__h{
+  font-size: 35px;
   color: #ffffff;
+  line-height: 1.333;
+  margin: 0 auto;
+  font-family: 'robotomedium';
+  display: inline-block;
+  text-align: center;
+}
+
+.user_pic{
+  border-radius: 50%;
+  max-height: 142px;
+  max-width: 142px;
+  margin-top: 40px;
+  margin-left: 170px;
+  z-index: 1;
+  position: absolute;
+}
+
+.stars{
+  width: 470px;
+  left: 445px;
+  top: 20px;
+}
+
+.desc{
   font-size: 16px;
+  font-family: 'robotoregular';
 }
 
 .skills-group{
@@ -325,8 +353,8 @@
 .contacts{
   position: absolute;
   transform: translateY(-50%);
-  top: 50%;
-  left: 30%;
+  top: 35%;
+  left: 35%;
   width: 580px;
   height: 260px;
   background: rgba(255, 255, 255, 0.8);
@@ -346,19 +374,18 @@
 }
 
 .icon__contacts{
-  width: 40px;
-  height: 40px;
-  fill: #004cd1;
+  width: 30px;
+  height: 30px;
   float: left;
-
 }
 
 .contacts-item{
   color: #6b6e78;
   font-family: 'robotomedium';
   font-size: 16px;
-  text-align: end;
-
+  text-align: start;
+  padding-left: 10px;
+  display: inline-block;
 }
 
 .page-footer{
@@ -425,12 +452,15 @@
   font-size: 15px;
   float: left;
   margin-left: 20px;
+  
+  &:hover{
+    color: #7e97c2;
+  }
+  
 }
 
 .socials-footer{
   float: left;
-  margin-top: -20px;
-  height: 90px;
   width: 600px;
 }
 

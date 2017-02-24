@@ -5,21 +5,18 @@ block title
 
 block content
     .wrapper
-        section.section.hero
-            .hero-background
-                img(src='assets/img/background.jpg').hero__bg-img
-            .hero__container
-                img(src='assets/img/stars.png').hero-title-pic
-
-                include ../common/avatar-all
+        section.section-about
             include ../common/socials
             include ../common/hamburger
+            include ../common/avatar-all
+            include ../common/arrow-down
         section.section.about
             .about__col.about__col_left
                 svg(viewbox="0 0 1000 110" preserveAspectRatio='none').about__triangle
-                    polygon(points="0,0 0,110 1000, 110")
-                .section-title(style="background-image: url('assets/img/stars2.png')")
-                    | Обо мне
+                    polygon(points="0,0 0,110 1000,110")
+                .section-title_fl_left
+                    .main-title_about Обо мне
+                    img.stars2(src='assets/img/stars2.png')
                 .about-user
                     .about__pic
                         img(src='assets/img/face2.jpg').about__img
