@@ -5,17 +5,41 @@
 }
 
 .blog {
-  position: relative; }
+  position: relative;
+  @extend %clearfix;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+
+
+.blog__triangle {
+  display: block;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+}
+
+.left__triangle {
+  fill: #faf8f0;
+}
+
+.right__triangle{
+  fill: #faf8f0;
+}
 
 .blog-container {
   padding: 70px 70px 0;
   margin-bottom: 200px;
   font-family: 'robotoregular';
+  width: 100%;
 }
 
 .sidebar {
   width: 22.77778%;
-  position: static; }
+  position: static;
+  float: left;}
 
 .articles {
   width: 72.77778%;
@@ -74,8 +98,8 @@
 
 .articles__item {
   position: relative;
-  margin-bottom: 63px;
-  padding-bottom: 50px;
+  margin-bottom: 23px;
+  padding-bottom: 20px;
 
   &after{
     content: '';
@@ -107,3 +131,10 @@
 
 .post__content p {
   margin-bottom: 20px; }
+
+.post-line{
+  background: url(../img/post-line.png)center left no-repeat;
+  width: 100%;
+  height: 10px;
+  padding-top: 30px;
+}

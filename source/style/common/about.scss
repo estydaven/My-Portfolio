@@ -152,24 +152,26 @@
 .section-title_fl_left{
   font-size: 63px;
   text-align: center;
-  padding: 45px;
-  display: inline-block;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  font-family: 'sansus_webissimoregular';
-  position: relative;
+  float: left;
+
 }
 
 .main-title_about{
-  width: 100%;
+  width: 300px;
   text-align: center;
-
+  display: inline-block;
+  float: left;
+  margin-left: 32px;
+  z-index: 1;
   font-family: sansus_webissimoregular;
   font-size: 63px;
   line-height: 1;
   color: #474b57;
   position: absolute;
+}
+
+.stars3{
+
 }
 
 .about__pic{
