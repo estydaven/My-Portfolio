@@ -132,12 +132,6 @@
   vertical-align: middle;
 }
 
-.work-slider{
-  width: 100%;
-  height: 800px;
-  position: relative;
-}
-
 .work__preview {
   width: 645px;
   height: 525px;
@@ -225,6 +219,7 @@
   width: 50%;
   margin: 0 auto;
   color: #ffffff;
+
 }
 
 .opinion{
@@ -288,6 +283,7 @@
   padding: 17px 19px;
   outline: none;
   border: none;
+  color: #ffffff;
   background: rgba(43, 41, 50, 0.5);
   margin-bottom: 20px; }
   .form__input_message{

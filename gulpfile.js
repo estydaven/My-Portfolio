@@ -30,6 +30,7 @@ $.gulp.task('default', $.gulp.series(
     'css:foundation',
     'copy:font',
     'spritesmith',
+      'pxtorem',
     'sprite:svg'
   ),
   $.gulp.parallel(

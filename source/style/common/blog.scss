@@ -46,26 +46,6 @@
   float: right;
 }
 
-.main-title_blog {
-  color: #fff;
-  padding: 70px 115px 100px;
-  margin-top: -60px;
-  margin-bottom: -80px;
-  background-position: center center;
-
-  &:before, &:after{
-    background-color: #fff;
-    top: 120px;
-  }
-  &:before{
-    left: 60px;
-  }
-  &:after{
-    right: 60px;
-  }
-
-}
-
 .blog-menu {
   text-align: right; }
 

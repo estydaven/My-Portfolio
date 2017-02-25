@@ -1,25 +1,10 @@
 .section-about{
-  min-height: 600px;
+  min-height: 800px;
   overflow: hidden;
   position: relative;
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
 
-}
-
-.hero__bg-img{
-  top: 0;
-  width: 100%;
-  @include centered(x);
-}
-
-.hero__container{
-  @include centered(y);
-  width: 100%;
-}
-
-.hero-title-pic{
-  @include centered();
 }
 
 .socials {
@@ -68,7 +53,7 @@
   z-index: 1;
   width: 100%;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 250px;
   display: inline-block;
 }
 
@@ -168,10 +153,6 @@
   line-height: 1;
   color: #474b57;
   position: absolute;
-}
-
-.stars3{
-
 }
 
 .about__pic{
