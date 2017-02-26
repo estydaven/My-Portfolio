@@ -7,21 +7,28 @@
   background-size: cover;
 }
 
-.c-button-auth{
-  width: 180px;
+.c-button{
+  width: rem(180);
   height: 50px;
-  border: 2px solid #ffffff;
   position: absolute;
+  right: 20px;
   top: 20px;
-  right: 50px;
+  background: transparent;
+  border: 2px solid #ffffff;
   color: #ffffff;
   text-align: center;
-  padding: 13px;
+  display: inline-block;
+  transition: .3s;
 
   &:hover{
-    border:none;
+    border: none;
     background-color: #083c96;
     cursor: pointer;
+  }
+
+  @include phones{
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 

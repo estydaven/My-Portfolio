@@ -4,11 +4,11 @@
   position: relative;
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
-  height: 810px;
-}
+  background-size: cover;
+  }
 
 .works__col{
-  padding-top: rem(30);
+  padding-top: rem(80);
 }
 
 .left{
@@ -54,9 +54,15 @@
 }
 
 .portfolio{
+  @extend %clearfix;
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 100vh;
+  min-height: 800px;
+
+  @include tablets {
+    height: auto;
+  }
+
 }
 
 .column {
@@ -73,17 +79,23 @@
 }
 
 .portfolio__column {
-  position: relative;
-  float: left;
-  min-height: 800px;
+  height: 100%;
+
+  @include tablets{
+    float: none;
+    width: 100%;
+    }
+
 }
 
 .work{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 46.66667%;
+  @include centered();
+  @include tablets{
+    position: static;
+    transform: translate(0, 0);
+    margin: 0 auto;
+    padding: rem(30) 0;
+  }
 }
 
 .work__technology {
@@ -114,6 +126,10 @@
   }
 }
 
+.work__slider{
+  height: 100%;
+}
+
 .work__icon{
   width: rem(20);
   height: 20px;
@@ -124,22 +140,44 @@
 
 .work__preview {
   width: 100%;
-  min-height: 525px;
+  height: 70%;
   margin: 0 auto;
-  padding: rem(43) 0 rem(66);
+  padding: rem(43) rem(43);
+  position: absolute;
+  left: 100%;
+  z-index: 100;
+
+  @include tablets{
+    position: static;
+    width: 100%;
+  }
 }
 
 .work__pic {
   max-width: 100%;
   max-height: 100%;
+
+  @include tablets{
+    width: 80%;
+  }
 }
 
 .work__toggle{
   @extend %clearfix;
-  min-height: 225px;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include tablets{
+    position: static;
+    height: auto;
+  }
+
 }
 .toggle {
-  height: 225px;
+  height: 100%;
   position: relative;
 
   &:before{
@@ -160,7 +198,6 @@
   background-color: rgba(55, 62, 66, 0.4);
 
   &_prev {
-
     &:hover {
       .toggle__icon {
         transition: .5s;
@@ -208,6 +245,10 @@
   width: 50%;
   margin: 0 auto;
   color: #ffffff;
+
+  @include tablets{
+    width: 90%;
+  }
 }
 
 .opinion{
@@ -235,11 +276,15 @@
 }
 
 .opinion__img{
-  width: rem(70);
+  width: 70px;
   height: 70px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
+
+  @include tablets{
+    margin-bottom: rem(20);
+  }
 }
 
 .opinion__pic{

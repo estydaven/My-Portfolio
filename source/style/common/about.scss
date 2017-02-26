@@ -1,10 +1,16 @@
 .section-about{
-  min-height: 110vh;
+  min-height: 800px;
   overflow: hidden;
   position: relative;
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
+
+  @include tablets{
+    min-height: 600px;
+  }
+
 }
 
 .socials {
@@ -145,12 +151,23 @@
   width: 100%;
   display: flex;
   align-items: stretch;
-}
+  position: relative;
+
+  @include tablets{
+    display: block;
+  }
+ }
 
 .about__col {
   float: left;
   width: 50%;
   position: relative;
+
+  @include tablets{
+    float: none;
+    width: 100%;
+    position: static;
+  }
 
   &_left {
     background: #f2f0e8;
@@ -167,6 +184,11 @@
     .about__triangle {
       right: 0;
       fill: #eae8e2;
+
+      @include tablets{
+        fill: #f2f0e8;
+      }
+
     }
   }
 }
@@ -177,6 +199,10 @@
   height: 110px;
   position: absolute;
   bottom: 100%;
+
+  @include tablets{
+    width: 50%;
+  }
 }
 
 .about-user{
@@ -188,6 +214,9 @@
     display: block;
     margin: 0 auto;
     width: auto;
+  }
+  @include phones{
+    width: 100%;
   }
 }
 
@@ -215,6 +244,16 @@
   line-height: 1;
   color: #474b57;
   position: absolute;
+
+  @include phones{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    z-index: auto;
+    float: none;
+    position: static;
+    padding: rem(40);
+  }
 }
 
 .stars3{
@@ -222,12 +261,20 @@
   @include desktop{
     width: auto;
   }
+  @include phones{
+    display: none;
+  }
 }
 
 .about__pic{
-  max-width: rem(380);
+  width: rem(380);
   height: auto;
   margin: 0 auto;
+
+  @include phones{
+    width: 100%;
+  }
+
 }
 
 .about__img{
@@ -243,6 +290,10 @@
   margin: 0 auto;
   padding-bottom: rem(20);
   background: url(../img/line.png)bottom center no-repeat;
+
+  @include tablets{
+    width: 100%;
+  }
 }
 
 .block-text{
@@ -255,6 +306,11 @@
   @include desktop{
     margin: 0 auto;
     width: 70%;
+  }
+  @include phones{
+    width: 100%;
+    padding-left: rem(10);
+    font-size: rem(20);
   }
 }
 
@@ -269,6 +325,12 @@
   padding-top: rem(10);
   line-height: 1.5;
   margin-left: rem(30);
+
+  @include phones{
+    width: 100%;
+    font-size: rem(20);
+  }
+
 }
 
 .skills-group{
@@ -285,6 +347,11 @@
   font-size: rem(28);
   font-family: 'Roboto';
   color: #474b57;
+
+  @include tablets{
+    text-align: center;
+  }
+
 }
 
 .skills-group__item{
@@ -296,6 +363,16 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+
+  @include tablets{
+    display: flex;
+    justify-content: center;
+  }
+  @include phones{
+    width: 70%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
 }
 
 .skills-list__item{
@@ -303,6 +380,10 @@
   @include desktop{
     padding-right: rem(15);
   }
+  @include phones{
+    margin-right: rem(50);
+  }
+
 }
 
 .skill{
@@ -318,6 +399,7 @@
   &:last-of-type {
     margin-right: 0;
   }
+
 }
 
 .skill__circle{
@@ -326,6 +408,11 @@
   display: block;
   fill: transparent;
   stroke-width: 15;
+
+  @include phones{
+    width: rem(160);
+  }
+
 }
 
 .skills__circle-under{
@@ -347,6 +434,11 @@
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+
+  @include phones{
+
+  }
+
 }
 
 .map{
@@ -359,21 +451,45 @@
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include phones{
+    display: block;
+  }
+
 }
 
 .map_contacts{
   margin-bottom: rem(100);
+  height: auto;
 }
 
 .contacts{
   width: rem(580);
-  height: 260px;
+  height: 40vh;
   background: rgba(255, 255, 255, 0.8);
+
+  @include desktop{
+    width: rem(580);
+  }
+
+  @include tablets{
+    height: auto;
+    width: rem(350);
+  }
+  @include phones{
+    width: 100%;
+    background: #ffffff;
+  }
 }
 
 .contacts-list{
   width: 50%;
   float: left;
+  @include tablets{
+    width: 100%;
+    float: none;
+  }
+
 }
 
 .contacts-list__item{
@@ -387,15 +503,24 @@
   width: rem(30);
   height: 30px;
   float: left;
+
+  @include phones{
+    width: rem(50);
+    height: 45px;
+  }
+
 }
 
 .contacts-item{
   color: #6b6e78;
   font-family: 'robotomedium';
-  font-size: rem(16);
+  font-size: rem(15);
   text-align: start;
   padding-left: rem(10);
   display: inline-block;
+  @include phones{
+    font-size: rem(20);
+  }
 }
 
 .page-footer{
@@ -432,6 +557,18 @@
   float: left;
   display: inline-block;
   margin-top: rem(40);
+  padding-right: rem(25);
+
+  @include tablets{
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: rem(5);
+    border-bottom: 2px solid #97989d;
+    margin-top: auto;
+    display: block;
+  }
+
 }
 
 .page-footer__right{
@@ -443,6 +580,18 @@
   float: left;
   margin-left: rem(30);
   margin-top: rem(35);
+
+  @include tablets{
+    float: right;
+    text-align: right;
+    margin-left: auto;
+    margin-top: rem(10);
+    bottom: auto;
+    margin-right: rem(20);
+    width: auto;
+    margin-left: 0;
+  }
+
 }
 
 .page-footer__center{
@@ -453,6 +602,19 @@
   height: auto;
   border-right: 2px solid #97989d;
   border-left: 2px solid #97989d;
+
+  @include tablets{
+    border: none;
+    margin-top: rem(10);
+    width: 50%;
+  }
+  @include phones{
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+  }
+
 }
 
 .nav-link{
@@ -462,6 +624,10 @@
   font-size: rem(15);
   float: left;
   margin-left: rem(20);
+
+  @include phones{
+
+  }
   
   &:hover{
     color: #7e97c2;
