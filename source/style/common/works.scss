@@ -8,7 +8,7 @@
 }
 
 .works__col{
-  padding-top: 30px;
+  padding-top: rem(30);
 }
 
 .left{
@@ -21,16 +21,12 @@
   border: 0;
   }
 
-.triangle{
-  border: 0;
-}
-
 .main-title{
   width: 100%;
   text-align: center;
-  margin: 20px 0;
+  margin: rem(20) 0;
   font-family: sansus_webissimoregular;
-  font-size: 63px;
+  font-size: rem(63);
   line-height: 1;
   color: #ffffff;
   position: absolute;
@@ -40,7 +36,6 @@
   height: 160px;
   display: block;
   margin: 0 auto;
-
 }
 
 .section-title__works {
@@ -48,15 +43,14 @@
   width: 100%;
   display: block;
   background-color: rgba(13, 15, 31, 0.5);
-  margin-top: -6px;
+  margin-top: rem(-6);
 }
 
 .section-title__work{
   height: 200px;
   width: 100%;
   display: block;
-  padding-top: 20px;
-
+  padding-top: rem(20);
 }
 
 .portfolio{
@@ -72,19 +66,16 @@
 
   &_left{
     background-color: #f2f0e8;
-
   }
   &_right{
     background-color: #e3e2de;
-
   }
-
 }
 
 .portfolio__column {
   position: relative;
   float: left;
-  height: 800px;
+  min-height: 800px;
 }
 
 .work{
@@ -97,20 +88,20 @@
 
 .work__technology {
   position: relative;
-  padding: 18px 20px;
+  padding: rem(10) rem(20);
   text-transform: uppercase;
   color: #083c96;
-  margin-bottom: 40px;
+  margin-bottom: rem(40);
   text-align: center;
   font-family: 'robotomedium';
-  font-size: 16px;
+  font-size: rem(16);
 }
 
 .work__link {
   display: block;
-  width: 200px;
+  width: rem(200);
   height: 40px;
-  padding: 10px;
+  padding: rem(10);
   background-color: #004cd1;
   border-radius: 4px;
   margin: 0 auto;
@@ -121,11 +112,10 @@
   &:hover{
     background-color: #0e55d2;
   }
-
 }
 
 .work__icon{
-  width: 20px;
+  width: rem(20);
   height: 20px;
   fill: #ffffff;
   float: left;
@@ -133,21 +123,20 @@
 }
 
 .work__preview {
-  width: 645px;
-  height: 525px;
+  width: 100%;
+  min-height: 525px;
   margin: 0 auto;
-  padding: 43px 0 66px;
-  }
-
-
+  padding: rem(43) 0 rem(66);
+}
 
 .work__pic {
   max-width: 100%;
-  max-height: 100%; }
+  max-height: 100%;
+}
 
 .work__toggle{
   @extend %clearfix;
-  height: 225px;
+  min-height: 225px;
 }
 .toggle {
   height: 225px;
@@ -161,7 +150,6 @@
     content: "";
     display: table;
   }
-
 }
 
 .toggle__link {
@@ -193,10 +181,11 @@
 
 .toggle__pic {
   max-width: 100%;
-  max-height: 100%; }
+  max-height: 100%;
+}
 
 .toggle__icon{
-  width: 43px;
+  width: rem(43);
   height: 27px;
   fill: #ffffff;
   transition: .2s;
@@ -219,23 +208,21 @@
   width: 50%;
   margin: 0 auto;
   color: #ffffff;
-
 }
 
 .opinion{
   width: 50%;
   float: left;
-
   font-family: 'robotoitalic';
-  font-size: 16px;
-
+  font-size: rem(16);
+  padding: rem(10);
 }
 
 .opinion__text{
   background-image: url(../img/quote.png);
   background-repeat: no-repeat;
   background-position: left top;
-  padding-top: 20px;
+  padding-top: rem(20);
 }
 
 .text{
@@ -243,17 +230,16 @@
 }
 
 .opinion__text-author{
-  padding: 30px;
+  padding: rem(30);
   text-align: center;
 }
 
 .opinion__img{
-  width: 70px;
+  width: rem(70);
   height: 70px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
-
 }
 
 .opinion__pic{
@@ -262,34 +248,36 @@
 
 .contact-me{
   position: relative;
-  width: 380px;
+  width: rem(380);
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
-  padding-top: 35px;
+  padding-top: rem(35);
   background: rgba(28, 27, 31, 0.5);
-  margin-bottom: 300px;
+  margin-bottom: rem(300);
 }
 .block-title_color{
   color: #ffffff;
 }
 
 .container{
-  padding: 0 20px;
+  padding: 0 rem(20);
 }
 
 .form__input{
   width: 80%;
-  padding: 17px 19px;
+  padding: rem(17) rem(19);
   outline: none;
   border: none;
   color: #ffffff;
   background: rgba(43, 41, 50, 0.5);
-  margin-bottom: 20px; }
-  .form__input_message{
+  margin-bottom: rem(20);
+
+  &_message{
     height: 140px;
     resize: none;
   }
+}
 
 .buttons{
   display: flex;
@@ -298,7 +286,7 @@
 
 .form__btn{
   width: 50%;
-  padding: 15px 0;
+  padding: rem(15) 0;
   text-decoration: none;
   font-family: 'robotomedium';
   text-align: center;
@@ -312,19 +300,14 @@
     &:hover{
       background: #004cd1;
     }
-
 }
-
-
-
 
 .arrow-up__img{
   width: 100%;
-
 }
 
 .arrow-up__pic{
-  width: 20px;
+  width: rem(20);
   height: 20px;
   fill: #ffffff;
 }

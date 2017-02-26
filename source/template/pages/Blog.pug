@@ -5,10 +5,18 @@ block title
 
 block content
     .wrapper
-        section.section-about
+        section.section-about.blog-title
             include ../common/socials
             include ../common/hamburger
-            include ../common/avatar-all
+            .user
+                .user__pic-container
+                    .user__name
+                        .user__margin
+                        .user__h
+                            img.user_pic(src='assets/img/face.jpg')
+                            img.stars(src='assets/img/stars.png')
+                            p.title Блог
+                            p.desc Статьи, которые я написала
 
         section.section.blog
             svg(height ="150px" width="100%" viewbox="0 0 1000 85" preserveAspectRatio='none').blog__triangle

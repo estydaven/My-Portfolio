@@ -16,14 +16,13 @@ block content
                     polygon(points="0,0 0,110 1000,110")
                 .section-title_fl_left
                     .main-title_about Обо мне
-                    img(src='assets/img/stars3.png')
+                    img(src='assets/img/stars3.png').stars3
                 .about-user
                     .about__pic
                         img(src='assets/img/face2.jpg').about__img
                     .block-title Кто я
                     .block-text
                         p Я веб-разработчик из Гродно, Беларусь. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                    .block-text
                         p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
             .about__col.about__col_right
                 svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
@@ -68,6 +67,7 @@ block content
 
 
         section.section.map#map
-            include ../common/contacts
+            .map_contacts
+                include ../common/contacts
             include ../common/footer
 
