@@ -79,6 +79,10 @@
   margin-right: rem(10);
   float: right;
   padding-top: rem(15);
+
+  @include phones{
+    margin-right: rem(40);
+  }
 }
 
 .hamburger__img{
@@ -479,6 +483,7 @@
   @include phones{
     width: 100%;
     background: #ffffff;
+    height: auto;
   }
 }
 
@@ -489,7 +494,6 @@
     width: 100%;
     float: none;
   }
-
 }
 
 .contacts-list__item{
@@ -497,6 +501,10 @@
   vertical-align: middle;
   width: 100%;
   padding: rem(30);
+
+  @include phones{
+    padding: rem(10);
+  }
 }
 
 .icon__contacts{
@@ -530,7 +538,9 @@
   left: 0;
   width: 100%;
   background: rgba(60, 62, 71, 0.8);
-
+  @include phones{
+    height: 250px;
+  }
 }
 
 .footer-author{
@@ -568,7 +578,9 @@
     margin-top: auto;
     display: block;
   }
-
+  @include phones{
+    margin: auto;
+  }
 }
 
 .page-footer__right{
@@ -591,7 +603,14 @@
     width: auto;
     margin-left: 0;
   }
-
+  @include phones{
+    bottom: auto;
+    margin: auto;
+    width: 100%;
+    float: none;
+    height: 100px;
+    text-align: center;
+  }
 }
 
 .page-footer__center{
@@ -613,8 +632,18 @@
     text-align: center;
     float: none;
     margin: 0 auto;
+    border-bottom: 2px solid #97989d;
+    height: 80px;
+    bottom: auto;
   }
 
+}
+
+.nav{
+  @include phones{
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 .nav-link{
@@ -625,10 +654,7 @@
   float: left;
   margin-left: rem(20);
 
-  @include phones{
 
-  }
-  
   &:hover{
     color: #7e97c2;
   }
@@ -646,6 +672,11 @@
   display: block;
   padding-top: rem(10);
   color: #ccc;
+
+  @include phones{
+    padding-top: 0;
+  }
+
 }
 
 .socials-footer__list{

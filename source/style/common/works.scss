@@ -30,6 +30,11 @@
   line-height: 1;
   color: #ffffff;
   position: absolute;
+
+  @include phones{
+    width: 70%;
+    margin-left: rem(100);
+  }
 }
 
 .stars2{
@@ -56,13 +61,15 @@
 .portfolio{
   @extend %clearfix;
   width: 100%;
-  height: 100vh;
   min-height: 800px;
+  height: 100vh;
 
   @include tablets {
     height: auto;
   }
-
+  @include phones{
+    margin-bottom: rem(-130);
+  }
 }
 
 .column {
@@ -85,7 +92,6 @@
     float: none;
     width: 100%;
     }
-
 }
 
 .work{
@@ -128,6 +134,7 @@
 
 .work__slider{
   height: 100%;
+
 }
 
 .work__icon{
@@ -249,6 +256,9 @@
   @include tablets{
     width: 90%;
   }
+  @include phones{
+    width: 80%;
+  }
 }
 
 .opinion{
@@ -257,6 +267,12 @@
   font-family: 'robotoitalic';
   font-size: rem(16);
   padding: rem(10);
+
+  @include phones{
+    width: 100%;
+    float: none;
+    font-size: rem(20);
+  }
 }
 
 .opinion__text{
@@ -300,6 +316,10 @@
   padding-top: rem(35);
   background: rgba(28, 27, 31, 0.5);
   margin-bottom: rem(300);
+
+  @include phones{
+    width: 100%;
+  }
 }
 .block-title_color{
   color: #ffffff;
