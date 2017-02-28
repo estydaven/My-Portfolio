@@ -4,17 +4,53 @@ block title
     | Welcome
 
 block content
+    .welcome-wrapper
+        .page-wrapper
+            video(src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop" class="bg-video")
+            .contain
+                .contain-welcome
+                    button.c-button.c-button-auth Авторизоваться
+                    .avatar
+                        .flip-container(ontouchstart="this.classList.toggle('hover');")
+                            .flipper
+                                .front
+                                    .l-wrapper-avatar
+                                        include ../common/avatar
+                                        include ../common/socials-welcome
+                                        include ../common/menu-welcom
+                                .back
+                                    .inner-container
+                                        .inner-title АВТОРИЗУЙТЕСЬ
+                                        form.form-inner
+                                            .icon-inner
+                                                svg.icon-svg
+                                                    use(xlink:href='assets/img/sprite.svg#login')
+                                            input.input-inner(name='name', placeholder='Логин', required='')
+                                            .icon-inner
+                                                svg.icon-svg
+                                                    use(xlink:href='assets/img/sprite.svg#password')
+                                            input.input-inner(name='name', placeholder='Пароль', required='')
+                                        .checkbox-inner
+                                            input#one(type='checkbox').checkbox
+                                            label.checkbox-label(for='one')
+                                        .checkbox-question Вы точно не робот?
+                                        .radio-inner
+                                            .radiobox-inner
+                                                input.radio#yes(type='radio', name='answer', value='yes')
+                                                label.radio-label.radio-label_first(for='yes')
+                                            .radiobox-inner
+                                                input.radio#no(type='radio', name='answer', value='no')
+                                                label.radio-label(for='no')
+                                        .navigation__welcome
+                                            nav.navigation
+                                                ul.navigation-list
+                                                    li.navigation-item.navigation-item_line
+                                                        a.navigation-link(href='works.html') На главную
+                                                    li.navigation-item.navigation-item_line
+                                                        a.navigation-link(href='index.html') Войти
 
-        button.c-button.c-button-auth Авторизоваться
-        .avatar
-            .l-wrapper-avatar
-                include ../common/avatar
-                include ../common/socials-welcome
-                include ../common/menu-welcom
-            .l-wrapper-rocks
-                img.rock(src='assets/img/Layer.png')
-            .c-wrapper-avatar__copyright
-                span.autor &copy; Лайковская Валентина | создано с любовью в Loftschool | 2016
-            video.video#video-on-bg(autoplay='', loop='', poster='')
-                source(src='assets/img/night.mp4', type='video/mp4', width='100%', height='600px')
+
+                        .c-wrapper-avatar__copyright
+                            span.autor &copy; Лайковская Валентина | создано с любовью в Loftschool | 2016
+
 
