@@ -186,6 +186,7 @@
   display: flex;
   flex-direction: column;
   background: rgba(30, 46, 74, 0.7);
+  margin: 0 auto;
 }
 
 .inner-title{
@@ -194,6 +195,38 @@
   font-family: 'sansus_webissimoregular';
   padding: rem(10);
   text-align: center;
+}
+
+.form-inner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper-input{
+  width: 90%;
+  border-radius: 4px;
+}
+
+.icon-inner{
+  float: left;
+  background: #f0efe9;
+  width: rem(40);
+  height: 40px;
+  position: relative;
+}
+
+.icon-svg{
+  width: rem(20);
+  height: 20px;
+  fill: #c4cbcd;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
   /*  Flip */

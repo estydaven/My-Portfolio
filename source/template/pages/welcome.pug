@@ -22,14 +22,16 @@ block content
                                     .inner-container
                                         .inner-title АВТОРИЗУЙТЕСЬ
                                         form.form-inner
-                                            .icon-inner
-                                                svg.icon-svg
-                                                    use(xlink:href='assets/img/sprite.svg#login')
-                                            input.input-inner(name='name', placeholder='Логин', required='')
-                                            .icon-inner
-                                                svg.icon-svg
-                                                    use(xlink:href='assets/img/sprite.svg#password')
-                                            input.input-inner(name='name', placeholder='Пароль', required='')
+                                            .wrapper-input
+                                                .icon-inner
+                                                    svg.icon-svg
+                                                        use(xlink:href='assets/img/sprite.svg#login')
+                                                input.input-inner(name='name', placeholder='Логин', required='')
+                                            .wrapper-input
+                                                .icon-inner
+                                                    svg.icon-svg
+                                                        use(xlink:href='assets/img/sprite.svg#password')
+                                                input.input-inner(name='name', placeholder='Пароль', required='')
                                         .checkbox-inner
                                             input#one(type='checkbox').checkbox
                                             label.checkbox-label(for='one')
