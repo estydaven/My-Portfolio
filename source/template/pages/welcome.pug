@@ -5,9 +5,13 @@ block title
 
 block content
     .welcome-wrapper
-        .page-wrapper.parallax#parallax
-            video(src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop").parallax-layer.bg-video
-            .contain.parallax-layer
+        .page-wrapper
+            video(src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop").bg-video
+            .background-welcome.parallax#parallax
+                .parallax-layer
+                .parallax-layer
+                    img.parallax-pic(src='assets/img/Layer.png')
+            .contain
                 .contain-welcome
                     button.c-button.c-button-auth#auth Авторизоваться
                     .avatar
