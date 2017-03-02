@@ -24,6 +24,8 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  left: 0;
+  bottom: 0;
   top: 50%;
 }
 
@@ -77,7 +79,7 @@
 
 .bg-video{
   width: 100%;
-
+  margin-bottom: rem(-200);
   z-index: 5;
 }
 
