@@ -5,11 +5,11 @@ block title
 
 block content
     .welcome-wrapper
-        .page-wrapper
-            video(src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop" class="bg-video")
-            .contain
+        .page-wrapper.parallax#parallax
+            video(src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop").parallax-layer.bg-video
+            .contain.parallax-layer
                 .contain-welcome
-                    button.c-button.c-button-auth Авторизоваться
+                    button.c-button.c-button-auth#auth Авторизоваться
                     .avatar
                         .flip-container(ontouchstart="this.classList.toggle('hover');")
                             .flipper
@@ -34,22 +34,18 @@ block content
                                                 input.input-inner(name='name', placeholder='Пароль', required='')
                                         .checkbox-inner
                                             input#one(type='checkbox').checkbox
-                                            label.checkbox-label(for='one')
+                                            label.checkbox-label(for='one') Я человек
                                         .checkbox-question Вы точно не робот?
                                         .radio-inner
                                             .radiobox-inner
                                                 input.radio#yes(type='radio', name='answer', value='yes')
-                                                label.radio-label.radio-label_first(for='yes')
+                                                label.radio-label.radio-label_first(for='yes') Да
                                             .radiobox-inner
                                                 input.radio#no(type='radio', name='answer', value='no')
-                                                label.radio-label(for='no')
-                                        .navigation__welcome
-                                            nav.navigation
-                                                ul.navigation-list
-                                                    li.navigation-item.navigation-item_line
-                                                        a.navigation-link(href='works.html') На главную
-                                                    li.navigation-item.navigation-item_line
-                                                        a.navigation-link(href='index.html') Войти
+                                                label.radio-label(for='no') Не уверен
+                                        .navigation__inner
+                                            a.inner-link(href='works.html') На главную
+                                            a.inner-link.inner-link_two(href='index.html') Войти
 
 
                         .c-wrapper-avatar__copyright

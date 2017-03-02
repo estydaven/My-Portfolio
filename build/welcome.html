@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
+    <script src=".assets/js/parallax.min.js" defer></script>
     <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="welcome-wrapper">
-      <div class="page-wrapper">
-        <video class="bg-video" src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop"></video>
-        <div class="contain">
+      <div class="page-wrapper parallax" id="parallax">
+        <video class="parallax-layer bg-video" src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop"></video>
+        <div class="contain parallax-layer">
           <div class="contain-welcome">
-            <button class="c-button c-button-auth">Авторизоваться</button>
+            <button class="c-button c-button-auth" id="auth">Авторизоваться</button>
             <div class="avatar">
               <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                 <div class="flipper">
@@ -82,27 +83,20 @@
                       </form>
                       <div class="checkbox-inner">
                         <input class="checkbox" id="one" type="checkbox">
-                        <label class="checkbox-label" for="one"></label>
+                        <label class="checkbox-label" for="one">Я человек</label>
                       </div>
                       <div class="checkbox-question">Вы точно не робот?</div>
                       <div class="radio-inner">
                         <div class="radiobox-inner">
                           <input class="radio" id="yes" type="radio" name="answer" value="yes">
-                          <label class="radio-label radio-label_first" for="yes"></label>
+                          <label class="radio-label radio-label_first" for="yes">Да</label>
                         </div>
                         <div class="radiobox-inner">
                           <input class="radio" id="no" type="radio" name="answer" value="no">
-                          <label class="radio-label" for="no"></label>
+                          <label class="radio-label" for="no">Не уверен</label>
                         </div>
                       </div>
-                      <div class="navigation__welcome">
-                        <nav class="navigation">
-                          <ul class="navigation-list">
-                            <li class="navigation-item navigation-item_line"><a class="navigation-link" href="works.html">На главную</a></li>
-                            <li class="navigation-item navigation-item_line"><a class="navigation-link" href="index.html">Войти</a></li>
-                          </ul>
-                        </nav>
-                      </div>
+                      <div class="navigation__inner"><a class="inner-link" href="works.html">На главную</a><a class="inner-link inner-link_two" href="index.html">Войти</a></div>
                     </div>
                   </div>
                 </div>
