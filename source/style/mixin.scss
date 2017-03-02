@@ -25,6 +25,12 @@
   }
 }
 
+@mixin phone{
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
 @mixin centered($axis: 'both') {
   position: absolute;
   @if ($axis == 'both') {

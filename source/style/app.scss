@@ -8,6 +8,19 @@
 
 html{
   height: 100%;
+
+  @include desktop{
+    font-size: 16px;
+  }
+  @include laptop{
+    font-size: 15px;
+  }
+  @include tablets{
+    font-size: 14px;
+  }
+  @include phones{
+    font-size: 13px;
+  }
 }
 
 body{
