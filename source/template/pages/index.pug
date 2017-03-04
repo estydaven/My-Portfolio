@@ -1,73 +1,58 @@
 extends ../_template
 
 block title
-    | Портфолио
+    | Welcome
 
 block content
-    .wrapper
-        section.section-about
-            include ../common/socials
-            include ../common/hamburger
-            include ../common/avatar-all
-            include ../common/arrow-down
-        section.section.about
-            .about__col.about__col_left
-                svg(viewbox="0 0 1000 110" preserveAspectRatio='none').about__triangle
-                    polygon(points="0,0 0,110 1000,110")
-                .section-title_fl_left
-                    .main-title_about Обо мне
-                    img(src='assets/img/stars3.png').stars3
-                .about-user
-                    .about__pic
-                        img(src='assets/img/face2.jpg').about__img
-                    .block-title Кто я
-                    .block-text
-                        p Я веб-разработчик из Гродно, Беларусь. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                        p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
-            .about__col.about__col_right
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,110 1000,110 1000,0")
-                .skills
-                    .block-title Чем я могу быть вам полезна
-
-                    .skills__text
-                        p Больше всего меня привлекает Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте попорядку.
-
-
-                    -
-                        skills = [
-                        {
-                        title: "Frontend",
-                        technologies: ['HTML5', 'CSS3', 'JavaScript & jQuery']
-                        },
-                        {
-                        title: "Backend",
-                        technologies: ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
-                        },
-                        {
-                        title: "WorkFlow",
-                        technologies: ['Git', 'Gulp', 'Bower']
-                        }
-                        ]
-
-
-                    ul.skills-group
-                        each skill in skills
-                            li.skills-group__item
-                                .skills-group__title= skill.title
-                                ul.skills-list
-                                    each tech in skill.technologies
-                                        li.skills-list__item
-                                            .skill
-                                                svg.skill__circle(viewBox="0 0 100 100")
-                                                    circle(r="40" cx="50%" cy="50%").skills__circle-under
-                                                    circle(r="40" cx="50%" cy="50%").skills__circle-above
-                                                    .skill_title= tech
+    .welcome-wrapper
+        .page-wrapper
+            video(src="assets/img/night.mp4", controls="controls" autoplay="autoplay" loop="loop").bg-video
+            .background-welcome.parallax#parallax
+                .parallax-layer
+                .parallax-layer
+                    img.parallax-pic(src='assets/img/Layer.png')
+            .contain
+                .contain-welcome
+                    button.c-button.c-button-auth#auth Авторизоваться
+                    .avatar
+                        .flip-container(ontouchstart="this.classList.toggle('hover');")
+                            .flipper
+                                .front
+                                    .l-wrapper-avatar
+                                        include ../common/avatar
+                                        include ../common/socials-welcome
+                                        include ../common/menu-welcom
+                                .back
+                                    .inner-container
+                                        .inner-title АВТОРИЗУЙТЕСЬ
+                                        form.form-inner
+                                            .wrapper-input
+                                                .icon-inner
+                                                    svg.icon-svg
+                                                        use(xlink:href='assets/img/sprite.svg#login')
+                                                input.input-inner(name='name', placeholder='Логин', required='')
+                                            .wrapper-input
+                                                .icon-inner
+                                                    svg.icon-svg
+                                                        use(xlink:href='assets/img/sprite.svg#password')
+                                                input.input-inner(name='name', placeholder='Пароль', required='')
+                                        .checkbox-inner
+                                            input#one(type='checkbox').checkbox
+                                            label.checkbox-label(for='one') Я человек
+                                        .checkbox-question Вы точно не робот?
+                                        .radio-inner
+                                            .radiobox-inner
+                                                input.radio#yes(type='radio', name='answer', value='yes')
+                                                label.radio-label.radio-label_first(for='yes') Да
+                                            .radiobox-inner
+                                                input.radio#no(type='radio', name='answer', value='no')
+                                                label.radio-label(for='no') Не уверен
+                                        .navigation__inner
+                                            a.inner-link(href='works.html') На главную
+                                            a.inner-link.inner-link_two(href='index.html') Войти
 
 
+                .c-wrapper-avatar__copyright
+                    span.autor &copy; Лайковская Валентина | создано с любовью в Loftschool | 2016
 
-        section.section.map#map
-            .map_contacts
-                include ../common/contacts
-            include ../common/footer
 

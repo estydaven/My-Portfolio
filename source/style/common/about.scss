@@ -1,16 +1,23 @@
 .section-about{
-  min-height: 800px;
+  height: 100vh;
+  min-height: 610px;
   overflow: hidden;
   position: relative;
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+
 
   @include tablets{
     min-height: 600px;
   }
 
+}
+
+.bg-parallax{
+  position: absolute;
+  top: -15%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 140%;
 }
 
 .socials {
@@ -56,11 +63,25 @@
 .arrow{
   position: absolute;
   z-index: 1;
+  left: 0;
+  right: 0;
+  top: 50%;
   width: 100%;
   text-align: center;
-  margin-top: rem(100);
-  display: inline-block;
+  margin-top: rem(250);
 }
+
+.arrow_ar{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: rem(150);
+}
+
 
 .arrow-down__img{
   width: rem(53);
@@ -79,6 +100,8 @@
   margin-right: rem(10);
   float: right;
   padding-top: rem(15);
+  cursor: pointer;
+
 
   @include phones{
     margin-right: rem(40);
@@ -133,59 +156,71 @@
   transform: translateY(-13px) rotate(-45deg);
 }
 
-.user{
-  top: 0;
-  right: 0;
-  bottom: rem(410);
+.stars-parallax{
+  position: absolute;
   left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: rem(-100);
   text-align: center;
-
-  &:before{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-
+  z-index: 5;
+  min-height: 200px;
 }
 
-.user__pic-container{
-  margin: 0 auto;
+.user__hero-parallax{
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: rem(-100);
+  z-index: 10;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user__name{
-  width: 100%;
-}
-
-.user__h{
   font-size: rem(35);
   color: #ffffff;
   line-height: 1.333;
   margin: 0 auto;
   font-family: 'robotomedium';
-  display: inline-block;
+  text-transform: capitalize;
   text-align: center;
 }
 
-.user_pic{
+.user__desc{
+  font-size: rem(16);
+  font-family: 'robotoregular';
+  color: #ffffff;
+}
+
+.user__pic{
   border-radius: 50%;
-  max-height: 142px;
-  max-width: rem(142);
-  margin-top: rem(40);
-  margin-left: rem(170);
-  z-index: 1;
-  position: absolute;
+  overflow: hidden;
+  height: 142px;
+  width: 142px;
+  z-index: 5;
+}
+
+.user__pic-item{
+  width: 100%;
 }
 
 .stars{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
   width: rem(470);
-  left: rem(445);
-  top: rem(20);
-}
-
-.desc{
-  font-size: rem(16);
-  font-family: 'robotoregular';
+  height: 275px;
+  opacity: 0.3;
+  display: inline-block;
 }
 
 .about{

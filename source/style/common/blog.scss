@@ -138,6 +138,13 @@
 
 .code-viewer{
   width: 100%;
+
+  &:before{
+    content: "Code:";
+    display: block;
+    font-size: rem(12);
+    background: #ffffff;
+  }
 }
 
 .code__pic{

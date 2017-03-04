@@ -12,13 +12,12 @@
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
-    <script src=".assets/js/parallax.min.js" defer></script>
     <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <section class="section-about blog-title">
+      <section class="section-about about-parallax">
         <div class="socials">
           <ul class="socials-list">
             <li class="socials__item"><a class="socials__link_vk" href="https://vk.com/id13401205" target="_blank">
@@ -36,16 +35,12 @@
           </ul>
         </div>
         <div class="hamburger ham" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
-        <div class="user">
-          <div class="user__pic-container">
-            <div class="user__name">
-              <div class="user__margin"></div>
-              <div class="user__h"><img class="user_pic" src="assets/img/face.jpg"><img class="stars" src="assets/img/stars.png">
-                <p class="title">Блог</p>
-                <p class="desc">Статьи, которые я написала</p>
-              </div>
-            </div>
-          </div>
+        <div class="bg-parallax"><img src="assets/img/parallax.jpg"></div>
+        <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
+        <div class="user__hero-parallax user">
+          <div class="user__pic"><img class="user__pic-item" src="assets/img/face.jpg"></div>
+          <div class="user__name">БЛОГ</div>
+          <div class="user__desc">Статьи, которые я написала</div>
         </div>
       </section>
       <section class="section blog">
@@ -74,7 +69,9 @@
                   <div class="post__content">
                     <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
                     <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
-                    <pre class="code-viewer"><img class="code__pic" src="assets/img/code.png"></pre>
+                    <pre class="code-viewer"><code><div id="foo">
+<div id="bar">test</div>
+</div></code></pre>
                     <div class="post-line"></div>
                   </div>
                 </article>

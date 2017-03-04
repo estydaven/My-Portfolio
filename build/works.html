@@ -12,13 +12,12 @@
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
-    <script src=".assets/js/parallax.min.js" defer></script>
     <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <section class="section-works">
+      <section class="section-about about-parallax">
         <div class="socials">
           <ul class="socials-list">
             <li class="socials__item"><a class="socials__link_vk" href="https://vk.com/id13401205" target="_blank">
@@ -36,21 +35,18 @@
           </ul>
         </div>
         <div class="hamburger ham" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
-        <div class="user">
-          <div class="user__pic-container">
-            <div class="user__name">
-              <div class="user__margin"></div>
-              <div class="user__h"><img class="user_pic" src="assets/img/face.jpg"><img class="stars" src="assets/img/stars.png">
-                <p>Лайковская Валентина</p>
-                <p class="desc">Личный сайт веб разработчика</p>
-              </div>
-            </div>
+        <div class="bg-parallax"><img src="assets/img/parallax.jpg"></div>
+        <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
+        <div class="user__hero-parallax user">
+          <div class="user__pic"><img class="user__pic-item" src="assets/img/face.jpg"></div>
+          <div class="user__name">Лайковская Валентина</div>
+          <div class="user__desc">Личный сайт веб разработчика
+            <div class="arrow_ar"><a class="arrow-down__img" href="" target="_blank">
+                <svg class="arrow-down__pic">
+                  <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                </svg></a></div>
           </div>
         </div>
-        <div class="arrow arrow_ar"><a class="arrow-down__img" href="" target="_blank">
-            <svg class="arrow-down__pic">
-              <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-            </svg></a></div>
         <section class="works__col">
           <svg class="triangle" height="150px" width="100%" viewbox="0 0 1000 85" preserveaspectratio="none">
             <polygon class="left" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>

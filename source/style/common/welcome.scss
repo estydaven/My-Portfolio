@@ -1,7 +1,7 @@
 .welcome-wrapper{
   overflow: hidden;
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
   min-width: rem(300);
   width: 100%;
 }
@@ -22,7 +22,7 @@
 }
 
 .parallax-layer{
-  height: 100%;
+  height: 50vh;
   width: 100%;
   position: absolute;
   left: 0;
@@ -45,8 +45,8 @@
 
 .contain-welcome{
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
 }
@@ -75,40 +75,42 @@
   @include phones{
     right: 50%;
     transform: translateX(50%);
-    margin-top: rem(20);
+    top: rem(50);
   }
 }
 
 .bg-video{
   min-width: 100%;
-  margin-bottom: rem(-200);
+  min-height: 100%;
+  margin-bottom: rem(-400);
   z-index: 5;
 }
 
 .avatar{
   width: 25%;
-  margin: 0 auto;
-  margin-top: rem(150);
-  position: relative;
+
+  @include tablets{
+    margin-right: rem(150);
+  }
 
   @include phones{
-
+    margin-right: rem(300);
+    margin-top: rem(50);
   }
-  @include phone{
 
-
-  }
 }
 
 .l-wrapper-avatar{
   width: 380px;
   height: 390px;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   z-index: 1;
   background: rgba(30, 46, 74, 0.7);
+
+  @include phone{
+    width: 320px;
+    height: 450px;
+  }
 }
 
 .user-welcome{
@@ -146,15 +148,12 @@
   color: #ffffff;
 }
 
-
-
 .c-wrapper-avatar__copyright {
   width: 100%;
   text-align: center;
   color: #e1e2e5;
   position: relative;
   z-index: 1;
-
   font-size: 16px;
   font-family: 'robotolight';
 }
@@ -164,6 +163,12 @@
   position: absolute;
   top: 250px;
   left: 100px;
+
+  @include phone{
+    width: 100%;
+    left: 0;
+    top: rem(280);
+  }
 }
 
 .socials-welcome__item{
@@ -190,15 +195,28 @@
   left: 0;
   right: 0;
   background-color: #7296d3;
+
+  @include phone{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+  }
 }
 
 .navigation-list{
   display: inline-block;
-}
+
+  }
 
 .navigation-item {
   display: inline-block;
+  @include phone{
+    flex: 1;
+    align-items: stretch;
+    width: 32.6%;
 
+  }
 }
 .navigation-link{
   display: inline-block;
@@ -209,6 +227,10 @@
   font-family: 'robotomedium';
   font-size: 16px;
   transition: .3s;
+
+  @include phone{
+    padding: 0;
+  }
 
   &:hover{
     background-color: #083c96;
@@ -318,7 +340,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {
     background-size: contain;
     position: absolute;
     top: 50%;
-    right: 89%;
+    right: 89.5%;
     transform: translate(-50%, -50%);
     display: none;
     z-index: 2;
@@ -373,7 +395,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {
     background-color: #0548be;
     position: absolute;
     top: 50%;
-    left: rem(4.5);
+    left: rem(4);
     transform: scale(0);
     transition: .3s;
     margin-top: rem(-3.3);
