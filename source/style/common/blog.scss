@@ -36,9 +36,12 @@
   font-family: 'robotoregular';
   transition: .5s;
   position: relative;
+  display: flex;
+  height: 100%;
+  @extend %clearfix;
 }
 
-.sidebar {
+.blog__tabs {
   width: 22.77778%;
   text-align: right;
   float: left;
@@ -46,13 +49,15 @@
 
   @include tablets{
     float: none;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 100%;
-    height: 100%;
+    left: 0;
+    height: 100vh;
     width: rem(250);
-    z-index: 100;
+    z-index: 1;
     background-color: #0e55d2;
+    transition: all 1s;
+    transform: translateX(-100%);
   }
   @include phones{
     &:after{
@@ -61,6 +66,9 @@
   }
 }
 
+.blog__tabs-active{
+  transform: translateX(0);
+}
 
 .articles {
   width: 72.77778%;
@@ -74,17 +82,17 @@
 
 }
 
-
-
-.blog-menu__item {
+.blog__tabs-list {
   margin-bottom: rem(10);
   &:last-child{
     margin-bottom: 0;
   }
 }
 
-.blog-menu__link {
+.blog__tabs-item {
   display: inline-block;
+  cursor: pointer;
+  list-style: none;
   padding: rem(14) rem(17);
   transition: .5s all ease-out;
   border-right: 3px solid transparent;
@@ -95,10 +103,6 @@
     border-right-color: #083c96;
     color: #083c96;
   }
-  &_active{
-    border-right-color: #083c96;
-    color: #083c96;
-  }
 
   @include tablets{
     color: rgba(#fff, 0.7);
@@ -106,22 +110,30 @@
     &:hover{
       color: #ffffff;
     }
-    &:active{
-      color: #ffffff;
-      font-family: 'robotobold';
-      font-size: rem(16);
-    }
+
   }
 }
 
+.blog__item-active{
+  border-right-color: #083c96;
+  color: #083c96;
 
+  @include tablets{
+    color: #ffffff;
+    font-family: 'robotobold';
+    font-size: rem(16);
+  }
+}
+
+.blog__tabs-link{
+  text-decoration: none;
+}
 
 .sidemenu-btn{
   display: block;
   width: rem(60);
   height: 60px;
   background-color: #0e55d2;
-  box-shadow: 0 0 3px 3px rgba(#000, .2);
   border-radius: 50%;
   position: absolute;
   right: rem(-15);

@@ -17,22 +17,22 @@ block content
                     img.user__pic-item(src='assets/img/face.jpg')
                 .user__name БЛОГ
                 .user__desc Статьи, которые я написала
+            include ../common/arrow-down
 
         section.blog
             svg(height ="150px" width="100%" viewbox="0 0 1000 85" preserveAspectRatio='none').blog__triangle
                 polygon(points="0,0 0,86 500.8,86 500.8,75.5").left__triangle
                 polygon(points="1000,0 1000,86 500,86 500,75.5").right__triangle
             .blog-container
-                aside.sidebar
-                    nav.blog-menu
-                        ul.blog-menu__list
-                            li.blog-menu__item
-                                a.blog-menu__link.blog-menu__link_active(href='#post1') Самое важное в sass
-                            li.blog-menu__item
-                                a.blog-menu__link(href='#post2') Приёмы в вёрстке, без которых не обходится ни один сайт
-                            li.blog-menu__item
-                                a.blog-menu__link(href='#post3') Статья
-                    button.sidemenu-btn.sidemenu-btn_disabled
+                .blog__tabs
+                    ul.blog__tabs-list
+                        li.blog__tabs-item.blog__item-active
+                            a.blog__tabs-link(href='#post1') Самое важное в sass
+                        li.blog__tabs-item
+                            a.blog__tabs-link(href='#post2') Приёмы в вёрстке, без которых не обходится ни один сайт
+                        li.blog__tabs-item
+                            a.blog__tabs-link(href='#post3') Статья
+                    .sidemenu-btn.sidemenu-btn_disabled
                 section.articles
                     ul.articles__list
                         li.articles__item#post1

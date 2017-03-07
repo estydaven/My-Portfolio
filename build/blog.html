@@ -54,6 +54,10 @@
           <div class="user__name">БЛОГ</div>
           <div class="user__desc">Статьи, которые я написала</div>
         </div>
+        <div class="arrow arrow_ar"><a class="arrow-down__img" href="" target="_blank">
+            <svg class="arrow-down__pic">
+              <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+            </svg></a></div>
       </section>
       <section class="blog">
         <svg class="blog__triangle" height="150px" width="100%" viewbox="0 0 1000 85" preserveAspectRatio="none">
@@ -61,16 +65,14 @@
           <polygon class="right__triangle" points="1000,0 1000,86 500,86 500,75.5"></polygon>
         </svg>
         <div class="blog-container">
-          <aside class="sidebar">
-            <nav class="blog-menu">
-              <ul class="blog-menu__list">
-                <li class="blog-menu__item"><a class="blog-menu__link blog-menu__link_active" href="#post1">Самое важное в sass</a></li>
-                <li class="blog-menu__item"><a class="blog-menu__link" href="#post2">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-                <li class="blog-menu__item"><a class="blog-menu__link" href="#post3">Статья</a></li>
-              </ul>
-            </nav>
-            <button class="sidemenu-btn sidemenu-btn_disabled"></button>
-          </aside>
+          <div class="blog__tabs">
+            <ul class="blog__tabs-list">
+              <li class="blog__tabs-item blog__item-active"><a class="blog__tabs-link" href="#post1">Самое важное в sass</a></li>
+              <li class="blog__tabs-item"><a class="blog__tabs-link" href="#post2">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+              <li class="blog__tabs-item"><a class="blog__tabs-link" href="#post3">Статья</a></li>
+            </ul>
+            <div class="sidemenu-btn sidemenu-btn_disabled"></div>
+          </div>
           <section class="articles">
             <ul class="articles__list">
               <li class="articles__item" id="post1">

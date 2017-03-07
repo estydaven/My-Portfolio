@@ -1,3 +1,7 @@
+var preload = document.querySelector('.preloader');
+
+if (preload !== null) preloader.init();
+
 window.onload = function () {
   console.log('app is ready');
 
@@ -40,14 +44,7 @@ window.onload = function () {
       }
   };
 
-    //Меню блога
-    var sideMenu = document.querySelector('.sidemenu-btn');
 
-    if (sideMenu !== null) {
-        sideMenu.onclick = function () {
-            menuBlog.toggle();
-        }
-    }
     // Скролл на один экран вниз
     var scrollDown = document.querySelector('.arrow');
 

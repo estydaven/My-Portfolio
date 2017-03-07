@@ -1,21 +1,21 @@
-var menuBlog = (function () {
-    var sidebar = document.querySelector('.blog-container');
+var tabs = (function () {
 
-    var _openMenu = function () {
-      sidebar.classList.add('blog-container_shift_right');
-    };
-    var _closeMenu = function () {
-      sidebar.classList.remove('blog-container_shift_right');
+    var _toggle = function () {
+        $('.blog__tabs').toggleClass("blog__tabs-active");
     };
 
-    return {
-        toggle: function () {
-            if (!sidebar.classList.contains('blog-container_shift_right')) {
-                _openMenu();
-            }
-            else {
-                _closeMenu();
-            }
-        }
+
+    return{
+        init: _toggle
     }
 })();
+
+var tabsCheck = $('.blog__tabs');
+
+if(tabsCheck !== null){
+    var tabsBtn = $('.sidemenu-btn');
+
+    tabsBtn.click(function () {
+        tabs.init();
+    })
+}
