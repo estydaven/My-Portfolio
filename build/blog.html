@@ -9,6 +9,8 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <title>Блог
     </title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
@@ -17,7 +19,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="section-about about-parallax">
+      <section class="section-about">
         <div class="socials">
           <ul class="socials-list">
             <li class="socials__item"><a class="socials__link_vk" href="https://vk.com/id13401205" target="_blank">
@@ -34,7 +36,17 @@
                 </svg></a></li>
           </ul>
         </div>
-        <div class="hamburger ham" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <div class="button_container" id="toggle"><span class="line top"></span><span class="line middle"></span><span class="line bottom"></span></div>
+        <div class="overlay overlay_disabled" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li><a href="works.html">МОИ РАБОТЫ</a></li>
+              <li><a href="about.html">ОБО МНЕ</a></li>
+              <li><a href="blog.html">БЛОГ</a></li>
+              <li><a href="index.html">АВТОРИЗАЦИЯ</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="bg-parallax"><img src="assets/img/parallax.jpg"></div>
         <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
         <div class="user__hero-parallax user">
@@ -43,7 +55,7 @@
           <div class="user__desc">Статьи, которые я написала</div>
         </div>
       </section>
-      <section class="section blog">
+      <section class="blog">
         <svg class="blog__triangle" height="150px" width="100%" viewbox="0 0 1000 85" preserveAspectRatio="none">
           <polygon class="left__triangle" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
           <polygon class="right__triangle" points="1000,0 1000,86 500,86 500,75.5"></polygon>
@@ -53,14 +65,15 @@
             <nav class="blog-menu">
               <ul class="blog-menu__list">
                 <li class="blog-menu__item"><a class="blog-menu__link blog-menu__link_active" href="#post1">Самое важное в sass</a></li>
-                <li class="blog-menu__item"><a class="blog-menu__link" href="#post">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-                <li class="blog-menu__item"><a class="blog-menu__link" href="#post">Статья</a></li>
+                <li class="blog-menu__item"><a class="blog-menu__link" href="#post2">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+                <li class="blog-menu__item"><a class="blog-menu__link" href="#post3">Статья</a></li>
               </ul>
             </nav>
+            <button class="sidemenu-btn sidemenu-btn_disabled"></button>
           </aside>
           <section class="articles">
             <ul class="articles__list">
-              <li class="articles__item">
+              <li class="articles__item" id="post1">
                 <article class="post">
                   <header class="post__head">
                     <div class="post__title">Самое важное в sass</div>
@@ -68,15 +81,15 @@
                   </header>
                   <div class="post__content">
                     <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
-                    <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
-                    <pre class="code-viewer"><code><div id="foo">
-<div id="bar">test</div>
-</div></code></pre>
+                    <p>Не стоит, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                    <pre class="code-viewer"><code>&lt;div id="foo"&gt;
+&lt;div id="bar"&gt;test&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                     <div class="post-line"></div>
                   </div>
                 </article>
               </li>
-              <li class="articles__item">
+              <li class="articles__item" id="post2">
                 <article class="post">
                   <header class="post__head">
                     <div class="post__title">Приёмы в вёрстке, без которых не обходится ни один сайт</div>
@@ -89,7 +102,7 @@
                   </div>
                 </article>
               </li>
-              <li class="articles__item">
+              <li class="articles__item" id="post3">
                 <article class="post">
                   <header class="post__head">
                     <div class="post__title">Статья</div>
@@ -114,9 +127,9 @@
             <nav class="nav">
               <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="works.html">Мои работы</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Обо мне</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Обо мне</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
-                <li class="nav-item_current"><a class="nav-link" href="#">Авторизация</a></li>
+                <li class="nav-item_current"><a class="nav-link" href="index.html">Авторизация</a></li>
               </ul>
             </nav>
             <div class="socials-footer">

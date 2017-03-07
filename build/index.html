@@ -9,6 +9,8 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <title>Welcome
     </title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
@@ -21,13 +23,13 @@
         <video class="bg-video" src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop"></video>
         <div class="background-welcome parallax" id="parallax">
           <div class="parallax-layer"></div>
-          <div class="parallax-layer"><img class="parallax-pic" src="assets/img/Layer.png"></div>
+          <div class="parallax-layer parallax-layer_img"></div>
         </div>
         <div class="contain">
           <div class="contain-welcome">
             <button class="c-button c-button-auth" id="auth">Авторизоваться</button>
             <div class="avatar">
-              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flip-container">
                 <div class="flipper">
                   <div class="front">
                     <div class="l-wrapper-avatar">
@@ -99,7 +101,7 @@
                           <label class="radio-label" for="no">Не уверен</label>
                         </div>
                       </div>
-                      <div class="navigation__inner"><a class="inner-link" href="works.html">На главную</a><a class="inner-link inner-link_two" href="index.html">Войти</a></div>
+                      <div class="navigation__inner"><a class="inner-link return-btn" href="index.html">На главную</a><a class="inner-link inner-link_two" href="index.html">Войти</a></div>
                     </div>
                   </div>
                 </div>

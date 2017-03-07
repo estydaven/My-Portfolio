@@ -5,13 +5,13 @@ block title
 
 block content
     .wrapper
-        section.section-about.about-parallax
+        section.section-about
             include ../common/socials
             include ../common/hamburger
             .bg-parallax
-                img(src='assets/img/parallax.jpg')
+                img.parallax-img(src='assets/img/parallax.jpg')
             include ../common/avatar-all
-                include ../common/arrow-down
+            include ../common/arrow-down
         section.section.about
             .about__col.about__col_left
                 svg(viewbox="0 0 1000 110" preserveAspectRatio='none').about__triangle
@@ -40,16 +40,60 @@ block content
                         skills = [
                         {
                         title: "Frontend",
-                        technologies: ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                        technologies: [
+                        {
+                        name: "HTML5",
+                        percent: 75
+                        },
+                        {
+                        name: "CSS3",
+                        percent: 60
+                        },
+                        {
+                        name: "JavaScript & jQuery",
+                        percent: 25
+                        }
+                        ]
                         },
                         {
                         title: "Backend",
-                        technologies: ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+                        technologies: [
+                        {
+                        name: "PHP",
+                        percent: 25
+                        },
+                        {
+                        name: "mySQL",
+                        percent: 30
+                        },
+                        {
+                        name: "Node.js & npm",
+                        percent: 5
+                        },
+                        {
+                        name: "Mongo.db",
+                        percent: 5
+                        }
+                        ]
                         },
                         {
                         title: "WorkFlow",
-                        technologies: ['Git', 'Gulp', 'Bower']
+                        technologies: [
+                        {
+                        name: "Git",
+                        percent: 50
+                        },
+                        {
+                        name: "Gulp",
+                        percent: 70
+                        },
+                        {
+                        name: "Bower",
+                        percent: 20
                         }
+                        ]
+                        }
+
                         ]
 
 
@@ -60,16 +104,16 @@ block content
                                 ul.skills-list
                                     each tech in skill.technologies
                                         li.skills-list__item
-                                            .skill
+                                            .skill(data-percent= tech.percent)
                                                 svg.skill__circle(viewBox="0 0 100 100")
-                                                    circle(r="40" cx="50%" cy="50%").skills__circle-under
-                                                    circle(r="40" cx="50%" cy="50%").skills__circle-above
-                                                    .skill_title= tech
+                                                    circle(r="40" cx="50" cy="50" transform="rotate(-90 50 50)").skills__circle-under
+                                                    circle(r="40" cx="50" cy="50" transform="rotate(-90 50 50)").skills__circle-above
+                                                    .skill_title= tech.name
 
 
 
-        section.section.map#map
-            .map_contacts
-                include ../common/contacts
+        section.l-contacts
+            #map.map
+            include ../common/contacts
             include ../common/footer
-
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBB6rM-vv-YQ8hbju8XpPvHfbYfPDeCrtU&callback=initMap' async defer)

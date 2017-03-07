@@ -9,6 +9,8 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <title>Портфолио
     </title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
@@ -17,7 +19,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="section-about about-parallax">
+      <section class="section-about">
         <div class="socials">
           <ul class="socials-list">
             <li class="socials__item"><a class="socials__link_vk" href="https://vk.com/id13401205" target="_blank">
@@ -34,19 +36,28 @@
                 </svg></a></li>
           </ul>
         </div>
-        <div class="hamburger ham" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
-        <div class="bg-parallax"><img src="assets/img/parallax.jpg"></div>
+        <div class="button_container" id="toggle"><span class="line top"></span><span class="line middle"></span><span class="line bottom"></span></div>
+        <div class="overlay overlay_disabled" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li><a href="works.html">МОИ РАБОТЫ</a></li>
+              <li><a href="about.html">ОБО МНЕ</a></li>
+              <li><a href="blog.html">БЛОГ</a></li>
+              <li><a href="index.html">АВТОРИЗАЦИЯ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bg-parallax"><img class="parallax-img" src="assets/img/parallax.jpg"></div>
         <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
         <div class="user__hero-parallax user">
           <div class="user__pic"><img class="user__pic-item" src="assets/img/face.jpg"></div>
           <div class="user__name">Лайковская Валентина</div>
-          <div class="user__desc">Личный сайт веб разработчика
-            <div class="arrow arrow_ar"><a class="arrow-down__img" href="" target="_blank">
-                <svg class="arrow-down__pic">
-                  <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-                </svg></a></div>
-          </div>
+          <div class="user__desc">Личный сайт веб разработчика</div>
         </div>
+        <div class="arrow arrow_ar"><a class="arrow-down__img" href="" target="_blank">
+            <svg class="arrow-down__pic">
+              <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+            </svg></a></div>
       </section>
       <section class="section about">
         <div class="about__col about__col_left">
@@ -79,28 +90,28 @@
                 <div class="skills-group__title">Frontend</div>
                 <ul class="skills-list">
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="75">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">HTML5</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="60">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">CSS3</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="25">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">JavaScript &amp; jQuery</div>
                       </svg>
                     </div>
@@ -111,37 +122,37 @@
                 <div class="skills-group__title">Backend</div>
                 <ul class="skills-list">
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="25">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">PHP</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="30">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">mySQL</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="5">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">Node.js &amp; npm</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="5">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">Mongo.db</div>
                       </svg>
                     </div>
@@ -152,28 +163,28 @@
                 <div class="skills-group__title">WorkFlow</div>
                 <ul class="skills-list">
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="50">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">Git</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="70">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">Gulp</div>
                       </svg>
                     </div>
                   </li>
                   <li class="skills-list__item">
-                    <div class="skill">
+                    <div class="skill" data-percent="20">
                       <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50%" cy="50%"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50%" cy="50%"></circle>
+                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
+                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
                         <div class="skill_title">Bower</div>
                       </svg>
                     </div>
@@ -184,27 +195,26 @@
           </div>
         </div>
       </section>
-      <section class="section map" id="map">
-        <div class="map_contacts">
-          <div class="contacts">
-            <div class="block-title">Контакты</div>
-            <ul class="contacts-list">
-              <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/skype.png">
-                <div class="contacts-item">estydaven</div>
-              </li>
-              <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/phone.png">
-                <div class="contacts-item">+375(29)5823133</div>
-              </li>
-            </ul>
-            <ul class="contacts-list">
-              <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/envelope.png">
-                <div class="contacts-item">esetnod1111@gmail.com</div>
-              </li>
-              <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/map-contact.png">
-                <div class="contacts-item">г.Гродно, ул.Репина 31</div>
-              </li>
-            </ul>
-          </div>
+      <section class="l-contacts">
+        <div class="map" id="map"></div>
+        <div class="contacts">
+          <div class="block-title">Контакты</div>
+          <ul class="contacts-list">
+            <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/skype.png">
+              <div class="contacts-item">estydaven</div>
+            </li>
+            <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/phone.png">
+              <div class="contacts-item">+375(29)5823133</div>
+            </li>
+          </ul>
+          <ul class="contacts-list">
+            <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/envelope.png">
+              <div class="contacts-item">esetnod1111@gmail.com</div>
+            </li>
+            <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/map-contact.png">
+              <div class="contacts-item">г.Гродно, ул.Репина 31</div>
+            </li>
+          </ul>
         </div>
         <footer class="page-footer">
           <div class="page-footer__left">
@@ -214,9 +224,9 @@
             <nav class="nav">
               <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="works.html">Мои работы</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Обо мне</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Обо мне</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
-                <li class="nav-item_current"><a class="nav-link" href="#">Авторизация</a></li>
+                <li class="nav-item_current"><a class="nav-link" href="index.html">Авторизация</a></li>
               </ul>
             </nav>
             <div class="socials-footer">
@@ -248,5 +258,6 @@
         </div>
       </section>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB6rM-vv-YQ8hbju8XpPvHfbYfPDeCrtU&amp;callback=initMap" async defer></script>
   </body>
 </html>

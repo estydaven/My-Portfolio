@@ -1,0 +1,151 @@
+.button_container{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  z-index: 50;
+  transition: opacity .25s ease;
+  cursor: pointer;
+
+  @include phones{
+    margin-right: rem(40);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &.active {
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: #ffffff;
+    }
+    .middle {
+      opacity: 0;
+      background: #ffffff;
+    }
+
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: #ffffff;
+    }
+  }
+}
+
+.line {
+  background: #ffffff;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:  all .35s ease;
+
+  &:nth-of-type(2) {
+    top: 11px;
+  }
+
+  &:nth-of-type(3) {
+    top: 22px;
+  }
+}
+
+.overlay{
+  position: fixed;
+  background: rgba(53, 79, 122, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  z-index: 30;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+
+  &.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%;
+
+    li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'sansus_webissimoregular';
+    font-weight: 400;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+
+    li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+
+      a {
+        display: block;
+        position: relative;
+        color: #ffffff;
+        text-decoration: none;
+        overflow: hidden;
+
+        &:hover:after,
+        &:focus:after,
+        &:active:after {
+          width: 100%;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: #ffffff;
+          transition: .35s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

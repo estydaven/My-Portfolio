@@ -9,6 +9,8 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <title>Мои работы
     </title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
     <script src="./assets/js/foundation.js" defer></script>
@@ -34,19 +36,28 @@
                 </svg></a></li>
           </ul>
         </div>
-        <div class="hamburger ham" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+        <div class="button_container" id="toggle"><span class="line top"></span><span class="line middle"></span><span class="line bottom"></span></div>
+        <div class="overlay overlay_disabled" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li><a href="works.html">МОИ РАБОТЫ</a></li>
+              <li><a href="about.html">ОБО МНЕ</a></li>
+              <li><a href="blog.html">БЛОГ</a></li>
+              <li><a href="index.html">АВТОРИЗАЦИЯ</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="bg-parallax"><img src="assets/img/parallax.jpg"></div>
         <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
         <div class="user__hero-parallax user">
           <div class="user__pic"><img class="user__pic-item" src="assets/img/face.jpg"></div>
           <div class="user__name">Лайковская Валентина</div>
-          <div class="user__desc">Личный сайт веб разработчика
-            <div class="arrow_ar"><a class="arrow-down__img" href="" target="_blank">
-                <svg class="arrow-down__pic">
-                  <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-                </svg></a></div>
-          </div>
+          <div class="user__desc">Личный сайт веб разработчика</div>
         </div>
+        <div class="arrow arrow_ar"><a class="arrow-down__img" href="" target="_blank">
+            <svg class="arrow-down__pic">
+              <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+            </svg></a></div>
         <section class="works__col">
           <svg class="triangle" height="150px" width="100%" viewbox="0 0 1000 85" preserveaspectratio="none">
             <polygon class="left" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
@@ -133,9 +144,9 @@
             <nav class="nav">
               <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="works.html">Мои работы</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Обо мне</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Обо мне</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
-                <li class="nav-item_current"><a class="nav-link" href="#">Авторизация</a></li>
+                <li class="nav-item_current"><a class="nav-link" href="index.html">Авторизация</a></li>
               </ul>
             </nav>
             <div class="socials-footer">

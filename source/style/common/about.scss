@@ -20,6 +20,11 @@
   height: 140%;
 }
 
+.parallax-img{
+  width: 100%;
+  height: 100%;
+}
+
 .socials {
   margin-left: rem(20);
   display: inline-block;
@@ -96,65 +101,7 @@
   fill: #ffffff;
 }
 
-.hamburger{
-  margin-right: rem(10);
-  float: right;
-  padding-top: rem(15);
-  cursor: pointer;
 
-
-  @include phones{
-    margin-right: rem(40);
-  }
-}
-
-.line{
-  width: rem(50);
-  height: 5px;
-  background: #ecf0f1;
-  display: block;
-  margin: rem(8) auto;
-  transition: all 0.3s ease-in-out;
-
-  &:hover{
-    cursor: pointer;
-  }
-}
-
-#hamburger{
-  transition: all 0.3s ease-in-out;
-}
-
-#hamburger.is-active{
-  animation: smallbig 0.6s forwards;
-}
-
-@keyframes smallbig {
-  0%, 100%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(0);
-  }
-}
-
-#hamburger.is-active .line:nth-child(1),
-#hamburger.is-active .line:nth-child(2),
-#hamburger.is-active .line:nth-child(3){
-  transition-delay: 0.2s;
-}
-
-#hamburger.is-active .line:nth-child(2){
-  opacity: 0;
-}
-
-#hamburger.is-active .line:nth-child(1){
-  transform: translateY(13px) rotate(45deg);
-}
-
-#hamburger.is-active .line:nth-child(3){
-  transform: translateY(-13px) rotate(-45deg);
-}
 
 .stars-parallax{
   position: absolute;
@@ -283,7 +230,7 @@
 }
 
 .about-user{
-  width: 60%;
+  width: 50%;
   float: right;
 
   @include desktop{
@@ -301,7 +248,7 @@
   font-size: rem(63);
   text-align: center;
   float: left;
-  width: 40%;
+  width: 50%;
   position: relative;
 
   @include desktop{
@@ -311,10 +258,9 @@
 }
 
 .main-title_about{
-  text-align: center;
-  display: inline-block;
-  float: left;
-  margin-left: rem(32);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   font-family: sansus_webissimoregular;
   font-size: rem(63);
@@ -335,6 +281,7 @@
 
 .stars3{
   width: 100%;
+
   @include desktop{
     width: auto;
   }
@@ -432,7 +379,6 @@
 }
 
 .skills-group__item{
-  padding: rem(20);
   width: 100%;
 }
 
@@ -464,7 +410,6 @@
 }
 
 .skill{
-  width: rem(110);
   height: 110px;
   margin-bottom: rem(30);
   position: relative;
@@ -494,7 +439,6 @@
 
 .skills__circle-under{
   stroke: #dfdcd5;
-
 }
 
 .skills__circle-above{
@@ -512,51 +456,38 @@
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 
-  @include phones{
+}
 
-  }
-
+.l-contacts {
+  position: relative;
+  height: 100vh;
 }
 
 .map{
+  height: 120%;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  margin-bottom: rem(-200);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  background-image: url(../img/map.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @include phones{
-    display: block;
-  }
-
 }
 
-.map_contacts{
-  margin-bottom: rem(100);
-  height: auto;
-}
 
 .contacts{
+  @include centered();
+  top: 35%;
   width: rem(580);
-  height: 40vh;
+  text-align: center;
   background: rgba(255, 255, 255, 0.8);
 
-  @include desktop{
-    width: rem(580);
-  }
 
-  @include tablets{
-    height: auto;
-    width: rem(350);
-  }
   @include phones{
     width: 100%;
     background: #ffffff;
-    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
   }
 }
 
@@ -736,8 +667,9 @@
 
 .socials-footer{
   float: left;
-  width: rem(600);
-}
+  margin-right: rem(100);
+
+ }
 
 .socials-footer__link{
   width: rem(53);

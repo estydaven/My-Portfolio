@@ -9,13 +9,12 @@ block content
             video(src="assets/img/night.mp4", controls="controls" autoplay="autoplay" loop="loop").bg-video
             .background-welcome.parallax#parallax
                 .parallax-layer
-                .parallax-layer
-                    img.parallax-pic(src='assets/img/Layer.png')
+                .parallax-layer.parallax-layer_img
             .contain
                 .contain-welcome
                     button.c-button.c-button-auth#auth Авторизоваться
                     .avatar
-                        .flip-container(ontouchstart="this.classList.toggle('hover');")
+                        .flip-container
                             .flipper
                                 .front
                                     .l-wrapper-avatar
@@ -48,7 +47,7 @@ block content
                                                 input.radio#no(type='radio', name='answer', value='no')
                                                 label.radio-label(for='no') Не уверен
                                         .navigation__inner
-                                            a.inner-link(href='works.html') На главную
+                                            a.inner-link.return-btn(href='index.html') На главную
                                             a.inner-link.inner-link_two(href='index.html') Войти
 
 
