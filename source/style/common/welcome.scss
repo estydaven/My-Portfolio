@@ -46,7 +46,6 @@
     animation: spin 1.5s linear infinite;
   }
   &:after{
-    
     animation: spin 3s linear infinite;
   }
 }
@@ -171,7 +170,7 @@
 
   @include phone{
     width: 320px;
-    height: 450px;
+    height: 400px;
   }
 }
 
@@ -220,6 +219,12 @@
   font-family: 'robotolight';
 }
 
+.navigation{
+  @include phone{
+    width: 100%;
+  }
+}
+
 .socials__welcome{
   text-align: center;
   position: absolute;
@@ -260,25 +265,20 @@
 
   @include phone{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-
   }
 }
 
 .navigation-list{
   display: inline-block;
-
+  width: 100%;
   }
 
 .navigation-item {
   display: inline-block;
   @include phone{
-    flex: 1;
-    align-items: stretch;
-    width: 32.6%;
-
+    width: 32.4%;
   }
+
 }
 .navigation-link{
   display: inline-block;
@@ -291,7 +291,9 @@
   transition: .3s;
 
   @include phone{
-    padding: 0;
+    padding: rem(5);
+    width: 100%;
+    text-align: center;
   }
 
   &:hover{
@@ -308,6 +310,11 @@
   flex-direction: column;
   background: rgba(30, 46, 74, 0.7);
   margin: 0 auto;
+
+  @include phone{
+    width: 320px;
+    height: 400px;
+  }
 }
 
 .inner-title{
@@ -358,6 +365,10 @@
   padding-left: rem(5);
   border: none;
   border-radius: 0 4px 4px 0;
+
+  @include phone{
+    width: 80%;
+  }
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -495,12 +506,13 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   padding: 10px 30px;
   background-color: #0548be;
   text-decoration: none;
+  border: none;
   color: #ffffff;
   font-family: 'robotomedium';
   font-size: 16px;
   transition: .3s;
   text-align: center;
-  width: 50%;
+  width: 49.4%;
 
   &_two{
     border-left: 2px solid #7296d3;

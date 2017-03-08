@@ -3,7 +3,6 @@ var preload = document.querySelector('.preloader');
 if (preload !== null) preloader.init();
 
 window.onload = function () {
-  console.log('app is ready');
 
   //Index Parallax
   var parallax = document.querySelector('#parallax');
@@ -12,21 +11,6 @@ window.onload = function () {
       mainParallax.init();
   }
 
-  //Flip
-  var btnAuth = document.querySelector('.c-button-auth'),
-      btnWelcome = document.querySelector('.return-btn');
-
-  if (btnAuth !== null) {
-      btnAuth.addEventListener('click', function () {
-         flip.auth();
-      });
-  }
-
-  if (btnWelcome !== null) {
-      btnWelcome.addEventListener('click', function () {
-         flip.welcome();
-      });
-  }
 
   //Parallax header, skills
   var bg = document.querySelector('.bg-parallax'),

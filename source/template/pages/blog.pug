@@ -5,11 +5,15 @@ block title
 
 block content
     .wrapper
-        section.section-about
+        .preloader
+            .preloader__content
+                .preloader__animation
+                .preloader__percent 0%
+        section.section-about.about-parallax
             include ../common/socials
             include ../common/hamburger
             .bg-parallax
-                img(src='assets/img/parallax.jpg')
+                img.parallax-img(src='assets/img/parallax.jpg')
             .stars-parallax
                 img.stars(src='assets/img/stars1.svg')
             .user__hero-parallax.user

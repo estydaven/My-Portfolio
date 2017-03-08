@@ -19,6 +19,12 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="preloader">
+        <div class="preloader__content">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percent">0%</div>
+        </div>
+      </div>
       <section class="section-about about-parallax">
         <div class="socials">
           <ul class="socials-list">
@@ -47,7 +53,7 @@
             </ul>
           </nav>
         </div>
-        <div class="bg-parallax"><img src="assets/img/parallax.jpg"></div>
+        <div class="bg-parallax"><img class="parallax-img" src="assets/img/parallax.jpg"></div>
         <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
         <div class="user__hero-parallax user">
           <div class="user__pic"><img class="user__pic-item" src="assets/img/face.jpg"></div>
@@ -71,26 +77,53 @@
       <section class="portfolio">
         <div class="column column_left portfolio__column">
           <div class="work__slider">
-            <div class="work__preview"><img class="work__pic" src="assets/img/work.png"></div>
-            <div class="work">
-              <div class="block-title">Сайт школы онлайн<br>образования</div>
-              <div class="work__technology">html, css, javascript</div><a class="work__link" href="#">Посмотреть сайт
-                <svg class="work__icon">
-                  <use xlink:href="assets/img/sprite.svg#link"></use>
-                </svg></a>
+            <div class="work__preview"><img class="work__preview-pic active-work" src="assets/img/work-1.png"><img class="work__preview-pic" src="assets/img/work-2.png"><img class="work__preview-pic" src="assets/img/work-3.png"><img class="work__preview-pic" src="assets/img/work-4.png"></div>
+            <div class="work__descr-container">
+              <div class="work__descr active-work">
+                <div class="block-title block-title_slide">Сайт школы онлайн<br>образования</div>
+                <div class="work__technology">html, css, JS</div><a class="work__link" href="#">Посмотреть сайт
+                  <svg class="work__icon">
+                    <use xlink:href="assets/img/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
+              <div class="work__descr">
+                <div class="block-title">Сайт школы онлайн<br>образования</div>
+                <div class="work__technology">html, css, JS-2</div><a class="work__link" href="#">Посмотреть сайт
+                  <svg class="work__icon">
+                    <use xlink:href="assets/img/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
+              <div class="work__descr">
+                <div class="block-title">Сайт школы онлайн<br>образования</div>
+                <div class="work__technology">html, css, JS-3</div><a class="work__link" href="#">Посмотреть сайт
+                  <svg class="work__icon">
+                    <use xlink:href="assets/img/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
+              <div class="work__descr">
+                <div class="block-title">Сайт школы онлайн<br>образования</div>
+                <div class="work__technology">html, css, JS-4</div><a class="work__link" href="#">Посмотреть сайт
+                  <svg class="work__icon">
+                    <use xlink:href="assets/img/sprite.svg#link"></use>
+                  </svg></a>
+              </div>
             </div>
           </div>
         </div>
         <div class="column column_right portfolio__column">
           <div class="work__toggle">
-            <div class="work__prev toggle column column_left"><a class="toggle__link toggle__link_prev" href="#">
-                <svg class="toggle__icon">
-                  <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-                </svg></a><img class="toggle__pic" src="assets/img/work.png"></div>
-            <div class="work__next toggle column column_right"><a class="toggle__link toggle__link_next" href="#">
-                <svg class="toggle__icon">
-                  <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
-                </svg></a><img class="toggle__pic" src="assets/img/work.png"></div>
+            <div class="prev toggle column column_left"><img class="toggle__pic" src="assets/img/work-1.png"><img class="toggle__pic" src="assets/img/work-2.png"><img class="toggle__pic" src="assets/img/work-3.png"><img class="toggle__pic active-work" src="assets/img/work-4.png"></div>
+            <div class="toggle__link-left toggle__link_prev">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+              </svg>
+            </div>
+            <div class="next toggle column column_right"><img class="toggle__pic" src="assets/img/work-1.png"><img class="toggle__pic active-work" src="assets/img/work-2.png"><img class="toggle__pic" src="assets/img/work-3.png"><img class="toggle__pic" src="assets/img/work-4.png"></div>
+            <div class="toggle__link-right toggle__link_next">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </section>

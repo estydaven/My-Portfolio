@@ -23,11 +23,11 @@
 }
 
 .left__triangle {
-  fill: #faf8f0;
+  fill: #ffffff;
 }
 
 .right__triangle{
-  fill: #faf8f0;
+  fill: #ffffff;
 }
 
 .blog-container {
@@ -54,8 +54,8 @@
     left: 0;
     height: 100vh;
     width: rem(250);
-    z-index: 1;
-    background-color: #0e55d2;
+    z-index: 10;
+    background-color: rgba(14, 85, 210, 0.8);
     transition: all 1s;
     transform: translateX(-100%);
   }
@@ -97,22 +97,15 @@
   transition: .5s all ease-out;
   border-right: 3px solid transparent;
   text-decoration: none;
-  color: #455a64;
+
 
   &:hover{
     border-right-color: #083c96;
     color: #083c96;
   }
 
-  @include tablets{
-    color: rgba(#fff, 0.7);
-
-    &:hover{
-      color: #ffffff;
-    }
-
   }
-}
+
 
 .blog__item-active{
   border-right-color: #083c96;
@@ -127,6 +120,15 @@
 
 .blog__tabs-link{
   text-decoration: none;
+  color: #474b57;
+
+  @include tablets {
+    color: rgba(#fff, 0.7);
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
 }
 
 .sidemenu-btn{

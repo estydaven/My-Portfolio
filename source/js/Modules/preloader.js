@@ -45,7 +45,7 @@ var preloader = (function(){
             });
         });
 
-    }
+    };
 
     return {
         init: function () {

@@ -15,9 +15,11 @@ block content
             .background-welcome.parallax#parallax
                 .parallax-layer
                 .parallax-layer.parallax-layer_img
+
             .contain
                 .contain-welcome
-                    button.c-button.c-button-auth#auth Авторизоваться
+                    .c-button
+                        .c-button-auth#auth Авторизоваться
                     .avatar
                         .flip-container
                             .flipper
@@ -52,8 +54,8 @@ block content
                                                 input.radio#no(type='radio', name='answer', value='no')
                                                 label.radio-label(for='no') Не уверен
                                         .navigation__inner
-                                            a.inner-link.return-btn(href='index.html') На главную
-                                            a.inner-link.inner-link_two(href='index.html') Войти
+                                            button.inner-link.return-btn(type = "button") На главную
+                                            button.inner-link.submit(type = "button") Войти
 
 
                 .c-wrapper-avatar__copyright

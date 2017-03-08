@@ -74,6 +74,8 @@
   width: 100%;
   text-align: center;
   margin-top: rem(250);
+
+
 }
 
 .arrow_ar{
@@ -255,6 +257,9 @@
     float: none;
     width: auto;
   }
+  @include phones{
+    height: 100px;
+  }
 }
 
 .main-title_about{
@@ -272,9 +277,7 @@
     margin: 0 auto;
     display: block;
     width: 100%;
-    z-index: auto;
     float: none;
-    position: static;
     padding: rem(40);
   }
 }
@@ -392,7 +395,7 @@
     justify-content: center;
   }
   @include phones{
-    width: 70%;
+    width: auto;
     flex-wrap: wrap;
     margin: 0 auto;
   }
@@ -464,7 +467,7 @@
 }
 
 .map{
-  height: 120%;
+  height: 120vh;
   width: 100%;
   overflow: hidden;
   margin-bottom: rem(-200);
@@ -481,13 +484,16 @@
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
 
+  @include tablets{
+    width: rem(480);
+    height: auto;
+
+  }
 
   @include phones{
     width: 100%;
     background: #ffffff;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
+
   }
 }
 
@@ -545,6 +551,9 @@
   @include phones{
     height: 250px;
   }
+  @include phone{
+    height: 300px;
+  }
 }
 
 .footer-author{
@@ -558,6 +567,9 @@
   font-family: 'robotomedium';
   height: 40px;
   padding: rem(10);
+  @include phone{
+    height: 60px;
+  }
 }
 
 .page-footer__left{
@@ -669,6 +681,13 @@
   float: left;
   margin-right: rem(100);
 
+  @include phones{
+    margin-left: rem(160);
+
+  }
+  @include phone{
+    margin: auto;
+  }
  }
 
 .socials-footer__link{

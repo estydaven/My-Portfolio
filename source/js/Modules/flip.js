@@ -1,20 +1,38 @@
-// Флип-эффект
 var flip = (function () {
-    var btn = document.getElementById('#auth'),
-        flipper = document.querySelector('.flipper');
 
-    var _auth = function () {
-      flipper.style.transform = 'rotateY(180deg)';
-      btn.style.display = 'none';
+    var flipper = document.querySelector(".flipper"),
+        btn = document.querySelector(".c-button");
+
+    var _login = function () {
+        btn.style.display = "none";
+        flipper.style.transform = "rotateY(180deg)";
     };
 
-    var _welcome = function () {
-        flipper.style.transform = 'rotateY(0deg)';
-        btn.style.display = 'block';
+    var _user = function () {
+        btn.style.display = "block";
+        flipper.style.transform = "rotateY(0deg)";
     };
 
-    return{
-        auth: _auth,
-        welcome: _welcome
+    return {
+
+        On: _login,
+        Off: _user
+
     }
+
+
 })();
+
+var btnOn = document.querySelector(".c-button"),
+    btnOff = document.querySelector(".return-btn");
+
+if (btnOn !== null) {
+    btnOn.onclick = function () {
+        flip.On();
+    };
+
+    btnOff.onclick = function () {
+        flip.Off();
+    };
+}
+

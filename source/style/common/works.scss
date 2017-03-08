@@ -1,5 +1,4 @@
 
-
 .works__col{
   margin-top: rem(380);
 }
@@ -53,8 +52,10 @@
 
 .portfolio{
   @extend %clearfix;
+  display: block;
+  overflow: hidden;
   width: 100%;
-  min-height: 800px;
+  min-height: 650px;
   height: 100vh;
 
   @include tablets {
@@ -87,15 +88,36 @@
     }
 }
 
-.work{
-  @include centered();
-  @include tablets{
-    position: static;
-    transform: translate(0, 0);
-    margin: 0 auto;
-    padding: rem(30) 0;
+.work__descr-container {
+  .work__descr.active-work {
+    opacity: 1;
   }
 }
+  .work__descr {
+    @include centered();
+    width: rem(430);
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    opacity: 0;
+
+    @include tablets {
+      position: absolute;
+      top: 100%;
+      transform: translate(-50%, 0);
+      z-index: 20;
+
+      .block-title_slide{
+        padding: rem(20) rem(60);
+      }
+    }
+    @include phones{
+      font-size: rem(14);
+    }
+  }
+
+
 
 .work__technology {
   position: relative;
@@ -138,27 +160,43 @@
   vertical-align: middle;
 }
 
+  .work__preview-pic.active-work {
+    opacity: 1;
+  }
+
+
 .work__preview {
   width: 100%;
   height: 70%;
-  margin: 0 auto;
-  padding: rem(43) rem(43);
+  z-index: 10;
   position: absolute;
   left: 100%;
-  z-index: 100;
+
 
   @include tablets{
-    position: static;
+    position: relative;
     width: 100%;
+    height: 400px;
+    left: 0;
+  }
+  @include phones{
+    height: 200px;
   }
 }
 
-.work__pic {
-  max-width: 100%;
-  max-height: 100%;
+.work__preview-pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 80%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
 
   @include tablets{
-    width: 80%;
+    padding: rem(65) 0;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -171,14 +209,22 @@
   right: 0;
 
   @include tablets{
-    position: static;
-    height: auto;
+    position: relative;
+    height: 115px;
+  }
+  @include phones{
+    height: 100px;
   }
 
 }
 .toggle {
   height: 100%;
   position: relative;
+  width: 50%;
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
 
   &:before{
     content: "";
@@ -190,45 +236,77 @@
   }
 }
 
-.toggle__link {
-  display: block;
+.toggle__pic{
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(55, 62, 66, 0.4);
-
-  &_prev {
-    &:hover {
-      .toggle__icon {
-        transition: .5s;
-        top: 65%;
-      }
-    }
-  }
-  &_next {
-    &:hover {
-      .toggle__icon {
-        transition: .5s;
-        top: 35%;
-      }
-    }
-  }
-
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-.toggle__pic {
-  max-width: 100%;
-  max-height: 100%;
+
+
+.prev .toggle__pic {
+  top: 100%;
 }
 
-.toggle__icon{
-  width: rem(43);
-  height: 27px;
-  fill: #ffffff;
-  transition: .2s;
+.next .toggle__pic {
+  top: -100%;
+}
+
+
+
+.prev .active-work {
+  top: 0;
+}
+
+.next .active-work {
+  top: 0;
+}
+
+.toggle__link-left{
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 50%;
+  height: 100%;
+  background-color: rgba(#c5c4c0, 0.4);
+  cursor: pointer;
+
+
+  svg{
+    fill: #fff;
+    width: 43px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+  }
+}
+
+.toggle__link-right{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 50%;
+  height: 100%;
+  background-color: rgba(#c5c4c0, 0.6);
+  cursor: pointer;
+
+  svg{
+    fill: #fff;
+    width: 43px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+  }
 }
 
 .about-me{
