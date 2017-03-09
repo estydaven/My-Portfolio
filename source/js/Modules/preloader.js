@@ -26,7 +26,7 @@ var preloader = (function(){
         if (percents >= 100) {
             preloader.fadeOut();
         }
-    }
+    };
 
     var loadImages = function(images) {
 
