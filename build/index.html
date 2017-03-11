@@ -19,6 +19,12 @@
   </head>
   <body>
     <div class="welcome-wrapper">
+      <div class="preloader">
+        <div class="preloader__content">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percent">0%</div>
+        </div>
+      </div>
       <div class="page-wrapper">
         <video class="bg-video" src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop"></video>
         <div class="background-welcome parallax" id="parallax">
@@ -70,42 +76,51 @@
                   <div class="back">
                     <div class="inner-container">
                       <div class="inner-title">АВТОРИЗУЙТЕСЬ</div>
-                      <form class="form-inner">
-                        <div class="wrapper-input">
-                          <div class="icon-inner">
-                            <svg class="icon-svg">
-                              <use xlink:href="assets/img/sprite.svg#login"></use>
-                            </svg>
+                      <div class="auth__form">
+                        <form action="" method="" id="auth-form">
+                          <div class="form__container">
+                            <div class="wrapper-input input-group input-group_iconed">
+                              <input class="form-input" type="text" placeholder="Логин">
+                              <div class="input-group__icon-field">
+                                <svg class="input-group__icon">
+                                  <use xlink:href="assets/img/sprite.svg#login"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="wrapper-input input-group input-group_iconed">
+                              <input class="form-input" type="password" placeholder="Пароль">
+                              <div class="input-group__icon-field">
+                                <svg class="input-group__icon">
+                                  <use xlink:href="assets/img/sprite.svg#password"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="checkbox-inner">
+                              <label class="checkbox">
+                                <input class="checkbox__fake" type="checkbox">
+                                <div class="checkbox__label">Я человек</div>
+                              </label>
+                            </div>
+                            <div class="auth-form__radio radio-group">
+                              <div class="radio-group__title">Вы точно человек?</div>
+                              <div class="radio-group__inputs">
+                                <label class="radio-btn">
+                                  <input class="radio-btn__fake" type="radio" name="robot" value="yes">
+                                  <div class="radio-btn__label">Да</div>
+                                </label>
+                                <label class="radio-btn">
+                                  <input class="radio-btn__fake" type="radio" name="robot" value="no">
+                                  <div class="radio-btn__label">Не уверен</div>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="input-error-msg"></div>
                           </div>
-                          <input class="input-inner" name="name" placeholder="Логин" required="">
-                        </div>
-                        <div class="wrapper-input">
-                          <div class="icon-inner">
-                            <svg class="icon-svg">
-                              <use xlink:href="assets/img/sprite.svg#password"></use>
-                            </svg>
+                          <div class="auth-form__buttons form__buttons">
+                            <button class="form__btn return-btn" type="button">На главную</button>
+                            <button class="form__btn" type="submit">Войти</button>
                           </div>
-                          <input class="input-inner" name="name" placeholder="Пароль" required="">
-                        </div>
-                      </form>
-                      <div class="checkbox-inner">
-                        <input class="checkbox" id="one" type="checkbox">
-                        <label class="checkbox-label" for="one">Я человек</label>
-                      </div>
-                      <div class="checkbox-question">Вы точно не робот?</div>
-                      <div class="radio-inner">
-                        <div class="radiobox-inner">
-                          <input class="radio" id="yes" type="radio" name="answer" value="yes">
-                          <label class="radio-label radio-label_first" for="yes">Да</label>
-                        </div>
-                        <div class="radiobox-inner">
-                          <input class="radio" id="no" type="radio" name="answer" value="no">
-                          <label class="radio-label" for="no">Не уверен</label>
-                        </div>
-                      </div>
-                      <div class="navigation__inner">
-                        <button class="inner-link return-btn" type="button">На главную</button>
-                        <button class="inner-link submit" type="button">Войти</button>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -114,13 +129,13 @@
             </div>
           </div>
           <div class="c-wrapper-avatar__copyright"><span class="autor">&copy; Лайковская Валентина | создано с любовью в Loftschool | 2016</span></div>
+          <div class="welcome__error">
+            <div class="input-error-captcha">
+              <div class="input-error-captcha__close"></div>
+              <div class="input-error-captcha__text">Роботам здесь делать нечего!</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="preloader">
-      <div class="preloader__content">
-        <div class="preloader__animation"></div>
-        <div class="preloader__percent">0%</div>
       </div>
     </div>
   </body>

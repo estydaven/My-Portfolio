@@ -20,8 +20,8 @@ var headerParallax = (function () {
     return{
         init: function (wScroll) {
             _move(bg, wScroll, 45);
-            _move(user, wScroll, 3);
-            _move(starsSection, wScroll, 20);
+            _move(user, wScroll, 7);
+            _move(starsSection, wScroll, 30);
         }
     }
 

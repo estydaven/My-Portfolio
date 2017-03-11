@@ -74,56 +74,39 @@
           </div>
         </section>
       </section>
-      <section class="portfolio">
-        <div class="column column_left portfolio__column">
-          <div class="work__slider">
-            <div class="work__preview"><img class="work__preview-pic active-work" src="assets/img/work-1.png"><img class="work__preview-pic" src="assets/img/work-2.png"><img class="work__preview-pic" src="assets/img/work-3.png"><img class="work__preview-pic" src="assets/img/work-4.png"></div>
-            <div class="work__descr-container">
-              <div class="work__descr active-work">
-                <div class="block-title block-title_slide">Сайт школы онлайн<br>образования</div>
-                <div class="work__technology">html, css, JS</div><a class="work__link" href="#">Посмотреть сайт
-                  <svg class="work__icon">
-                    <use xlink:href="assets/img/sprite.svg#link"></use>
-                  </svg></a>
-              </div>
-              <div class="work__descr">
-                <div class="block-title">Сайт школы онлайн<br>образования</div>
-                <div class="work__technology">html, css, JS-2</div><a class="work__link" href="#">Посмотреть сайт
-                  <svg class="work__icon">
-                    <use xlink:href="assets/img/sprite.svg#link"></use>
-                  </svg></a>
-              </div>
-              <div class="work__descr">
-                <div class="block-title">Сайт школы онлайн<br>образования</div>
-                <div class="work__technology">html, css, JS-3</div><a class="work__link" href="#">Посмотреть сайт
-                  <svg class="work__icon">
-                    <use xlink:href="assets/img/sprite.svg#link"></use>
-                  </svg></a>
-              </div>
-              <div class="work__descr">
-                <div class="block-title">Сайт школы онлайн<br>образования</div>
-                <div class="work__technology">html, css, JS-4</div><a class="work__link" href="#">Посмотреть сайт
-                  <svg class="work__icon">
-                    <use xlink:href="assets/img/sprite.svg#link"></use>
-                  </svg></a>
-              </div>
+      <section class="portfolio__wrapper">
+        <div class="column column_left portfolio__column portfolio__column_left">
+          <div class="work">
+            <div class="work__preview"><img class="work__pic" src=""></div>
+            <div class="work__desc">
+              <div class="work__title block-title"></div>
+              <div class="work__technology"></div><a class="work__link" href="#">
+                <svg class="work__icon">
+                  <use xlink:href="assets/img/sprite.svg#link"></use>
+                </svg><span>Посмотреть сайт</span></a>
             </div>
           </div>
         </div>
-        <div class="column column_right portfolio__column">
-          <div class="work__toggle">
-            <div class="prev toggle column column_left"><img class="toggle__pic" src="assets/img/work-1.png"><img class="toggle__pic" src="assets/img/work-2.png"><img class="toggle__pic" src="assets/img/work-3.png"><img class="toggle__pic active-work" src="assets/img/work-4.png"></div>
-            <div class="toggle__link-left toggle__link_prev">
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
-              </svg>
-            </div>
-            <div class="next toggle column column_right"><img class="toggle__pic" src="assets/img/work-1.png"><img class="toggle__pic active-work" src="assets/img/work-2.png"><img class="toggle__pic" src="assets/img/work-3.png"><img class="toggle__pic" src="assets/img/work-4.png"></div>
-            <div class="toggle__link-right toggle__link_next">
-              <svg>
-                <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
-              </svg>
-            </div>
+        <div class="column column_right portfolio__column portfolio__column_right">
+          <div class="work__slider work-slider">
+            <div class="work__prev toggle column column_left"><a class="toggle__link toggle__link_prev" href="#">
+                <svg class="toggle__icon">
+                  <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+                </svg>
+                <ul class="work-slider__list work-slider__list_prev">
+                  <li class="work-slider__item" data-title="Сайт школы онлайн-образования" data-technology="html, css" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/work-1.png"></li>
+                  <li class="work-slider__item" data-title="Сайт ИТ-компании" data-technology="html, css, javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/work-2.png"></li>
+                  <li class="work-slider__item" data-title="Портал видеоуроков и ИТ сообщество" data-technology="javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/work-3.png"></li>
+                </ul></a></div>
+            <div class="work__next toggle column column_right"><a class="toggle__link toggle__link_next" href="#">
+                <svg class="toggle__icon">
+                  <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+                </svg>
+                <ul class="work-slider__list work-slider__list_next">
+                  <li class="work-slider__item" data-title="Сайт школы онлайн-образования" data-technology="html, css" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/work-1.png"></li>
+                  <li class="work-slider__item" data-title="Сайт ИТ-компании" data-technology="html, css, javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/work-2.png"></li>
+                  <li class="work-slider__item" data-title="Портал видеоуроков и ИТ сообщество" data-technology="javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/work-3.png"></li>
+                </ul></a></div>
           </div>
         </div>
       </section>
@@ -152,16 +135,23 @@
           </div>
           <div class="contact-me">
             <div class="block-title block-title_color">СВЯЗАТЬСЯ СО МНОЙ</div>
-            <form class="form" method="" action="">
-              <form class="container">
-                <input class="form__input" name="name" placeholder="Ваше имя" required="">
-                <input class="form__input" name="emailaddress" placeholder="Bаш email" type="email" required="">
-                <textarea class="form__input form__input_message" name="subject" placeholder="Ваше сообщение" required=""></textarea>
-              </form>
-              <form class="buttons">
-                <button class="form__btn" type="submit">Отправить</button>
-                <button class="form__btn" type="submit">Очистить</button>
-              </form>
+            <form class="form" action="" method="">
+              <div class="form__container">
+                <div class="input-group input-group_dark">
+                  <input class="form__input form__input_dark" name="name" placeholder="Ваше имя" required="">
+                </div>
+                <div class="input-group input-group_dark">
+                  <input class="form__input_dark form__input" name="emailaddress" placeholder="Bаш email" type="email" required="">
+                </div>
+                <div class="input-group input-group_dark">
+                  <textarea class="form__input form__input_dark form-input_area" name="subject" placeholder="Ваше сообщение" required=""></textarea>
+                </div>
+                <div class="input-error-msg"></div>
+              </div>
+              <div class="buttons">
+                <button class="form__btn form__btn_dark" type="submit">Отправить</button>
+                <button class="form__btn form__btn_dark" type="reset">Очистить</button>
+              </div>
             </form>
           </div>
           <div class="arrow-up"><a class="arrow-up__img" href="" target="_blank">

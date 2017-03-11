@@ -1,11 +1,15 @@
 .contact-me
     .block-title.block-title_color СВЯЗАТЬСЯ СО МНОЙ
-    form.form(method='', action='')
-        form.container
-            input.form__input(name='name', placeholder='Ваше имя', required='')
-            input.form__input(name='emailaddress', placeholder='Bаш email', type='email', required='')
-            textarea.form__input.form__input_message(name='subject', placeholder='Ваше сообщение', required='')
-        form.buttons
-            button.form__btn(type='submit') Отправить
-            button.form__btn(type='submit') Очистить
+    form(action="" method="" class="form")
+        .form__container
+            .input-group.input-group_dark
+                input.form__input.form__input_dark(name='name', placeholder='Ваше имя', required='')
+            .input-group.input-group_dark
+                input.form__input_dark.form__input(name='emailaddress', placeholder='Bаш email', type='email', required='')
+            .input-group.input-group_dark
+                textarea.form__input.form__input_dark.form-input_area(name='subject', placeholder='Ваше сообщение', required='')
+            .input-error-msg
+        .buttons
+            button.form__btn.form__btn_dark(type='submit') Отправить
+            button.form__btn.form__btn_dark(type='reset') Очистить
 include ../common/arrow-up

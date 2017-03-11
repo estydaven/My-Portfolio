@@ -2,14 +2,14 @@
   height: 40px;
   width: 40px;
   position: absolute;
-  right: 2%;
-  top: 5%;
+  right: 5%;
+  top: 3%;
   z-index: 50;
   transition: opacity .25s ease;
   cursor: pointer;
 
-  @include phones{
-    margin-right: rem(40);
+  @include phone{
+    margin-right: rem(20);
   }
 
   &:hover {

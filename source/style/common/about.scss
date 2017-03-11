@@ -1,5 +1,5 @@
 .section-about{
-  height: 100vh;
+  height: auto;
   min-height: 610px;
   overflow: hidden;
   position: relative;
@@ -109,7 +109,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 40%;
   margin-top: rem(-100);
   text-align: center;
   z-index: 5;
@@ -121,7 +121,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 40%;
   margin-top: rem(-100);
   z-index: 10;
 }
@@ -335,7 +335,7 @@
     width: 70%;
   }
   @include phones{
-    width: 100%;
+    width: 90%;
     padding-left: rem(10);
     font-size: rem(20);
   }
@@ -354,7 +354,7 @@
   margin-left: rem(30);
 
   @include phones{
-    width: 100%;
+    width: 90%;
     font-size: rem(20);
   }
 
@@ -363,11 +363,19 @@
 .skills-group{
   width: 100%;
   margin-left: rem(30);
+
+  @include phone{
+    margin-left: 0;
+  }
 }
 
 .skills{
   padding-right: rem(40);
   padding-top: rem(60);
+
+  @include phone{
+    padding: 0;
+  }
 }
 
 .skills-group__title{
@@ -409,7 +417,10 @@
   @include phones{
     margin-right: rem(50);
   }
+  @include phone{
+    margin-right: 0;
 
+  }
 }
 
 .skill{
@@ -463,17 +474,19 @@
 
 .l-contacts {
   position: relative;
-  height: 100vh;
+  height: 120vh;
+
+  @include phone{
+    height: 150vh;
+  }
 }
 
 .map{
-  height: 120vh;
+  height: 120%;
   width: 100%;
   overflow: hidden;
   margin-bottom: rem(-200);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 
@@ -487,13 +500,12 @@
   @include tablets{
     width: rem(480);
     height: auto;
-
   }
 
   @include phones{
     width: 100%;
     background: #ffffff;
-
+    top: 16%;
   }
 }
 
@@ -512,21 +524,19 @@
   width: 100%;
   padding: rem(30);
 
+  @include tablets{
+    padding: rem(20);
+  }
+
   @include phones{
     padding: rem(10);
   }
 }
 
 .icon__contacts{
-  width: rem(30);
-  height: 30px;
+  width: rem(40);
+  height: 40px;
   float: left;
-
-  @include phones{
-    width: rem(50);
-    height: 45px;
-  }
-
 }
 
 .contacts-item{
@@ -536,6 +546,11 @@
   text-align: start;
   padding-left: rem(10);
   display: inline-block;
+
+  @include tablets{
+    font-size: rem(20);
+    float: left;
+  }
   @include phones{
     font-size: rem(20);
   }
@@ -569,6 +584,7 @@
   padding: rem(10);
   @include phone{
     height: 60px;
+
   }
 }
 
@@ -652,12 +668,19 @@
     height: 80px;
     bottom: auto;
   }
+  @include phone{
+    height: 60px;
+  }
 
 }
 
 .nav{
   @include phones{
     width: 70%;
+    margin: 0 auto;
+  }
+  @include phone{
+    width: auto;
     margin: 0 auto;
   }
 }
@@ -686,6 +709,7 @@
 
   }
   @include phone{
+    float: none;
     margin: auto;
   }
  }

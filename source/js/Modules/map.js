@@ -9,8 +9,10 @@ function initMap() {
     });
 
     var marker = new google.maps.Marker({
+        icon: 'assets/img/map-contact.png',
         position: {lat: 53.658348, lng: 23.786986},
         map: map,
-        title: "Я здесь!"
+        title: "Я здесь!",
+        animation: google.maps.Animation.BOUNCE
     });
 }

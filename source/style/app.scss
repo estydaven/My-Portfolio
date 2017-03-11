@@ -48,6 +48,87 @@ ul{
 @import "common/works";
 @import "common/blog";
 @import "common/fullscreen-menu";
+@import "common/forms";
 @import "roboto.css";
 @import "fontowesome.css";
 @import "webissimo.css";
+
+
+.preloader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: url(../img/preloader.jpg);
+
+}
+
+.preloader__content{
+  width: rem(150);
+  height: 150px;
+  position: absolute;
+  color: #ffffff;
+  font-family: "RobotoRegular";
+  font-size: rem(18);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.preloader__percent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.preloader__animation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(150);
+  height: 150px;
+
+  animation: rotate 1s linear infinite;
+  &, &:after, &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top-color: #fff;
+  }
+
+  &:after {
+    top: 13px;
+    left: 13px;
+    bottom: 13px;
+    right: 13px;
+
+    animation: rotate 1.5s linear infinite;
+  }
+
+  &:before {
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+
+    animation: rotate 3s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

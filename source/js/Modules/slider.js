@@ -1,110 +1,130 @@
-var slider = (function () {
-    var timeIn = 1000,
-        timeOut = 2000;
+var Slider = (function () {
+    var items = $('.work-slider__item', '.work-slider__list_next'),
+        index = 1,
+        ndx,
+        duration = 500,
+        title = $('.work__title'),
+        skills = $('.work__technology'),
+        imgContainer = $('.work__pic');
 
-    var _moveUp = function (container, direction) {
-        var items = $(container).children('.toggle__pic'),
-            itemActive = items.filter('.active-work'),
-            itemNext = itemActive.next(),
-            directions = direction == 'down' ? 100 : -100;
+    function _init() {
+        var activeItem = items.eq(index),
+            imgSrc = activeItem.find('img').attr('src'),
+            activeTitle = activeItem.data('title'),
+            activeSlill = activeItem.data('technology');
 
-        if (itemNext.length == 0) {
-            items.first().addClass('active-work');
-            items.last().removeClass('active-work');
-            items.first().css('top', '0');
+        imgContainer.attr('src', imgSrc);
+        title.text(activeTitle);
+        skills.text(activeSlill);
+
+        var nextItem = $('.work-slider__item', '.work-slider__list_next').eq(index + 1);
+        nextItem.addClass('work-slider__item_current');
+        var prevItem = $('.work-slider__item', '.work-slider__list_prev').eq(index - 1);
+        prevItem.addClass('work-slider__item_current');
+    }
+
+    function animateSlide(ndx, container, direction) {
+        var nextItems = $('.work-slider__item', container),
+            currentItem = nextItems.filter('.work-slider__item_current'),
+            reqItem = nextItems.eq(ndx);
+        direction = direction === 'up' ? -100 : 100;
+
+        currentItem.animate({
+            'top': direction + '%'
+        }, duration);
+
+        reqItem.animate({
+            'top': 0
+        }, duration, function () {
+            currentItem.removeClass('work-slider__item_current').css('top', -direction + '%');
+            reqItem.addClass('work-slider__item_current');
+        })
+    }
+
+    function _moveNext() {
+        var container = $('.work-slider__list_next'),
+            direction = 'up';
+
+        if (index == items.length - 1) {
+            ndx = 0;
+        } else if (index < 0) {
+            ndx = items.length - 1;
+        } else {
+            ndx = index + 1;
         }
 
-        itemActive.animate({
-           'top': directions + '%'
-        }, timeIn);
+        animateSlide(ndx, container, direction);
+    }
 
-        itemNext.animate({
-            'top': '0'
-        }, timeIn, function () {
-            itemActive.removeClass('active-work');
-            $(this).addClass('active-work');
+    function _movePrev() {
+        var container = $('.work-slider__list_prev'),
+            direction = 'down';
+
+        if (index > items.length - 1) {
+            ndx = 0;
+        } else if (index <= 0) {
+            ndx = items.length - 1;
+        } else {
+            ndx = index - 1;
+        }
+
+        animateSlide(ndx, container, direction);
+    }
+
+    function _slideShow() {
+        var fadedOut = $.Deferred(),
+            loaded = $.Deferred(),
+            nextSrc = items.eq(index).find('img').attr('src'),
+            nextTitle = items.eq(index).data('title'),
+            nextSkills = items.eq(index).data('technology');
+
+        _moveNext();
+        _movePrev();
+
+        imgContainer.fadeOut(function () {
+            title.slideUp();
+            skills.fadeOut();
+            fadedOut.resolve();
         });
-    };
 
-    var _moveDown = function (container, direction) {
-      var items = $(container).children('.toggle__pic'),
-          itemActive = items.filter('.active-work'),
-          itemPrev = itemActive.prev(),
-          directions = direction == 'down' ? 100 : -100;
-
-        if (itemPrev.length == 0) {
-            items.last().addClass("active-work");
-            items.first().removeClass("active-work");
-            items.last().css("top", "0");
-        }
-
-        itemActive.animate({
-            "top": directions + "%"
-        }, timeIn);
-
-        itemPrev.animate({
-            'top': "0"
-        }, timeIn, function () {
-            itemActive.removeClass("active-work");
-            $(this).addClass("active-work");
+        fadedOut.done(function () {
+            title.text(nextTitle);
+            skills.text(nextSkills);
+            imgContainer.attr('src', nextSrc).on('load', function () {
+                loaded.resolve();
+            })
         });
-    };
 
-    var _showNext = function (container, children) {
-        var items = $(container).children(children),
-            itemActive = items.filter(".active-work"),
-            itemNext = itemActive.next();
-
-        if (itemNext.length == 0) {
-            items.first().addClass("active-work");
-            items.first().fadeIn(timeIn);
-            items.last().removeClass("active-work");
-            items.last().fadeOut(timeOut);
-        } else if (itemNext.length !== 0) {
-            itemActive.fadeOut(timeOut);
-            itemNext.fadeIn(timeIn);
-            itemNext.addClass("active-work");
-            itemNext.prev().removeClass("active-work");
-        }
-    };
-
-    var _showPrev = function (container, children) {
-        var items = $(container).children(children),
-            itemActive = items.filter(".active"),
-            itemPrev = itemActive.prev();
-
-        if (itemPrev.length == 0) {
-            items.last().addClass("active-work");
-            items.last().fadeIn(timeIn);
-            items.first().removeClass("active-work");
-            items.first().fadeOut(timeOut);
-        } else if (itemPrev.length !== 0) {
-            itemActive.fadeOut(timeOut);
-            itemPrev.fadeIn(timeIn);
-            itemPrev.addClass("active-work");
-            itemPrev.next().removeClass("active-work");
-        }
-    };
+        loaded.done(function () {
+            title.slideDown();
+            skills.fadeIn();
+            imgContainer.fadeIn();
+        });
+    }
 
     return {
-        init: function () {
-            $('.toggle__link-left').on("click", function () {
-                _moveUp($(".prev"), "down");
-                _moveUp($(".next"), "up");
-                _showNext($(".work__descr-container"), $(".work__descr"));
-                _showNext($(".work__preview"), $(".work__preview-pic"));
-            });
+        init: _init,
+        move: function () {
 
-            $('.toggle__link-right').on("click", function () {
-                _moveDown($(".prev"), "down");
-                _moveDown($(".next"), "up");
-                _showPrev($(".work__descr-container"), $(".work__descr"));
-                _showPrev($(".work__preview"), $(".work__preview-pic"));
-            });
+            $('.toggle__link').on('click', function (e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('toggle__link_next')) {
+                    index++;
+                } else if ($(this).hasClass('toggle__link_prev')) {
+                    index--;
+                }
+
+                if (index > items.length - 1) {
+                    index = 0;
+                } else if (index < 0) {
+                    index = items.length - 1;
+                }
+
+                _slideShow();
+
+            })
         }
     }
-})();
-
-if ($('.work__slider') !== null) {
-    slider.init();
-}
+})
+();

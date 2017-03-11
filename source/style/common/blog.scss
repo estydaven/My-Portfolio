@@ -7,6 +7,10 @@
   @extend %clearfix;
   width: 100%;
   margin-bottom: rem(200);
+
+  @include phone{
+    margin-bottom: rem(350);
+  }
 }
 
 .title{
@@ -55,14 +59,17 @@
     height: 100vh;
     width: rem(250);
     z-index: 10;
-    background-color: rgba(14, 85, 210, 0.8);
+    background-color: rgba(14, 85, 210, 1);
     transition: all 1s;
     transform: translateX(-100%);
+  }
+  @include phone{
+    width: rem(200);
   }
   @include phones{
     &:after{
       right: rem(-9);
-    }
+      }
   }
 }
 
@@ -83,9 +90,12 @@
 }
 
 .blog__tabs-list {
-  margin-bottom: rem(10);
+  margin-top: rem(10);
   &:last-child{
     margin-bottom: 0;
+  }
+  @include tablets{
+    margin-top: 100%;
   }
 }
 
@@ -107,7 +117,7 @@
   }
 
 
-.blog__item-active{
+.blog__tabs-link-active{
   border-right-color: #083c96;
   color: #083c96;
 
@@ -118,16 +128,34 @@
   }
 }
 
-.blog__tabs-link{
+.blog-menu__link{
+  display: inline-block;
+  padding: rem(14) rem(17);
+  padding-left: rem(10);
+  border-right: 3px solid transparent;
   text-decoration: none;
-  color: #474b57;
+  color: #6b6e78;
+  &:hover {
+    border-right-color: #004cd1;
+    color: #004cd1;
+  }
+  &_active {
+    border-right-color: #004cd1;
+    color: #004cd1;
+  }
 
   @include tablets {
-    color: rgba(#fff, 0.7);
+    color: rgba(#fff, .7);
 
     &:hover {
-      color: #ffffff;
+      color: #fff;
     }
+
+    &_active {
+      color: #fff;
+      font-family: 'robotobold';
+    }
+
   }
 }
 
@@ -153,6 +181,10 @@
 .articles__list {
   width: 100%;
   padding: 0 rem(20);
+
+  @include phone{
+    padding: 0;
+  }
 }
 
 .articles__item {
@@ -195,16 +227,27 @@
 
 .post__content p {
   margin-bottom: rem(20);
+
+  @include phone{
+    font-size: rem(16);
+  }
 }
 
 .code-viewer{
   width: 100%;
-
+  > code {
+    display: block;
+    border: #ccc solid 1px;
+    padding: rem(5);
+    overflow: auto;
+  }
   &:before{
     content: "Code:";
     display: block;
     font-size: rem(12);
-    background: #ffffff;
+    background: #e8e8e8;
+    border: #ccc solid 1px;
+    border-bottom: none;
   }
 }
 

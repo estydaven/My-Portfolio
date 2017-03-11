@@ -5,6 +5,11 @@ block title
 
 block content
     .welcome-wrapper
+        .preloader
+            .preloader__content
+                .preloader__animation
+                .preloader__percent 0%
+
         .page-wrapper
             video(src="assets/img/night.mp4", controls="controls" autoplay="autoplay" loop="loop").bg-video
             .background-welcome.parallax#parallax
@@ -25,38 +30,45 @@ block content
                                         include ../common/menu-welcom
                                 .back
                                     .inner-container
-                                        .inner-title АВТОРИЗУЙТЕСЬ
-                                        form.form-inner
-                                            .wrapper-input
-                                                .icon-inner
-                                                    svg.icon-svg
-                                                        use(xlink:href='assets/img/sprite.svg#login')
-                                                input.input-inner(name='name', placeholder='Логин', required='')
-                                            .wrapper-input
-                                                .icon-inner
-                                                    svg.icon-svg
-                                                        use(xlink:href='assets/img/sprite.svg#password')
-                                                input.input-inner(name='name', placeholder='Пароль', required='')
-                                        .checkbox-inner
-                                            input#one(type='checkbox').checkbox
-                                            label.checkbox-label(for='one') Я человек
-                                        .checkbox-question Вы точно не робот?
-                                        .radio-inner
-                                            .radiobox-inner
-                                                input.radio#yes(type='radio', name='answer', value='yes')
-                                                label.radio-label.radio-label_first(for='yes') Да
-                                            .radiobox-inner
-                                                input.radio#no(type='radio', name='answer', value='no')
-                                                label.radio-label(for='no') Не уверен
-                                        .navigation__inner
-                                            button.inner-link.return-btn(type = "button") На главную
-                                            button.inner-link.submit(type = "button") Войти
+                                        .inner-title
+                                            | АВТОРИЗУЙТЕСЬ
+                                        .auth__form
+                                            form(action="" method="" id="auth-form")
+                                                .form__container
+                                                    .wrapper-input.input-group.input-group_iconed
+                                                        input.form-input(type="text" placeholder="Логин")
+                                                        .input-group__icon-field
+                                                            svg.input-group__icon
+                                                                use(xlink:href='assets/img/sprite.svg#login')
+                                                    .wrapper-input.input-group.input-group_iconed
+                                                        input.form-input(type="password" placeholder="Пароль")
+                                                        .input-group__icon-field
+                                                            svg.input-group__icon
+                                                                use(xlink:href='assets/img/sprite.svg#password')
+                                                    .checkbox-inner
+                                                        label.checkbox
+                                                            input.checkbox__fake(type="checkbox")
+                                                            .checkbox__label Я человек
+                                                    .auth-form__radio.radio-group
+                                                        .radio-group__title Вы точно человек?
+                                                        .radio-group__inputs
+                                                            label.radio-btn
+                                                                input.radio-btn__fake(type="radio" name="robot" value="yes")
+                                                                .radio-btn__label Да
+                                                            label.radio-btn
+                                                                input.radio-btn__fake(type="radio" name="robot" value='no')
+                                                                .radio-btn__label Не уверен
+                                                    .input-error-msg
+
+                                                .auth-form__buttons.form__buttons
+                                                    button.form__btn.return-btn(type="button") На главную
+                                                    button.form__btn(type="submit") Войти
 
 
                 .c-wrapper-avatar__copyright
                     span.autor &copy; Лайковская Валентина | создано с любовью в Loftschool | 2016
-    .preloader
-        .preloader__content
-            .preloader__animation
-            .preloader__percent 0%
+                .welcome__error
+                    .input-error-captcha
+                        .input-error-captcha__close
+                        .input-error-captcha__text Роботам здесь делать нечего!
 
