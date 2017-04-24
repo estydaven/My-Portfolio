@@ -1,5 +1,5 @@
 @function rem($pxsize,$rembase:16){
-  @return ($pxsize/$rembase) + rem}
+  @return ($pxsize/$rembase) + rem};
 
 @mixin desktop {
   @media (max-width: 1200px) {

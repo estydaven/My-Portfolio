@@ -1,6 +1,10 @@
 
 .works__col{
   margin-top: rem(380);
+
+  @include phones{
+    margin-top: rem(300);
+  }
 }
 
 .left{
@@ -13,11 +17,17 @@
   border: 0;
   }
 
+.triangle{
+  @include phones{
+    height: 50px;
+  }
+}
+
 .main-title{
   width: 100%;
   text-align: center;
   margin: rem(20) 0;
-  font-family: sansus_webissimoregular;
+  font-family: 'sansus_webissimoregular';
   font-size: rem(63);
   line-height: 1;
   color: #ffffff;
@@ -34,6 +44,10 @@
   height: 160px;
   display: block;
   margin: 0 auto;
+
+  @include phones{
+    height: 100px;    
+  }
 }
 
 .section-title__works {
@@ -44,12 +58,12 @@
   margin-top: rem(-6);
 
   @include phones{
-    height: 140px;
+    height: 100px;
   }
 }
 
 .section-title__work{
-  height: 200px;
+  
   width: 100%;
   display: block;
   padding-top: rem(20);
@@ -57,10 +71,17 @@
 
 .portfolio__wrapper {
   @extend %clearfix;
-  height: 100vh;
-  min-height: 550px;
+  height: 450px;    
   text-align: center;
   position: relative;
+
+  @include tablets{
+    height: 600px;
+  }
+
+  @include phone{
+    height: 550px;
+  }
 }
 .column {
   float: left;
@@ -71,7 +92,7 @@
     background-color: #f0efe9;
   }
   &_right {
-    background-color: #efebe0;
+    background-color: #f0efe9;
   }
 }
 .portfolio__column {
@@ -86,11 +107,40 @@
     @include tablets {
       height: 80%;
     }
+    @include phone{
+      height: 70%;
+    }
   }
   &_right {
     @include tablets {
       height: 20%;
     }
+    @include phone{
+      height: 20%;
+    }
+  }
+}
+
+.work__speak{
+  width: 100%;
+  text-align: center;  
+  font-size: 16px;
+  background-color: #f0efe9;
+  color:#474b57;
+  padding: rem(10);
+
+  @include phones{
+    text-align: left;
+  }
+}
+
+.speak{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: rem(10);
+
+  @include phones{
+    width: 100%;
   }
 }
 
@@ -102,7 +152,7 @@
   height: 70%;
   margin: 0 auto;
   padding: rem(43) 0 rem(43);
-  background-color: #efebe0;
+  background-color: #f0efe9;
   position: absolute;
   left: 100%;
   z-index: 100;
@@ -111,13 +161,17 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 60%;
+    width: 80%;
     height: 55%;
     padding: 1% -0px;
   }
   @include phones{
-    width: 90%;
-    height: 45%;
+    width: 100%;
+    height: 50%;
+  }
+  @include phone{
+    height: 60%;
+    width: 100%;
   }
 }
 .work__pic {
@@ -148,24 +202,26 @@
       max-width: 100%;
     }
   }
-
+  @include phones{
+    padding: 0;    
+  }
 }
 
 .work__technology {
-  font-family: 'robotomedium';
   position: relative;
   padding: rem(18) rem(20);
   text-transform: uppercase;
   color: #004cd1;
   margin-bottom: rem(40);
 
-
-
   @include tablets {
     margin-bottom: rem(30);
   }
   @include phones {
     margin-bottom: rem(20);
+  }
+  @include phone{
+    padding: 0;
   }
 }
 
@@ -201,6 +257,8 @@
 .work__slider {
   @extend %clearfix;
   height: 30%;
+  width: 81%;
+  margin: 0 auto;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -235,7 +293,7 @@
     bottom: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(10, 10, 10, 0.4);
+    
   }
 
   &_prev {
@@ -272,6 +330,10 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+
+  @include phone{
+    height: 98%;
+  }
 }
 .work-slider__list_next {
   .work-slider__item {
@@ -305,7 +367,13 @@
   left: 0;
   bottom: 0;
   margin: auto;
+
+  @include phone{
+    height: 95%;
+  }
 }
+
+
 .slider__list {
   width: 100%;
   height: 100%;
@@ -337,36 +405,44 @@
 
 .about-me{
   width: 100%;
-  height: auto;
-  background-image: url(../img/lighth.png);
+  height: 100vh;
+  background-image: url(../img/milkyway.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  
+  @include tablets{
+    margin-top: 10px;
+  }
+
+  @include phone{
+    margin-top: rem(-64);
+    height: auto;
+  }
 }
 
 .section-opinion{
   position: relative;
   width: 50%;
   margin: 0 auto;
-  color: #ffffff;
-  min-height: 1100px;
+  color: #ffffff;  
 
   @include tablets{
     width: 90%;
   }
   @include phones{
-    width: 80%;
-    min-height: 1400px;
+    width: 80%; 
+    min-height: 600px;   
   }
-  @include phone{
-    min-height: 1540px;
+  @include phone{    
+    width: 90%;
+     min-height: 700px;  
   }
 }
 
 .opinion{
   width: 50%;
   float: left;
-  font-family: 'robotoitalic';
   font-size: rem(16);
   padding: rem(10);
 
@@ -379,18 +455,29 @@
 
 .opinion__text{
   background-image: url(../img/quote.png);
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;    
   background-position: left top;
   padding-top: rem(20);
+
+  @include phones{
+    margin-left: rem(100);
+    margin-top: rem(-20);
+    font-size: 14px;
+  }
 }
 
 .text{
-  font-family: 'robotobold_italic';
+  font-weight: 600;
 }
 
 .opinion__text-author{
   padding: rem(30);
   text-align: center;
+
+  @include phones{
+    padding: rem(15);
+    font-size: 14px;
+  }
 }
 
 .opinion__img{
@@ -403,6 +490,9 @@
   @include tablets{
     margin-bottom: rem(20);
   }
+  @include phones{
+  float: left;
+}
 }
 
 .opinion__pic{
@@ -459,7 +549,6 @@
   width: 50%;
   padding: rem(15) 0;
   text-decoration: none;
-  font-family: 'robotomedium';
   text-align: center;
   color: #fff;
   position: relative;

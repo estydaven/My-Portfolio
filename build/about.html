@@ -7,15 +7,14 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <title>Портфолио
-    </title>
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
-    <script src="./assets/js/foundation.js" defer></script>
-    <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/webissimo.css">
+    <link rel="stylesheet" href="/assets/css/fontowesome.css">
+    <title>Портфолио
+    </title>
   </head>
   <body>
     <div class="wrapper">
@@ -42,7 +41,7 @@
                 </svg></a></li>
           </ul>
         </div>
-        <div class="button_container" id="toggle"><span class="line top"></span><span class="line middle"></span><span class="line bottom"></span></div>
+        <div class="button_container button_container_workses" id="toggle"><span class="line top"></span><span class="line middle"></span><span class="line bottom"></span></div>
         <div class="overlay overlay_disabled" id="overlay">
           <nav class="overlay-menu">
             <ul>
@@ -53,14 +52,17 @@
             </ul>
           </nav>
         </div>
-        <div class="bg-parallax"><img class="parallax-img" src="assets/img/parallax.jpg"></div>
+        <div class="bg-parallax"></div>
+        <div class="starses stars-parallax__layer"></div>
+        <div class="twinkling"></div>
+        <div class="clouds stars-parallax__layer"></div>
         <div class="stars-parallax"><img class="stars" src="assets/img/stars1.svg"></div>
         <div class="user__hero-parallax user">
           <div class="user__pic"><img class="user__pic-item" src="assets/img/face.jpg"></div>
           <div class="user__name">Лайковская Валентина</div>
           <div class="user__desc">Личный сайт веб разработчика</div>
         </div>
-        <div class="arrow arrow_ar"><a class="arrow-down__img" href="" target="_blank">
+        <div class="arrow arrow_arr"><a class="arrow-down__img" href="" target="_blank">
             <svg class="arrow-down__pic">
               <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
             </svg></a></div>
@@ -77,8 +79,8 @@
             <div class="about__pic"><img class="about__img" src="assets/img/face2.jpg"></div>
             <div class="block-title">Кто я</div>
             <div class="block-text">
-              <p>Я веб-разработчик из Гродно, Беларусь. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
-              <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!</p>
+              <p>Я фронтент-разработчик из Беларуси. Занимаюсь разработкой современных сайтов и приложений. Мне нраявятся интересные проекты с нетривиальными задачами.</p>
+              <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент.</p>
             </div>
           </div>
         </div>
@@ -87,9 +89,10 @@
             <polygon points="0,110 1000,110 1000,0"></polygon>
           </svg>
           <div class="skills">
-            <div class="block-title">Чем я могу быть вам полезна</div>
+            <div class="block-title block-title_upper">Технологии, которыми я владею</div>
             <div class="skills__text">
-              <p>Больше всего меня привлекает Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте попорядку.</p>
+              <p>Больше всего меня привлекает Frontend разработка, мне очень нравится процесс создания сайта, верстка с самого нуля. </p>
+              <p>Помимо этого я интересуюсь CSS3-анимациями, активно изучаю JavaScript и пробую в своей работе новые технологии: БЭМ-нейминг, Pug, SCSS и другие.</p>
             </div>
             <ul class="skills-group">
               <li class="skills-group__item">
@@ -127,24 +130,6 @@
               <li class="skills-group__item">
                 <div class="skills-group__title">Backend</div>
                 <ul class="skills-list">
-                  <li class="skills-list__item">
-                    <div class="skill" data-percent="25">
-                      <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
-                        <div class="skill_title">PHP</div>
-                      </svg>
-                    </div>
-                  </li>
-                  <li class="skills-list__item">
-                    <div class="skill" data-percent="30">
-                      <svg class="skill__circle" viewBox="0 0 100 100">
-                        <circle class="skills__circle-under" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
-                        <circle class="skills__circle-above" r="40" cx="50" cy="50" transform="rotate(-90 50 50)"></circle>
-                        <div class="skill_title">mySQL</div>
-                      </svg>
-                    </div>
-                  </li>
                   <li class="skills-list__item">
                     <div class="skill" data-percent="5">
                       <svg class="skill__circle" viewBox="0 0 100 100">
@@ -201,24 +186,15 @@
           </div>
         </div>
       </section>
-      <section class="l-contacts">
-        <div class="map" id="map"></div>
+      <section class="l-contacts">           
         <div class="contacts">
           <div class="block-title">Контакты</div>
           <ul class="contacts-list">
             <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/skype.png">
               <div class="contacts-item">estydaven</div>
             </li>
-            <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/phone.png">
-              <div class="contacts-item">+375(29)5823133</div>
-            </li>
-          </ul>
-          <ul class="contacts-list">
             <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/envelope.png">
               <div class="contacts-item">esetnod1111@gmail.com</div>
-            </li>
-            <li class="contacts-list__item"><img class="icon__contacts" src="assets/img/map-contact.png">
-              <div class="contacts-item">г.Гродно, ул.Репина 31</div>
             </li>
           </ul>
         </div>
@@ -254,9 +230,7 @@
           </div>
           <div class="page-footer__right">
             <p>estydaven</p>
-            <p>esetnod1111@gmail.com</p>
-            <p>+375(29)5823133</p>
-            <p>г.Гродно, ул.Репина 31</p>
+            <p>esetnod1111@gmail.com        </p>
           </div>
         </footer>
         <div class="footer-author">
@@ -264,6 +238,8 @@
         </div>
       </section>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB6rM-vv-YQ8hbju8XpPvHfbYfPDeCrtU&amp;callback=initMap" async defer></script>
+    <script src="./assets/js/foundation.js" defer></script>
+    <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </body>
 </html>

@@ -193,14 +193,18 @@
 .form__btn {
   width: 50%;
   padding: 15px 0;
-  text-decoration: none;
-  font-family: 'robotomedium';
+  text-decoration: none;  
   text-align: center;
   color: #fff;
   background-color: #1056d1;
   transition: .3s;
   position: relative;
   bottom: 0;
+
+  a{
+    text-decoration: none;
+    color: #ffffff;
+  }
 
   &_dark{
     background: rgba(28, 27, 31, 0.2);
@@ -225,7 +229,7 @@ label {
     margin-bottom: 42px;
   }
   @include phone{
-    margin-bottom: 51px;
+    margin-bottom: 21px;
   }
 }
 
@@ -247,8 +251,7 @@ label {
 }
 
 .checkbox__label{
-  cursor: pointer;
-  font-family: 'robotoregular';
+  cursor: pointer;  
   font-size: rem(16);
   color: #ffffff;
   margin-bottom: 10px;
@@ -268,7 +271,6 @@ label {
 }
 
 .radio-group__title {
-  font-family: 'robotobold';
   color: #ffffff;
   width: 60%;
   margin: 0 auto;

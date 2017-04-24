@@ -7,15 +7,14 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <title>Welcome
-    </title>
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css">
-    <script src="./assets/js/foundation.js" defer></script>
-    <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/webissimo.css">
+    <link rel="stylesheet" href="/assets/css/fontowesome.css">
+    <title>Welcome
+    </title>
   </head>
   <body>
     <div class="welcome-wrapper">
@@ -25,110 +24,103 @@
           <div class="preloader__percent">0%</div>
         </div>
       </div>
-      <div class="page-wrapper">
-        <video class="bg-video" src="assets/img/night.mp4" controls="controls" autoplay="autoplay" loop="loop"></video>
-        <div class="background-welcome parallax" id="parallax">
-          <div class="parallax-layer"></div>
-          <div class="parallax-layer parallax-layer_img"></div>
-        </div>
-        <div class="contain">
-          <div class="contain-welcome">
-            <div class="c-button">
-              <div class="c-button-auth" id="auth">Авторизоваться</div>
-            </div>
-            <div class="avatar">
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <div class="l-wrapper-avatar">
-                      <div class="user-welcome">
-                        <div class="user-welcome__pic-container"><img class="user-welcome__pic" src="assets/img/face.jpg" alt="avatar"></div>
-                        <div class="user-welcome__name">Лайковская Валентина</div>
-                        <div class="user-welcome__occ">Личный сайт разработчика</div>
-                      </div>
-                      <div class="socials__welcome">
-                        <ul class="socials-welcome">
-                          <li class="socials-welcome__item"><a class="socials-welcome__link_vk" href="https://vk.com/id13401205" target="_blank">
-                              <svg class="icon-welcome">
-                                <use xlink:href="assets/img/sprite.svg#vk"></use>
-                              </svg></a></li>
-                          <li class="socials-welcome__item"><a class="socials-welcome__link_github" href="https://github.com/estydaven" target="_blank">
-                              <svg class="icon-welcome">
-                                <use xlink:href="assets/img/sprite.svg#github"></use>
-                              </svg></a></li>
-                          <li class="socials-welcome__item"><a class="socials-welcome__link_in" href="https://www.linkedin.com/in/%D0%B2%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0-%D0%BB%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F-13448791?trk=nav_responsive_tab_profile" target="_blank">
-                              <svg class="icon-welcome">
-                                <use xlink:href="assets/img/sprite.svg#in"></use>
-                              </svg></a></li>
-                        </ul>
-                      </div>
-                      <div class="navigation__welcome">
-                        <nav class="navigation">
-                          <ul class="navigation-list">
-                            <li class="navigation-item navigation-item_line"><a class="navigation-link" href="works.html">Мои работы</a></li>
-                            <li class="navigation-item navigation-item_line"><a class="navigation-link" href="about.html">Обо мне</a></li>
-                            <li class="navigation-item navigation-item_line"><a class="navigation-link" href="blog.html">Блог</a></li>
-                          </ul>
-                        </nav>
-                      </div>
-                    </div>
+      <section class="l-section page-wrapper">
+        <div class="parallax" id="parallax"></div>
+        <div class="starses stars-parallax__layer"></div>
+        <div class="twinkling"></div>
+        <div class="clouds stars-parallax__layer"></div>
+        <div class="c-button c-button-auth" id="auth">Авторизоваться</div>
+        <div class="avatar">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <div class="l-wrapper-avatar">
+                  <div class="user-welcome">
+                    <div class="user-welcome__pic-container"><img class="user-welcome__pic" src="assets/img/face.jpg" alt="avatar"></div>
+                    <div class="user-welcome__name">Лайковская Валентина</div>
+                    <div class="user-welcome__occ">Личный сайт разработчика</div>
                   </div>
-                  <div class="back">
-                    <div class="inner-container">
-                      <div class="inner-title">АВТОРИЗУЙТЕСЬ</div>
-                      <div class="auth__form">
-                        <form action="" method="" id="auth-form">
-                          <div class="form__container">
-                            <div class="wrapper-input input-group input-group_iconed">
-                              <input class="form-input" type="text" placeholder="Логин">
-                              <div class="input-group__icon-field">
-                                <svg class="input-group__icon">
-                                  <use xlink:href="assets/img/sprite.svg#login"></use>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="wrapper-input input-group input-group_iconed">
-                              <input class="form-input" type="password" placeholder="Пароль">
-                              <div class="input-group__icon-field">
-                                <svg class="input-group__icon">
-                                  <use xlink:href="assets/img/sprite.svg#password"></use>
-                                </svg>
-                              </div>
-                            </div>
-                            <div class="checkbox-inner">
-                              <label class="checkbox">
-                                <input class="checkbox__fake" type="checkbox">
-                                <div class="checkbox__label">Я человек</div>
-                              </label>
-                            </div>
-                            <div class="auth-form__radio radio-group">
-                              <div class="radio-group__title">Вы точно человек?</div>
-                              <div class="radio-group__inputs">
-                                <label class="radio-btn">
-                                  <input class="radio-btn__fake" type="radio" name="robot" value="yes">
-                                  <div class="radio-btn__label">Да</div>
-                                </label>
-                                <label class="radio-btn">
-                                  <input class="radio-btn__fake" type="radio" name="robot" value="no">
-                                  <div class="radio-btn__label">Не уверен</div>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="input-error-msg"></div>
+                  <div class="socials__welcome">
+                    <ul class="socials-welcome">
+                      <li class="socials-welcome__item"><a class="socials-welcome__link_vk" href="https://vk.com/id13401205" target="_blank">
+                          <svg class="icon-welcome">
+                            <use xlink:href="assets/img/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li class="socials-welcome__item"><a class="socials-welcome__link_github" href="https://github.com/estydaven" target="_blank">
+                          <svg class="icon-welcome">
+                            <use xlink:href="assets/img/sprite.svg#github"></use>
+                          </svg></a></li>
+                      <li class="socials-welcome__item"><a class="socials-welcome__link_in" href="https://www.linkedin.com/in/%D0%B2%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0-%D0%BB%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F-13448791?trk=nav_responsive_tab_profile" target="_blank">
+                          <svg class="icon-welcome">
+                            <use xlink:href="assets/img/sprite.svg#in"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                  <div class="navigation__welcome">
+                    <nav class="navigation">
+                      <ul class="navigation-list">
+                        <li class="navigation-item navigation-item_line"><a class="navigation-link" href="works.html">Мои работы</a></li>
+                        <li class="navigation-item navigation-item_line"><a class="navigation-link" href="about.html">Обо мне</a></li>
+                        <li class="navigation-item navigation-item_line"><a class="navigation-link" href="blog.html">Блог</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner-container">
+                  <div class="inner-title">АВТОРИЗУЙТЕСЬ</div>
+                  <div class="status"></div>
+                  <div class="auth__form">
+                    <form class="form" id="login" action="login" method="POST">
+                      <div class="form__container">
+                        <div class="wrapper-input input-group input-group_iconed">
+                          <input class="form-input" name="login" type="text" placeholder="Логин">
+                          <div class="input-group__icon-field">
+                            <svg class="input-group__icon">
+                              <use xlink:href="assets/img/sprite.svg#login"></use>
+                            </svg>
                           </div>
-                          <div class="auth-form__buttons form__buttons">
-                            <button class="form__btn return-btn" type="button">На главную</button>
-                            <button class="form__btn" type="submit">Войти</button>
+                        </div>
+                        <div class="wrapper-input input-group input-group_iconed">
+                          <input class="form-input" name="password" type="password" placeholder="Пароль">
+                          <div class="input-group__icon-field">
+                            <svg class="input-group__icon">
+                              <use xlink:href="assets/img/sprite.svg#password"></use>
+                            </svg>
                           </div>
-                        </form>
+                        </div>
+                        <div class="checkbox-inner">
+                          <label class="checkbox"></label>
+                          <input class="checkbox__fake" type="checkbox">
+                          <div class="checkbox__label">Я человек</div>
+                        </div>
+                        <div class="auth-form__radio radio-group">
+                          <div class="radio-group__title">Вы точно человек?</div>
+                          <div class="radio-group__inputs"></div>
+                          <label class="radio-btn">
+                            <input class="radio-btn__fake" type="radio" name="robot" value="yes">
+                            <div class="radio-btn__label">Да</div>
+                          </label>
+                          <label class="radio-btn">
+                            <input class="radio-btn__fake" type="radio" name="robot" value="no">
+                            <div class="radio-btn__label">Не уверен</div>
+                          </label>
+                        </div>
+                        <div class="input-error-msg">      </div>
                       </div>
-                    </div>
+                      <div class="auth-form__buttons form__buttons">
+                        <button class="form__btn return-btn" name="" type="reset">На главную</button>
+                        <button class="form__btn" name="" type="submit">Войти    </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="c-wrapper-avatar__copyright"><span class="autor">&copy; Лайковская Валентина | создано с любовью в Loftschool | 2016</span></div>
+        </div>
+        <div class="c-wrapper-avatar__copyright"><span class="autor">&copy; Лайковская Валентина | создано с любовью в Loftschool | 2016</span>
           <div class="welcome__error">
             <div class="input-error-captcha">
               <div class="input-error-captcha__close"></div>
@@ -136,7 +128,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
+    <script src="./assets/js/foundation.js" defer></script>
+    <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </body>
 </html>

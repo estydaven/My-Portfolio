@@ -6,6 +6,7 @@
   position: relative;
   @extend %clearfix;
   width: 100%;
+  background-color: #ffffff;
   margin-bottom: rem(200);
 
   @include phone{
@@ -13,9 +14,21 @@
   }
 }
 
-.title{
+.post__title{
   font-family: 'sansus_webissimoregular';
-  font-size: rem(63);
+  font-size: rem(33);
+  color: #6b6e78;
+}
+
+.post__date{
+  font-family: 'sansus_webissimoregular';
+  font-size: rem(18);
+  color: #004cd1;
+  padding: rem(10) 0;
+}
+
+.post__content p{
+  padding-bottom: rem(10);
 }
 
 .blog__triangle {
@@ -36,13 +49,17 @@
 
 .blog-container {
   padding: rem(70) rem(70) 0;
-  margin-bottom: rem(200);
-  font-family: 'robotoregular';
+  margin-bottom: rem(200);  
   transition: .5s;
   position: relative;
   display: flex;
   height: 100%;
   @extend %clearfix;
+
+  @include phones{
+    padding: rem(10); 
+
+  }
 }
 
 .blog__tabs {
@@ -86,7 +103,6 @@
     float: none;
     padding-bottom: rem(70);
   }
-
 }
 
 .blog__tabs-list {
@@ -104,16 +120,13 @@
   cursor: pointer;
   list-style: none;
   padding: rem(14) rem(17);
-  transition: .5s all ease-out;
-  border-right: 3px solid transparent;
+  transition: .5s all ease-out;  
   text-decoration: none;
-
 
   &:hover{
     border-right-color: #083c96;
     color: #083c96;
-  }
-
+   }
   }
 
 
@@ -122,8 +135,7 @@
   color: #083c96;
 
   @include tablets{
-    color: #ffffff;
-    font-family: 'robotobold';
+    color: #ffffff;    
     font-size: rem(16);
   }
 }
@@ -152,8 +164,7 @@
     }
 
     &_active {
-      color: #fff;
-      font-family: 'robotobold';
+      color: #fff;      
     }
 
   }
@@ -189,8 +200,7 @@
 
 .articles__item {
   position: relative;
-  margin-bottom: rem(23);
-  padding-bottom: rem(20);
+  margin-bottom: rem(23);  
 
   &after{
     content: '';
@@ -210,23 +220,25 @@
   }
 }
 
-.post__head {
+.article__head {
   margin-bottom: rem(27);
 }
 
-.post__title {
+.article__title {
   font-family: 'sansus_webissimoregular';
   font-size: rem(35);
   color: #474b57;
   margin-bottom: rem(30);
 }
 
-.post__date {
+.article__date {
   color: #7e97c2;
 }
 
-.post__content p {
+.article__text {
   margin-bottom: rem(20);
+  P{
+  margin-bottom: rem(20);}
 
   @include phone{
     font-size: rem(16);

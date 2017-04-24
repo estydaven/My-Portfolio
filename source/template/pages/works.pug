@@ -13,8 +13,10 @@ block content
             include ../common/socials
             include ../common/hamburger
             .bg-parallax
-                img.parallax-img(src='assets/img/parallax.jpg')
-            include ../common/avatar-all
+            .starses.stars-parallax__layer
+            .twinkling
+            .clouds.stars-parallax__layer
+            include ../common/avatar-works
             .arrow.arrow_ar
                 a.arrow-down__img(href="", target='_blank')
                     svg.arrow-down__pic
@@ -27,9 +29,10 @@ block content
                 .section-title__works
                     .main-title МОИ РАБОТЫ
                     img.stars2(src='assets/img/stars2.png')
-
+            .work__speak
+                p.speak Я начинающий разработчик, поэтому не могу похвастаться большим количеством выполненных работ. По сути, мой сайт-портфолио и есть моя первая серьезная работа. Уверена, что совсем скоро в слайдере ниже вы сможете увидеть ссылки на созданные мной проекты!
+                p.speak Вы можете связаться со мной лично и я обязательно отвечу на любой ваш вопрос=)        
         section.portfolio__wrapper
-
             .column.column_left.portfolio__column.portfolio__column_left
                 .work
                     .work__preview
@@ -42,7 +45,6 @@ block content
                                 use(xlink:href='assets/img/sprite.svg#link')
                             span Посмотреть сайт
 
-
             .column.column_right.portfolio__column.portfolio__column_right
                 .work__slider.work-slider
                     .work__prev.toggle.column.column_left
@@ -50,24 +52,24 @@ block content
                             svg.toggle__icon
                                 use(xlink:href='assets/img/sprite.svg#portf_arrow_down')
                             ul.work-slider__list.work-slider__list_prev
-                                li.work-slider__item(data-title="Сайт школы онлайн-образования" data-technology="html, css" data-link="http://loftschool.ru")
-                                    img.work-slider__img(src="assets/img/work-1.png")
-                                li.work-slider__item(data-title="Сайт ИТ-компании" data-technology="html, css, javascript" data-link="http://loftschool.ru")
-                                    img.work-slider__img(src="assets/img/work-2.png")
-                                li.work-slider__item(data-title="Портал видеоуроков и ИТ сообщество" data-technology="javascript" data-link="http://loftschool.ru")
-                                    img.work-slider__img(src="assets/img/work-3.png")
+                                li.work-slider__item(data-title="КРАСИВЫЙ СЛАЙД №1" data-technology="html, css" data-link="http://loftschool.ru")
+                                    img.work-slider__img(src="assets/img/cosmo1.jpg")
+                                li.work-slider__item(data-title="КРАСИВЫЙ СЛАЙД №2" data-technology="html, css, javascript" data-link="http://loftschool.ru")
+                                    img.work-slider__img(src="assets/img/cosmo2.jpg")
+                                li.work-slider__item(data-title="КРАСИВЫЙ СЛАЙД №3" data-technology="javascript" data-link="http://loftschool.ru")
+                                    img.work-slider__img(src="assets/img/cosmo3.jpg")
 
                     .work__next.toggle.column.column_right
                         a.toggle__link.toggle__link_next(href="#")
                             svg.toggle__icon
                                 use(xlink:href='assets/img/sprite.svg#portf_arrow_up')
                             ul.work-slider__list.work-slider__list_next
-                                li.work-slider__item(data-title="Сайт школы онлайн-образования" data-technology="html, css" data-link="http://loftschool.ru")
-                                    img.work-slider__img(src="assets/img/work-1.png")
-                                li.work-slider__item(data-title="Сайт ИТ-компании" data-technology="html, css, javascript" data-link="http://loftschool.ru")
-                                    img.work-slider__img(src="assets/img/work-2.png")
-                                li.work-slider__item(data-title="Портал видеоуроков и ИТ сообщество" data-technology="javascript" data-link="http://loftschool.ru")
-                                    img.work-slider__img(src="assets/img/work-3.png")
+                                li.work-slider__item(data-title="КРАСИВЫЙ СЛАЙД №1" data-technology="html, css" data-link="http://loftschool.ru")
+                                    img.work-slider__img(src="assets/img/cosmo1.jpg")
+                                li.work-slider__item(data-title="КРАСИВЫЙ СЛАЙД №2" data-technology="html, css, javascript" data-link="http://loftschool.ru")
+                                    img.work-slider__img(src="assets/img/cosmo2.jpg")
+                                li.work-slider__item(data-title="КРАСИВЫЙ СЛАЙД №3" data-technology="javascript" data-link="http://loftschool.ru")
+                                    img.work-slider__img(src="assets/img/cosmo3.jpg")
 
         section.section.about-me
             .section-title__work
@@ -89,9 +91,7 @@ block content
                         p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
                     .opinion__text-author
                         span.text Сабанцев Владимир
-                        p - преподаватель
-
-                include ../common/contact-me
+                        p - преподаватель                
             include ../common/footer
 
 

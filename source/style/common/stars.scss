@@ -1,0 +1,38 @@
+@keyframes move-twink-back {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 5000px;}
+}
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.starses, .twinkling, .clouds {
+  position: absolute;
+  top: -3%;
+  left: -5%;
+  width: 110%;
+  height: 110vh;
+  display: block;
+}
+
+.starses{
+  background: #152c55 url(../img/starses.png)repeat top center;
+  z-index:-153;
+  min-height: 800px;
+}
+.twinkling{
+  background: transparent url(../img/twinkling.png)repeat top center;
+  z-index:-151;
+  animation: move-twink-back 200s linear infinite;
+}
+.clouds{
+  background: transparent url(../img/clouds3.png) repeat top center;
+  z-index: -150;
+  animation: move-clouds-back 200s linear infinite;
+
+}

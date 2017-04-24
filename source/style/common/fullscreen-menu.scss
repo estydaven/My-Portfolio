@@ -4,12 +4,18 @@
   position: absolute;
   right: 5%;
   top: 3%;
-  z-index: 50;
+  z-index: 121;
   transition: opacity .25s ease;
   cursor: pointer;
 
   @include phone{
     margin-right: rem(20);
+  }
+
+  &_workses{
+    @include phones{
+    top: 2%;
+  }
   }
 
   &:hover {
@@ -59,7 +65,7 @@
   width: 100%;
   height: 0;
   opacity: 0;
-  z-index: 30;
+  z-index: 120;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
@@ -93,6 +99,10 @@
     font-family: 'sansus_webissimoregular';
     font-weight: 400;
     text-align: center;
+
+    @include phones{
+      font-size: 30px;
+    }
   }
   ul {
     list-style: none;

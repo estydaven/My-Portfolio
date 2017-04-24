@@ -4,11 +4,13 @@
   overflow: hidden;
   position: relative;
 
-
   @include tablets{
     min-height: 600px;
   }
 
+  @include phone{
+    min-height: 400px;
+  }
 }
 
 .bg-parallax{
@@ -20,9 +22,71 @@
   height: 140%;
 }
 
-.parallax-img{
+.stars-bg {
+  position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  background-size: 240px;
+  backface-visibility: visible;
+  z-index: 1;
+
+  // animation
+  animation: spin 300s linear infinite;
+}
+
+.circle {
+  position: absolute;
+  background: rgba(217, 248, 251, 0.8);
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // glow
+  box-shadow: 0 0 5px 2px rgba(89, 149, 199, 1);
+
+  // animation
+  animation: glow 2s infinite alternate;
+
+  &-big .circle {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+@keyframes glow {
+  from {box-shadow: 0 0 6px 1px rgba(89, 149, 199, 1);}
+  to {box-shadow: 0 0 8px 4px rgba(89, 149, 199, 1);}
+}
+
+@keyframes spin {
+  from {
+    transform: rotate( 0deg );
+  }
+  to {
+    transform: rotate( 360deg );
+  }
+}
+
+@for $i from 1 through 100 {
+  .circle-small .circle:nth-child(#{$i}) {
+    top: random(300) - 100%;
+    left: random(300) - 100%;
+
+    // each star should animate in diferent times
+    animation-delay:$i + s;
+  }
+  .circle-big .circle:nth-child(#{$i}) {
+    top: random(300) - 100%;
+    left: random(300) - 100%;
+
+    // each star should animate in diferent times
+    animation-delay:$i + s;
+  }
 }
 
 .socials {
@@ -62,7 +126,6 @@
   &:hover{
     fill: #0548be;
   }
-
 }
 
 .arrow{
@@ -75,10 +138,7 @@
   text-align: center;
   margin-top: rem(250);
 
-
-}
-
-.arrow_ar{
+  &_arr{
   position: absolute;
   z-index: 1;
   left: 0;
@@ -87,8 +147,32 @@
   width: 100%;
   text-align: center;
   margin-top: rem(150);
+  }
 }
 
+.arrow_ar{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  margin-top: rem(150);
+
+  @include laptop{
+    top: 43%;
+  }
+  @include tablets{
+    top: 35%;
+  }
+  @include phones{
+    top: 30%;
+  }
+  @include phone{
+    top: 25%;
+  }
+}
 
 .arrow-down__img{
   width: rem(53);
@@ -103,8 +187,6 @@
   fill: #ffffff;
 }
 
-
-
 .stars-parallax{
   position: absolute;
   left: 0;
@@ -114,6 +196,15 @@
   text-align: center;
   z-index: 5;
   min-height: 200px;
+
+  &_phone{
+  @include tablets{
+    top: 30%;
+  }  
+  @include phone{
+    top: 20%;
+  }
+  }
 }
 
 .user__hero-parallax{
@@ -124,6 +215,15 @@
   top: 40%;
   margin-top: rem(-100);
   z-index: 10;
+
+   &_media{ 
+   @include tablets{
+    top: 30%;
+  }    
+   @include phone{
+    top: 20%;
+  }
+   }
 }
 
 .user{
@@ -137,14 +237,12 @@
   color: #ffffff;
   line-height: 1.333;
   margin: 0 auto;
-  font-family: 'robotomedium';
   text-transform: capitalize;
   text-align: center;
 }
 
 .user__desc{
   font-size: rem(16);
-  font-family: 'robotoregular';
   color: #ffffff;
 }
 
@@ -267,7 +365,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  font-family: sansus_webissimoregular;
+  font-family: 'sansus_webissimoregular';
   font-size: rem(63);
   line-height: 1;
   color: #474b57;
@@ -309,7 +407,7 @@
 }
 
 .block-title{
-  font-family: sansus_webissimoregular;
+  font-family: 'sansus_webissimoregular';
   font-size: rem(35);
   color: #474b57;
   text-align: center;
@@ -323,8 +421,11 @@
   }
 }
 
+.block-title_upper{
+  margin-top: -9%;
+}
+
 .block-text{
-  font-family: 'robotoregular';
   font-size: rem(16);
   color: #474b57;
   padding-top: rem(10);
@@ -339,6 +440,11 @@
     padding-left: rem(10);
     font-size: rem(20);
   }
+  @include phone{
+    width: 100%;
+    margin-bottom: rem(20);   
+    font-size: 15px; 
+  }
 }
 
 .block-text p{
@@ -346,18 +452,25 @@
 }
 
 .skills__text{
-  font-family: 'robotoregular';
   font-size: rem(16);
   color: #474b57;
   padding-top: rem(10);
   line-height: 1.5;
   margin-left: rem(30);
 
+  p{
+    margin-bottom: rem(10);
+  }
+
   @include phones{
     width: 90%;
     font-size: rem(20);
   }
-
+  @include phone{
+    width: 95%;
+    font-size: 15px;
+    margin-left: rem(10);
+  }
 }
 
 .skills-group{
@@ -380,7 +493,6 @@
 
 .skills-group__title{
   font-size: rem(28);
-  font-family: 'Roboto';
   color: #474b57;
 
   @include tablets{
@@ -398,15 +510,14 @@
   flex-direction: row;
   width: 100%;
 
-  @include tablets{
-    display: flex;
+  @include tablets{    
     justify-content: center;
   }
   @include phones{
     width: auto;
     flex-wrap: wrap;
     margin: 0 auto;
-  }
+  } 
 }
 
 .skills-list__item{
@@ -414,12 +525,16 @@
   @include desktop{
     padding-right: rem(15);
   }
+  @include laptop{
+    justify-content: space-between;
+    width: rem(120);
+  }
   @include phones{
     margin-right: rem(50);
   }
   @include phone{
     margin-right: 0;
-
+    width: rem(150);
   }
 }
 
@@ -448,7 +563,6 @@
   @include phones{
     width: rem(160);
   }
-
 }
 
 .skills__circle-under{
@@ -463,39 +577,31 @@
 .skill_title{
   font-size: rem(12);
   font-weight: 500;
-  font-family: 'robotomedium';
   color: #243994;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-
 }
 
 .l-contacts {
   position: relative;
-  height: 120vh;
+  height: 115vh;
+  background: url(../img/cosmo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @include phone{
-    height: 150vh;
-  }
+  @include phones{
+    height: 70vh;
+  }  
 }
-
-.map{
-  height: 120%;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: rem(-200);
-
-}
-
 
 .contacts{
   @include centered();
   top: 35%;
-  width: rem(580);
+  padding: rem(10);  
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
 
   @include tablets{
     width: rem(480);
@@ -503,14 +609,12 @@
   }
 
   @include phones{
-    width: 100%;
-    background: #ffffff;
-    top: 16%;
+    display: none;
   }
 }
 
 .contacts-list{
-  width: 50%;
+  width: 100%;
   float: left;
   @include tablets{
     width: 100%;
@@ -521,7 +625,7 @@
 .contacts-list__item{
   display: inline-block;
   vertical-align: middle;
-  width: 100%;
+  width: 80%;
   padding: rem(30);
 
   @include tablets{
@@ -541,9 +645,10 @@
 
 .contacts-item{
   color: #6b6e78;
-  font-family: 'robotomedium';
-  font-size: rem(15);
+  font-size: rem(22);
   text-align: start;
+  width: 60%;
+  margin-top: rem(5);
   padding-left: rem(10);
   display: inline-block;
 
@@ -563,11 +668,15 @@
   left: 0;
   width: 100%;
   background: rgba(60, 62, 71, 0.8);
+
+  @include tablets{
+    height: 160px;
+  }
   @include phones{
-    height: 250px;
+    height: 220px;
   }
   @include phone{
-    height: 300px;
+    height: 280px;
   }
 }
 
@@ -579,19 +688,17 @@
   position: absolute;
   bottom: 0;
   font-size: rem(16);
-  font-family: 'robotomedium';
   height: 40px;
   padding: rem(10);
+
   @include phone{
     height: 60px;
-
   }
 }
 
 .page-footer__left{
   text-align: left;
   color: #ffffff;
-  font-family: 'robotolight';
   font-size: rem(16);
   width: 33%;
   margin-left: rem(16);
@@ -603,10 +710,9 @@
 
   @include tablets{
     float: none;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    padding: rem(5);
-    border-bottom: 2px solid #97989d;
+    padding: rem(5);    
     margin-top: auto;
     display: block;
   }
@@ -618,7 +724,6 @@
 .page-footer__right{
   text-align: left;
   color: #ffffff;
-  font-family: 'robotolight';
   font-size: rem(16);
   bottom: rem(70);
   float: left;
@@ -628,19 +733,17 @@
   @include tablets{
     float: right;
     text-align: right;
-    margin-left: auto;
+    margin: 0 auto;
     margin-top: rem(10);
     bottom: auto;
     margin-right: rem(20);
     width: auto;
-    margin-left: 0;
+    
   }
   @include phones{
     bottom: auto;
     margin: auto;
-    width: 100%;
-    float: none;
-    height: 100px;
+    width: 100%;       
     text-align: center;
   }
 }
@@ -664,31 +767,45 @@
     text-align: center;
     float: none;
     margin: 0 auto;
-    border-bottom: 2px solid #97989d;
     height: 80px;
     bottom: auto;
   }
   @include phone{
-    height: 60px;
+    height: 100px;
   }
 
 }
 
 .nav{
   @include phones{
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
   @include phone{
     width: auto;
-    margin: 0 auto;
+    margin: 0 auto;    
+  }
+}
+
+.nav-list{
+
+  @include phone{
+  display: flex;
+  margin-right: rem(20); 
+  margin-top: rem(10);
+  }
+}
+
+.nav-item{
+  @include phone{
+  flex: 1;
+  font-size: 12px;
   }
 }
 
 .nav-link{
   text-decoration: none;
   color: #ffffff;
-  font-family: 'robotobold';
   font-size: rem(15);
   float: left;
   margin-left: rem(20);
@@ -705,8 +822,8 @@
   margin-right: rem(100);
 
   @include phones{
-    margin-left: rem(160);
-
+    margin-left: 30%;
+    min-width: 200px;
   }
   @include phone{
     float: none;
@@ -735,6 +852,10 @@
 .socials-footer__item{
   display: inline-block;
   margin-right: rem(30);
+
+  @include laptop{
+    margin-right: rem(16);
+  }
 }
 
 .icon-footer{

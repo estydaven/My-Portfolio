@@ -13,9 +13,11 @@ block content
             include ../common/socials
             include ../common/hamburger
             .bg-parallax
-                img.parallax-img(src='assets/img/parallax.jpg')
+            .starses.stars-parallax__layer
+            .twinkling
+            .clouds.stars-parallax__layer
             include ../common/avatar-all
-            include ../common/arrow-down
+            include ../common/arrow-down_second
         section.section.about
             .about__col.about__col_left
                 svg(viewbox="0 0 1000 110" preserveAspectRatio='none').about__triangle
@@ -28,18 +30,18 @@ block content
                         img(src='assets/img/face2.jpg').about__img
                     .block-title Кто я
                     .block-text
-                        p Я веб-разработчик из Гродно, Беларусь. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                        p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
+                        p Я фронтент-разработчик из Беларуси. Занимаюсь разработкой современных сайтов и приложений. Мне нраявятся интересные проекты с нетривиальными задачами.
+                        p Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент.
             .about__col.about__col_right
                 svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
                     polygon(points="0,110 1000,110 1000,0")
                 .skills
-                    .block-title Чем я могу быть вам полезна
+                    .block-title.block-title_upper Технологии, которыми я владею
 
                     .skills__text
-                        p Больше всего меня привлекает Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте попорядку.
-
-
+                        p Больше всего меня привлекает Frontend разработка, мне очень нравится процесс создания сайта, верстка с самого нуля. 
+                        p Помимо этого я интересуюсь CSS3-анимациями, активно изучаю JavaScript и пробую в своей работе новые технологии: БЭМ-нейминг, Pug, SCSS и другие.
+                    
                     -
                         skills = [
                         {
@@ -62,14 +64,6 @@ block content
                         {
                         title: "Backend",
                         technologies: [
-                        {
-                        name: "PHP",
-                        percent: 25
-                        },
-                        {
-                        name: "mySQL",
-                        percent: 30
-                        },
                         {
                         name: "Node.js & npm",
                         percent: 5
@@ -116,8 +110,7 @@ block content
 
 
 
-        section.l-contacts
-            #map.map
+        section.l-contacts            
             include ../common/contacts
             include ../common/footer
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBB6rM-vv-YQ8hbju8XpPvHfbYfPDeCrtU&callback=initMap' async defer)
+    
